@@ -1,0 +1,83 @@
+.mainPage---color{
+    background: #E8EBF8;
+    height: 35em;
+  }
+  
+  .mainPage---container{
+    display: flex;
+    padding: 6em;
+    gap: 2em;
+  }
+  .ShoeImage----container{
+    margin-top: -4.5em;
+    padding: 2em;
+    display: flex;
+    position: relative;
+   
+  }
+  .ShoeImage--wahala{
+    /* width: 210%; */
+   margin-left: 2em;
+   height: 30.5em;
+  }
+  
+  .TagCircle{
+    position: absolute;
+    margin-top: 3em;
+    margin-left: 6em;
+    /* width: 5%; */
+  }
+  .mainPage--tile--Container{
+    /* width: 110%; */
+    margin-top: 5em;
+  }
+  
+  .MainPage--paragraph, .mainPage--title{
+    color: #151414;
+  }
+  
+  .MainPage--paragraph{
+    line-height: 20px;
+    font-weight: 400;
+    /* font-size: 15px; */
+    font-style: normal;
+  }
+  .mainPage--title{
+    font-weight: bolder;
+    font-size: 2.6em;
+     padding: 9px 0px 9px 3px;
+     width: 100%;
+  }
+
+  .mainPage--button{
+    background-color: #141B34;
+    border-radius: 15px;
+    padding: 5px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    width: 30%;
+    margin-top: 1em;
+    position: relative;
+    cursor: pointer;
+   
+  }
+  .mainPage--arrow{
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 2px;
+    margin-left: 4em;
+    margin-top: 0.1em;
+  }
+
+ .mainPage--button--text{
+    font-size: 15px;
+    margin-top: 0.3em;
+    position: absolute;
+   
+ } 
+
+  
+  

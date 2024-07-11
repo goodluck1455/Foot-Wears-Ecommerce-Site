@@ -1,0 +1,77 @@
+
+.FirstCartPage---container{
+    margin: 3em 2em 2em 3em;
+}
+
+
+.FirstCartPage---titlePage{
+   margin: 3em 2em 2em 3em;
+   text-align: center;
+}
+
+
+.FirstCartPage---titlePage h2{
+    color: #151414;
+    text-align: center;
+ 
+}
+.FirstCartPage---titlePage p{
+    line-height: 24px;
+    color: #646464;
+}
+
+
+
+
+
+
+.vshdvbhs{
+    /* Shop Now, Turn Heads Later */
+
+width: 710px;
+height: 44px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+text-align: center;
+
+/* text */
+color: #151414;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+
+/* Don’t wait to upgrade your wardrobe! Grab your favorites now and be ready to turn heads wherever you go. */
+
+width: 710px;
+height: 48px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+/* grey */
+color: #646464;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+}

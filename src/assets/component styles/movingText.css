@@ -1,0 +1,63 @@
+
+
+.MovingText---container{
+    background-color: #141B34;
+   padding: 8px;
+   color: white;
+
+   overflow: hidden;
+   white-space: nowrap;
+   /* width: 100%; */
+}
+
+.scrolingText--A, .scrolingText--B, .scrolingText--C{
+  display: flex;
+ 
+}
+
+
+
+.MovingText---holder{
+    display: flex;
+    justify-content: space-around;
+    /* gap: 3em; */
+    overflow: hidden;
+    font-size: 0.8em;
+    animation: scroll 30s linear infinite;
+}
+
+
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+.scrolingText--A-paragraph, .scrolingText--B-paragraph, .scrolingText--C-paragraph{
+    margin-top: 0.7em;
+    padding-left: 5px;
+}
+.scrolingText--B-paragraph{
+    width: 10rem;
+    
+}
+.hbdhusbf{
+  
+ /* Frame 35 */
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+width: 223px;
+height: 45px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+}
