@@ -13,7 +13,7 @@ import PriceData from "../assets/PriceData"
 
 function ScrollingProduct() {
 
-  const [priceData, setPriceData]= useState(PriceData);
+  const [priceData]= useState(PriceData);
 
 
   const priceDataElement = 

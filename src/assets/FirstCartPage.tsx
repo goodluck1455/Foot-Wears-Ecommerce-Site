@@ -12,13 +12,13 @@ function App() {
             ready to turn heads wherever you go.</p>
          </div>
 
-         <div>
-            <div>
+         <div className="FirstCartPage---ViewPanel">
+            <div className="FirstCartPage---SearchPanel">
 
             </div>
 
             <div>
-                
+
             </div>
 
 
