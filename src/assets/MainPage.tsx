@@ -2,6 +2,9 @@
 import "../assets/component styles/mainPage.css"
 import TagCircle from "../images/Group 10.png";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import CanvasImage from "../images/Group 8.png";
+
+
 
 function MainPage() {
 
@@ -20,7 +23,7 @@ function MainPage() {
          
          <div className="ShoeImage----container">
            <img src={TagCircle} alt="" className="TagCircle" />
-          <img src="./src/images/Group 8.png" alt="" className="ShoeImage--wahala"/>
+          <img src={CanvasImage} alt="" className="ShoeImage--wahala"/>
          </div>
 
         </div>

@@ -1,6 +1,7 @@
 
 import * as Ci from "react-icons/ci"
 // import Cart from "./src/images/vector.png";
+import VectorImage from "../images/Vector.png"
 
  function Header() {
 
@@ -27,7 +28,7 @@ import * as Ci from "react-icons/ci"
           </div>
           <div className="Menue--icon">
             <Ci.CiSearch className="search--icon"/>
-            <img src="./src/images/vector.png" alt=""  />
+          <img src={VectorImage} alt=""  />
             </div>
         </div>
     </div>
