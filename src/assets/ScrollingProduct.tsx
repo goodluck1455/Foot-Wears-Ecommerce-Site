@@ -9,11 +9,11 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 
 // import KswissHeel from "../images/Group 18.png"
-import PriceData from "../assets/PriceData"
+import{ priceData4ScrollingPage } from "../assets/PriceData"
 
 function ScrollingProduct() {
 
-  const [priceData]= useState(PriceData);
+  const [priceData]= useState(priceData4ScrollingPage);
 
 
   const priceDataElement = 

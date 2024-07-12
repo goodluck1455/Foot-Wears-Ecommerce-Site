@@ -1,6 +1,6 @@
 
 .FirstCartPage---container{
-    margin: 3em 2em 2em 3em;
+    margin: 3em 4em 2em 4em;
 }
 
 
@@ -20,23 +20,103 @@
     color: #646464;
 }
 
+.FirstCartPage---ViewPanel{
+    display: flex;
+    gap: 5em;
+}
+.FirstCartPage---SearchPanel{
+    background: #F4F4F4;
+    border: 2px solid #D7D7D7;
+    border-radius: 20px;
+    width: 45%;
+    height: 20em;
+    padding: 13px;
+}
+
+/* .FirstCartPgae---checkBoxContainer-A{
+    margin: 3px 0px 3px 0px;
+} */
+.FirstCartPgae---checkBoxContainer-A, .FirstCartPgae---checkBoxContainer-B{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px 5px 0px;
+}
+
+/* .FirstCartPgae---checkBoxContainer-A input[type="checkbox"], .FirstCartPgae---checkBoxContainer-B input[type="checkbox"]{
+    background-color: #151414;
+    color: white;
+} */
+/* nsdivnijdcnbvndkovnkodfngfv */
+.FirstCartPgae---checkBoxContainer-A input[type="checkbox"], .FirstCartPgae---checkBoxContainer-B input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #151414;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .FirstCartPgae---checkBoxContainer-A input[type="checkbox"]:checked, .FirstCartPgae---checkBoxContainer-B input[type="checkbox"]:checked {
+    background-color: #151414;
+    color: white;
+  }
+  
+  .FirstCartPgae---checkBoxContainer-A input[type="checkbox"]:checked::before,  .FirstCartPgae---checkBoxContainer-B input[type="checkbox"]:checked::before {
+    content: '✔';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+  }
 
 
+
+
+
+
+
+
+/* am just check dfijdinvjsdnjv */
+.FirstCartPgae---labelContent-A{
+    margin-left: -7em;
+}
+.FirstCartPgae---labelContent-B{
+    margin-left: -3em;
+}
+.FirstCartPgae---labelContent-C{
+    margin-left: -2.5em;
+}
+.FirstCartPgae---labelContent-D{
+    margin-left: -2em;
+    color: #151414;
+}
+.FirstCarPge---ProductDisplay{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin-bottom: 1em;
+}
 
 
 
 .vshdvbhs{
-    /* Shop Now, Turn Heads Later */
+/* Male shoes */
 
-width: 710px;
-height: 44px;
+width: 110px;
+height: 30px;
 
 font-family: 'Inter';
 font-style: normal;
-font-weight: 600;
-font-size: 36px;
-line-height: 44px;
-/* identical to box height */
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+display: flex;
+align-items: center;
 text-align: center;
 
 /* text */
@@ -45,33 +125,10 @@ color: #151414;
 
 /* Inside auto layout */
 flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-
-/* Don’t wait to upgrade your wardrobe! Grab your favorites now and be ready to turn heads wherever you go. */
-
-width: 710px;
-height: 48px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-/* grey */
-color: #646464;
-
-
-/* Inside auto layout */
-flex: none;
 order: 1;
-align-self: stretch;
 flex-grow: 0;
+
+
 
 
 }
