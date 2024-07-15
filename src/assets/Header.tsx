@@ -12,7 +12,7 @@ import VectorImage from "../images/Vector.png"
       <div className="Header">
         <div className="testing">
         <div>
-        <h1 className='Header--logo'>FOOT FASHION</h1>
+        <h1 className='Header--logo'>FOOTFASHION</h1>
         </div>
 
           <div className="Menubar--container">

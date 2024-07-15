@@ -110,7 +110,7 @@ const priceData4ProductDisplay = [
         itemContainer: "5 items left",
         oldPrice: "$200,000",
         newPrice: "$150,000"
-    }, 
+    },
     {
     id: 5,
     Image:PumTrainSneakers,

@@ -1,0 +1,64 @@
+
+.Footer--container{
+    background: #141B34; 
+    /* color: white; */
+}
+.Footer-secondLayer---container{
+    /* margin: 3em 4px 2em 4em; */
+    padding: 3em 5em 1em 5em;
+}
+.Footer--logo{
+  color: white;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 0.5em;
+    }
+
+.Footer---paragraph{
+    font-size: 13px;
+    color: #F4F4F4;
+    line-height: 19px;
+    
+    /* font-weight: 400; */
+}
+.Footer--images{
+  display: flex;
+  gap: 1em;
+}
+
+.Footer--images img{
+    padding: 5px 0px 0px 0px;
+     width: 3%;
+}
+
+
+.hhcfs{
+    /* Footer */
+/* Sustainable footwear for every step.Discover stylish and comfortable shoes */
+
+/* Sustainable footwear for every step.Discover stylish and comfortable shoes */
+
+width: 414px;
+height: 50px;
+
+/* Paragraph 18 25 */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+/* or 139% */
+
+/* Text 2 */
+color: #F4F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+
+
+}

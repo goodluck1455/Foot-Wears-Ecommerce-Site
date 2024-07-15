@@ -1,0 +1,29 @@
+.ProductDisplay--container {
+    background: #F4F4F4;
+    border-radius: 10px;
+    padding: 10px;
+    height: 14em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin-bottom: 4px;
+    cursor: pointer;
+    flex: 1 1  1 auto;
+  }
+
+
+
+  .ProductDisplay--cartBal {
+    position: relative;
+    color: #646464;
+    font-size: 14px;
+    margin-left: 12px;
+  }
+  
+  .ProductDisplay--cartBal::before {
+    content: '•'; 
+    position: absolute;
+    top: -8px;
+    left: -13px; 
+    color: rgb(100, 100, 100);
+    font-size: 30px; 
+  }

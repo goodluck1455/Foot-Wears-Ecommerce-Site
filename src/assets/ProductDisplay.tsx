@@ -1,5 +1,6 @@
 // import KswissHeel from "../images/Group 18.png"
-
+// import "./component styles/firstCartPage.css"
+import "./component styles/ProductDisplay.css";
 interface ProductDisplayProps {
 productName:string, 
  itemContainer:string, 
@@ -14,12 +15,12 @@ productName:string,
     return (
       <>
          <div>
-         <div className="imageSlider--container">
+         <div className="ProductDisplay--container">
                 <div className="imageSlide--A">
                   <img src={images} alt="" />
                 </div>
                 <p className="scrollingPage---productName">{productName}</p>
-                <span className="scrollingPage--cartBal">{itemContainer}</span> <br />
+                <span className="ProductDisplay--cartBal">{itemContainer}</span> <br />
                 <span className="Scrolling--Oldprice">{oldPrice}</span> <span className="Scrolling--NewPrice">{newPrice}</span>
                 </div>
          </div>

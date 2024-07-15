@@ -5,6 +5,7 @@ import Header from "./assets/Header";
 import MainPage from "./assets/MainPage";
 import MovingText from './assets/MovingText';
 import FirstCartPage from "./assets/FirstCartPage"
+import Footer from './assets/Footer';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
      <MovingText />
      <ScrollingProduct />
      <FirstCartPage />
+     <Footer />
     </>
   )
 }

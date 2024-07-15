@@ -1,0 +1,30 @@
+.range-slider-container {
+    /* width: 100%; */
+    /* margin: auto; */
+    padding: 10px;
+  }
+  
+  .range-slider-track {
+    height: 3px;
+    width: 100%;
+    /* background: #ccc; */
+    position: relative;
+  }
+  
+  .range-slider-thumb {
+    height: 12px;
+    width: 12px;
+    background-color: #151414;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .RangeStyle{
+    font-size: 14px;
+    padding: 4px 0px 0px 0px;
+   
+  }
+  

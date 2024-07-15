@@ -5,11 +5,13 @@ import { useState } from "react";
 import ProductDisplay from "./ProductDisplay";
 // import PriceData from "../assets/PriceData"
 import {priceData4ProductDisplay} from "../assets/PriceData"
+import InputRange from "./InputRange";
 
 
 
 
-function App() {
+
+function FirstCartPage() {
   const [productDisplay] = useState(priceData4ProductDisplay)
 
   const productDisplayElement = productDisplay.map((product) => {
@@ -52,10 +54,11 @@ function App() {
       });
     } else {
       setCheckedItems((prevState) => {
-        const newCheckedItems = { ...prevState, [name]: checked, all: false };
+        const newCheckedItems = { ...prevState, [name]: checked };
 
         if (name === 'femaleShoes' && checked) {
           newCheckedItems.maleShoes = false;
+      
           newCheckedItems.childrenShoes = false;
         } else if (name === 'maleShoes' && checked) {
           newCheckedItems.femaleShoes = false;
@@ -134,6 +137,41 @@ function App() {
                </span>
                </div>
 
+              <div>
+                
+               <span className="FirstCartPgae---RangeBox">
+               <label htmlFor="" >Price</label> <br />
+               <InputRange /> 
+               </span>
+              </div>
+
+              <div>
+              <span className="FirstCartPgae---checkBoxContainer-B">
+               <input 
+                 type="checkbox"
+                 id="childrenShoes"
+                 name="childrenShoes"
+                //  checked={checkedItems.childrenShoes}
+                //  onChange={handleCheckboxChange}
+                //  disabled={checkedItems.all}
+               /> 
+               <label htmlFor="" className="FirstCartPgae---labelContent-D">Children shoes</label> 
+               <label htmlFor="" >50</label>  
+               </span>
+               <span className="FirstCartPgae---checkBoxContainer-B">
+               <input 
+                 type="checkbox"
+                 id="childrenShoes"
+                 name="childrenShoes"
+                //  checked={checkedItems.childrenShoes}
+                //  onChange={handleCheckboxChange}
+                //  disabled={checkedItems.all}
+               /> 
+               <label htmlFor="" className="FirstCartPgae---labelContent-D">Children shoes</label> 
+               <label htmlFor="" >50</label>  
+               </span>
+              </div>
+
                
              
             </div>
@@ -144,6 +182,9 @@ function App() {
               <div className="FirstCarPge---ProductDisplay">
                 {productDisplayElement}
               </div>
+              {/* <div className="FirstCarPge---ProductDisplay">
+                {productDisplayElement}
+              </div> */}
               {/* <div className="FirstCarPge---ProductDisplay">
                 {productDisplayElement}
               </div>
@@ -165,4 +206,4 @@ function App() {
     )
   }
   
-  export default App
+  export default FirstCartPage
