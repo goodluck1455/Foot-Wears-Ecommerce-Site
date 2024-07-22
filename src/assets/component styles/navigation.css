@@ -1,0 +1,140 @@
+
+.Navigation---container{
+    margin-top: 2em;
+    margin-left: 18em;
+    /* width: 10%; */
+    /* text-align: center;
+    justify-items: center; */
+    justify-content: center;
+    list-style: none;
+    display: flex;
+}
+.Navigation---container a{
+    border: 1px solid #141B34;
+    width: 29px;
+    height: 29px;
+    padding: 6px;
+    border-radius: 5px;
+    margin: 6px;
+    cursor: pointer;
+    color: #141B34;
+}
+
+.Navigation---container a:hover{
+    color: #D7D7D7;
+   background-color:  #141B34;}
+   
+.paginationActive a{
+    color: #D7D7D7;
+     background-color:  #141B34;
+}
+/* .paginationDisabled a{
+    background-color:#D7D7D7;
+    color: #D7D7D7;
+} */
+
+
+/* .Navigation---PreviousBtn, .Navigation---Btn-F{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #141B34;
+    cursor: pointer;
+    margin: 6px;
+} */
+
+/* .Navigation---Btn-A,
+.Navigation---Btn-B, 
+.Navigation---Btn-C, 
+.Navigation---Btn-D,
+.Navigation---Btn-E
+{
+    border: 1px solid #141B34;
+    width: 29px;
+    height: 29px;
+    padding: 5px;
+    border-radius: 5px;
+   margin: 6px;
+   cursor: pointer;
+} */
+
+
+
+.bnhbs{
+    /* Frame 3473149 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5px;
+gap: 10px;
+
+width: 29px;
+height: 29px;
+
+/* Primary Color */
+border: 1px solid #141B34;
+border-radius: 5px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+
+
+/* Frame 3473147 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5px;
+gap: 10px;
+
+width: 29px;
+height: 29px;
+
+/* Primary Color */
+background: #141B34;
+/* Primary Color */
+border: 1px solid #141B34;
+border-radius: 5px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+
+/* 1 */
+
+width: 8px;
+height: 19px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+/* grey */
+color: #D7D7D7;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+}

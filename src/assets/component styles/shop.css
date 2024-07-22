@@ -1,0 +1,20 @@
+.Shop---container{
+    background-color: #141B34;
+    color: #F4F4F4;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+.Shop---title{
+    padding: 1em;
+    margin-top: 3em;
+}
+.Shop---title h1{
+    color: #F4F4F4;
+    font-size: 2.5em;
+
+}
+.Shop---imageContainer{
+    padding: 10px;
+    margin-top: -1em;
+}

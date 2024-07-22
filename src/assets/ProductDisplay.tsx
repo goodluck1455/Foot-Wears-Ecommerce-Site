@@ -1,6 +1,9 @@
 // import KswissHeel from "../images/Group 18.png"
 // import "./component styles/firstCartPage.css"
+import { FaPlusCircle } from "react-icons/fa";
 import "./component styles/ProductDisplay.css";
+import "./component styles/firstCartPage.css"
+import { NavLink } from "react-router-dom";
 interface ProductDisplayProps {
 productName:string, 
  itemContainer:string, 
@@ -14,7 +17,11 @@ productName:string,
 
     return (
       <>
-         <div>
+        
+
+            
+
+
          <div className="ProductDisplay--container">
                 <div className="imageSlide--A">
                   <img src={images} alt="" />
@@ -22,8 +29,15 @@ productName:string,
                 <p className="scrollingPage---productName">{productName}</p>
                 <span className="ProductDisplay--cartBal">{itemContainer}</span> <br />
                 <span className="Scrolling--Oldprice">{oldPrice}</span> <span className="Scrolling--NewPrice">{newPrice}</span>
+            <NavLink to="/Cart">  
+              <FaPlusCircle  className="ProductDisplay---add-to-cart"/>
+              </NavLink> 
                 </div>
-         </div>
+
+
+                  
+           
+       
       </>
     )
   }

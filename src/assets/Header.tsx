@@ -1,7 +1,8 @@
 
 import * as Ci from "react-icons/ci"
-// import Cart from "./src/images/vector.png";
-import VectorImage from "../images/Vector.png"
+
+import CartImage from "../images/Vector.png"
+import { NavLink } from "react-router-dom"
 
  function Header() {
 
@@ -18,9 +19,9 @@ import VectorImage from "../images/Vector.png"
           <div className="Menubar--container">
             <div className="Menuebar">
               <ul>
-                <li>HOME</li>
-                <li>SHOP</li>
-                <li>SALES</li>
+              <NavLink to="/" >  <li>HOME</li></NavLink>
+             <NavLink to="Shop"> <li>SHOP</li></NavLink>     
+             <NavLink to="Sales">   <li>SALES</li></NavLink>  
               </ul>
             </div>  
           </div>
@@ -28,7 +29,7 @@ import VectorImage from "../images/Vector.png"
           </div>
           <div className="Menue--icon">
             <Ci.CiSearch className="search--icon"/>
-          <img src={VectorImage} alt=""  />
+          <img src={CartImage} alt="Cart"  />
             </div>
         </div>
     </div>

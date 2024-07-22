@@ -10,6 +10,7 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 // import KswissHeel from "../images/Group 18.png"
 import{ priceData4ScrollingPage } from "../assets/PriceData"
+import TimeCounter from "./TimeCounter";
 
 function ScrollingProduct() {
 
@@ -39,9 +40,10 @@ function ScrollingProduct() {
                <div>
                 <h3>Today Best Deals!</h3>
                </div>
-               <div className="ScrollingPage---timeCountDown">
+               <TimeCounter />
+               {/* <div className="ScrollingPage---timeCountDown">
                 <p>Ends in: {12}h : {10}m : {10}s</p>
-               </div>
+               </div> */}
 
             </div>
 

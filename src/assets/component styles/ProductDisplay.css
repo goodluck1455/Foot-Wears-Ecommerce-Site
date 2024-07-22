@@ -8,6 +8,7 @@
     margin-bottom: 4px;
     cursor: pointer;
     flex: 1 1  1 auto;
+    position: relative;
   }
 
 
@@ -26,4 +27,12 @@
     left: -13px; 
     color: rgb(100, 100, 100);
     font-size: 30px; 
+  }
+  .ProductDisplay---add-to-cart{
+   position: absolute;
+   border-radius: 50%;
+   color: #141B34;
+   font-size: 1.5em;
+   left: 8em;
+   top: 7em;
   }

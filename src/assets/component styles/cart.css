@@ -1,0 +1,139 @@
+
+
+
+:root{
+    --PrimaryColor: #151414;
+    --cartHeadingColor: #646464;
+}
+
+.Cart--container{
+    margin: 3em 4em 2em 4em;
+}
+.Cart---C-shopping{
+    display: flex;
+    /* gap: 1em; */
+}
+
+.Cart---C-shopping h4{
+    margin-top: 8px;
+   /* color:  var(--PrimaryColor); */
+    color: #151414;
+}
+.cart--left-shopping{
+    font-size: 2em;
+}
+.Cart--heading{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: var(--cartHeadingColor);
+    /* color: #646464; */
+}
+
+.Cart--heading h3{
+    color: #151414;
+}
+
+.Cart--BasketItems{
+    /* background: #ECEFFF; */
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid #141B34;
+    box-sizing: border-box;
+    width: 50%;
+    justify-content: space-between;
+    height: 7.5em;
+}
+
+
+
+.Cart--image--container {
+    background-color: #9DAEEA;
+    border-radius: 10px;
+    height: 5em;
+    width: 30%;
+    margin: 5px;
+  
+  }
+  .Cart--image--container img{
+    width: 90%;
+  }
+
+  .Cart--BasketItem--Container{
+    display: flex;
+    padding: 12px;
+  }
+  .Cart--Basket-Container{
+    display: flex;
+    gap: 5em;
+    margin-top: 2em;
+    /* justify-content: space-between; */
+  }
+
+  .Cart--size, .Cart--quantity {
+    background: none;
+    border: 1px solid #141B34;
+    margin-left: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+
+  .Cart--Info{
+   margin-top: 13px;
+  }
+  .cart--sizeQuantity{
+    margin-top: 0.8em;
+    color: #151414;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .Cart--Edition{
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--cartHeadingColor);
+  }
+  .Cart--quantityContainer{
+    margin-left: 3px;
+  }
+
+.cart--amount{
+    margin-top: 1.5em;
+    padding-right: 2em;
+}
+
+.cart--DeleteBTN{
+    margin-top: 1.2em;
+    color: #B91D1D;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.Cart--Order--container{
+    /* border: 1px solid #141B34; */
+    border-radius: 10px;
+    border: 2px solid #141B34;
+    box-sizing: border-box;
+    width: 35%;
+    height: 10em;
+    padding: 8px;
+}
+
+.Cart--order h4{
+    text-align: center;
+}
+
+ 
+
+.fdhgf{
+
+
+/* Danger */
+background: linear-gradient(90deg, #FB6969 0%, #B91D1D 100%);
+
+
+
+
+}
+
+

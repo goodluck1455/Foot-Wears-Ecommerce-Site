@@ -2,19 +2,55 @@ import "./component styles/firstCartPage.css"
 import "../assets/component styles/scrollingProduct.css";
 // import KswissHeel from "../images/Group 18.png"
 import { useState } from "react";
-import ProductDisplay from "./ProductDisplay";
-// import PriceData from "../assets/PriceData"
+// import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
+
 import {priceData4ProductDisplay} from "../assets/PriceData"
+
 import InputRange from "./InputRange";
+// import { Navigation } from "swiper/modules";
+// import NavigationPanel from "./Navigation";
+import ProductDisplay from "./ProductDisplay";
+import ReactPaginate from "react-paginate";
+// import ProductLayout from "./ProductLayout";
+// import ProductDisplaySec from "./ProductDisplaySec";
+
+
+// const router = createBrowserRouter(
+//     createRoutesFromElements(
+//       <Route path="ProductDisplaySec" element={<ProductDisplaySec />} />
+        
+     
+//     )
 
 
 
 
 
-function FirstCartPage() {
-  const [productDisplay] = useState(priceData4ProductDisplay)
 
-  const productDisplayElement = productDisplay.map((product) => {
+// interface FirstCartPageProps {
+//   pageCount:void, 
+//    itemContainer:string, 
+//    oldPrice:string, 
+//    newPrice:string,
+//    images:string
+//   }
+  
+   
+// )
+
+
+
+const FirstCartPage: React.FC = () => {
+
+
+  const [productDisplay] = useState(priceData4ProductDisplay.slice(0, 200))
+
+  const [pageNumber, setPageNumber] = useState(0);
+  const userPerPage = 12;
+  const pageVisited = pageNumber * userPerPage;
+
+  const productDisplayElement = productDisplay.slice(pageVisited, pageVisited + userPerPage)
+  .map((product) => {
     return (
       <ProductDisplay
         key={product.id}
@@ -26,6 +62,8 @@ function FirstCartPage() {
       />
     );
   });
+
+  
 
 
 
@@ -47,6 +85,7 @@ function FirstCartPage() {
 
     if (name === 'all') {
       setCheckedItems({
+     
         all: checked,
         maleShoes: checked,
         femaleShoes: checked,
@@ -73,7 +112,10 @@ function FirstCartPage() {
     }
   };
 
-
+const pageCount = Math.ceil(productDisplay.length / userPerPage);
+const changePage = ({selected}: { selected: number })=>{
+  setPageNumber(selected)
+}
 
 
     return (
@@ -91,6 +133,7 @@ function FirstCartPage() {
                <div>
                <span className="FirstCartPgae---checkBoxContainer-A">
                <input 
+              
                    type="checkbox"
                    id="all"
                    name="all"
@@ -140,35 +183,117 @@ function FirstCartPage() {
               <div>
                 
                <span className="FirstCartPgae---RangeBox">
-               <label htmlFor="" >Price</label> <br />
+               <h4>Price</h4>
                <InputRange /> 
                </span>
               </div>
-
               <div>
+
+              <h4 className="FirstCartPage--size">Size</h4> 
               <span className="FirstCartPgae---checkBoxContainer-B">
+             
                <input 
                  type="checkbox"
                  id="childrenShoes"
-                 name="childrenShoes"
+                 name="size-A"
                 //  checked={checkedItems.childrenShoes}
                 //  onChange={handleCheckboxChange}
                 //  disabled={checkedItems.all}
                /> 
-               <label htmlFor="" className="FirstCartPgae---labelContent-D">Children shoes</label> 
-               <label htmlFor="" >50</label>  
+               <label htmlFor="" className="FirstCartPgae---labelContent-E">06 - 20</label> 
+               <label htmlFor="" >20</label>  
                </span>
                <span className="FirstCartPgae---checkBoxContainer-B">
                <input 
                  type="checkbox"
                  id="childrenShoes"
-                 name="childrenShoes"
+                 name="size-B"
                 //  checked={checkedItems.childrenShoes}
                 //  onChange={handleCheckboxChange}
                 //  disabled={checkedItems.all}
                /> 
-               <label htmlFor="" className="FirstCartPgae---labelContent-D">Children shoes</label> 
+               <label htmlFor="" className="FirstCartPgae---labelContent-E">20 - 30</label> 
                <label htmlFor="" >50</label>  
+               </span>
+
+               <span className="FirstCartPgae---checkBoxContainer-B">
+               <input 
+                 type="checkbox"
+                 id="childrenShoes"
+                 name="size-C"
+                //  checked={checkedItems.childrenShoes}
+                //  onChange={handleCheckboxChange}
+                //  disabled={checkedItems.all}
+               /> 
+               <label htmlFor="" className="FirstCartPgae---labelContent-E">31 - 40</label> 
+               <label htmlFor="" >40</label>  
+               </span>
+
+               <span className="FirstCartPgae---checkBoxContainer-B">
+               <input 
+                 type="checkbox"
+                 id="childrenShoes"
+                 name="size-D"
+                //  checked={checkedItems.childrenShoes}
+                //  onChange={handleCheckboxChange}
+                //  disabled={checkedItems.all}
+               /> 
+               <label htmlFor="" className="FirstCartPgae---labelContent-E">41 - 50</label> 
+               <label htmlFor="" >40</label>  
+               </span>
+
+
+
+               <h4 className="FirstCartPage--Brands">Brands</h4> 
+              <span className="FirstCartPgae---checkBoxContainer-B">
+               <input 
+                 type="checkbox"
+                 id="childrenShoes"
+                 name="size-A"
+                //  checked={checkedItems.childrenShoes}
+                //  onChange={handleCheckboxChange}
+                //  disabled={checkedItems.all}
+               /> 
+               <label htmlFor="" className="FirstCartPgae---labelContent-F">Nike</label> 
+               <label htmlFor="" >120</label>  
+               </span>
+               <span className="FirstCartPgae---checkBoxContainer-B">
+               <input 
+                 type="checkbox"
+                 id="childrenShoes"
+                 name="size-B"
+                //  checked={checkedItems.childrenShoes}
+                //  onChange={handleCheckboxChange}
+                //  disabled={checkedItems.all}
+               /> 
+               <label htmlFor="" className="FirstCartPgae---labelContent-F">Puma</label> 
+               <label htmlFor="" >03</label>  
+               </span>
+
+               <span className="FirstCartPgae---checkBoxContainer-B">
+               <input 
+                 type="checkbox"
+                 id="childrenShoes"
+                 name="size-C"
+                //  checked={checkedItems.childrenShoes}
+                //  onChange={handleCheckboxChange}
+                //  disabled={checkedItems.all}
+               /> 
+               <label htmlFor="" className="FirstCartPgae---labelContent-G">K-swiss</label> 
+               <label htmlFor="" >01</label>  
+               </span>
+
+               <span className="FirstCartPgae---checkBoxContainer-B">
+               <input 
+                 type="checkbox"
+                 id="childrenShoes"
+                 name="size-D"
+                //  checked={checkedItems.childrenShoes}
+                //  onChange={handleCheckboxChange}
+                //  disabled={checkedItems.all}
+               /> 
+               <label htmlFor="" className="FirstCartPgae---labelContent-H">Encap</label> 
+               <label htmlFor="" >01</label>  
                </span>
               </div>
 
@@ -181,26 +306,35 @@ function FirstCartPage() {
 
               <div className="FirstCarPge---ProductDisplay">
                 {productDisplayElement}
+                {/* <RouterProvider router={router}/> */}
               </div>
-              {/* <div className="FirstCarPge---ProductDisplay">
-                {productDisplayElement}
-              </div> */}
-              {/* <div className="FirstCarPge---ProductDisplay">
-                {productDisplayElement}
-              </div>
-              <div className="FirstCarPge---ProductDisplay">
-                {productDisplayElement}
-              </div>
-              <div className="FirstCarPge---ProductDisplay">
-                {productDisplayElement}
-              </div> */}
+
+              
+         
 
             </div>
 
 
+
+            
+
+
          </div>
+         <ReactPaginate 
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={"Navigation---container"}
+            previousLinkClassName={"previousBttn"}
+            nextLinkClassName={"nextBtn"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
 
-
+         
+         />
+         {/* <NavigationPanel /> */}
+         {/* <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, alias.</p> */}
        </div>
       </>
     )

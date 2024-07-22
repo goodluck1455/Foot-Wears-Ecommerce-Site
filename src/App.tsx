@@ -1,23 +1,34 @@
 
 import './App.css'
-import ScrollingProduct from "./assets/ScrollingProduct";
 import Header from "./assets/Header";
-import MainPage from "./assets/MainPage";
-import MovingText from './assets/MovingText';
-import FirstCartPage from "./assets/FirstCartPage"
 import Footer from './assets/Footer';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import HomePage from './assets/HomePage';
+import Shop from './assets/Shop';
+import Cart from './assets/Cart';
 
 function App() {
 
 
   return (
     <>
+    <BrowserRouter>
+
      <Header />
-     <MainPage />
-     <MovingText />
-     <ScrollingProduct />
-     <FirstCartPage />
+
+     <main>
+       <Routes>
+        <Route index element={<HomePage />}/>
+        <Route path='Shop' element={<Shop /> }/>
+        {/* <Route path='CartShop' element={<CartShop /> }/> */}
+        <Route path='Cart' element={<Cart /> }/>
+        </Routes>
+    
+     </main>
+     
      <Footer />
+
+     </BrowserRouter>
     </>
   )
 }

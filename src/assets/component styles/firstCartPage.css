@@ -29,7 +29,7 @@
     border: 2px solid #D7D7D7;
     border-radius: 20px;
     width: 15%;
-    height: 20em;
+    height: 30em;
     padding: 13px;
 }
 
@@ -104,7 +104,27 @@
     /* margin-bottom: 1em; */
 
 }
-
+.FirstCartPgae---RangeBox h4, .FirstCartPage--size{
+    margin-top: 25px;
+}
+.FirstCartPage--size{
+    margin-top: 10px;
+}
+.FirstCartPgae---labelContent-E{
+    margin-left: -5.3em;
+}
+.FirstCartPgae---labelContent-F{
+    margin-left: -6.3em;
+}
+.FirstCartPgae---labelContent-G{
+    margin-left: -5.5em;
+}
+.FirstCartPgae---labelContent-H{
+    margin-left: -6em;
+}
+.FirstCartPage--Brands{
+    margin-top: 20px;
+}
 
 
 
