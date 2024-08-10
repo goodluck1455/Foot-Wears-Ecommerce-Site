@@ -17,7 +17,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = () => {
 //  function Header({size}:{size:string}) {
-  const GlobalState = useContext(ShoppingContext)
+  const GlobalState = useContext(ShoppingContext)!;
  
   const state = GlobalState.state;
 

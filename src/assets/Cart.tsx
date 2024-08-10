@@ -13,7 +13,7 @@ import {ShoppingContext} from "./ShopContext";
 
 function Cart() {
 
-const GlobalState = useContext(ShoppingContext)
+const GlobalState = useContext(ShoppingContext)!;
  
 const state = GlobalState.state;
 

@@ -44,7 +44,7 @@ item: {
 
   //  const {addToCart}= useContext(ShopContextProvider)
 
-  const globalVersion = useContext(ShoppingContext);
+  const globalVersion = useContext(ShoppingContext)!;
         //  const state = globalVersion.state;
          const dispatch = globalVersion.dispatch;
         //  const { dispatch } = useContext(ShoppingContext);
