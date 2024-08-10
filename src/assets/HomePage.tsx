@@ -8,8 +8,12 @@ import FirstCartPage from "./FirstCartPage"
 
 
 
+interface HomePageProps {
+  // handleClick: () => void;
+}
 
-function HomePage() {
+const HomePage: React.FC<HomePageProps> = () => {
+// function HomePage({handleClick}) {
 
 
     return (

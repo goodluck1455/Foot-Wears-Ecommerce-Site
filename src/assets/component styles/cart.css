@@ -18,6 +18,13 @@
     margin-top: 8px;
    /* color:  var(--PrimaryColor); */
     color: #151414;
+    cursor: pointer;
+}
+
+.Cart--container a{
+  text-decoration: none;
+  border-bottom: none;
+  color: #151414;
 }
 .cart--left-shopping{
     font-size: 2em;
@@ -40,9 +47,10 @@
     border-radius: 10px;
     border: 2px solid #141B34;
     box-sizing: border-box;
-    width: 50%;
+    /* width: 50%; */
     justify-content: space-between;
     height: 7.5em;
+    margin-top: 1.5em;
 }
 
 
@@ -62,12 +70,23 @@
   .Cart--BasketItem--Container{
     display: flex;
     padding: 12px;
+ 
+  }
+  .cart--product{
+     width: 50%;
   }
   .Cart--Basket-Container{
     display: flex;
-    gap: 5em;
+    gap: 8em;
     margin-top: 2em;
     /* justify-content: space-between; */
+  }  
+  
+  .cart--sizeQuantity{
+    margin-top: 0.8em;
+    color: #151414;
+    font-weight: 600;
+    font-size: 15px;
   }
 
   .Cart--size, .Cart--quantity {
@@ -82,12 +101,7 @@
   .Cart--Info{
    margin-top: 13px;
   }
-  .cart--sizeQuantity{
-    margin-top: 0.8em;
-    color: #151414;
-    font-weight: 600;
-    font-size: 15px;
-  }
+
   .Cart--Edition{
     font-weight: 600;
     font-size: 12px;
@@ -114,22 +128,175 @@
     border-radius: 10px;
     border: 2px solid #141B34;
     box-sizing: border-box;
-    width: 35%;
-    height: 10em;
+    width: 100%;
+    height: auto;
     padding: 8px;
 }
 
 .Cart--order h4{
     text-align: center;
 }
+.cart--promo{
+    /* justify-items: center;
+    text-align: center; */
+    margin-top: 10px;
+}
 
- 
+.cart--promo p{
+/* margin-left: -12em; */
+color: #151414;
+font-weight: 600;
+font-size: 14px;
+padding: 5px;
+}
+
+ .cart--promo input{
+    border: 1px solid #646464;
+    background: none;
+    border-radius: 5px;
+    width: 93%;
+   
+    /* padding: 10px; */
+ }
+ .cart--promo input[placeholder]{
+   color: #646464;
+     padding: 10px;
+ }
+ .cart--secondContainer{
+    margin: 2px 1em 2px 1em;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+ }
+
+ .Cart---balanceBreakdown{
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+    /* gap: 15em; */
+    padding-top: 10px;
+ }
+ .cart--balanceContainer{
+    margin-top: 1.3em;
+ }
+
+ .Cart-Total{
+    margin-top: 1em;
+ }
+
+ .Cart-Total h5, .Cart-Total p{
+    font-size: 16px;
+  font-weight: bold;
+ }
+
+ .cart--checkout{
+    background: #141B34;
+ }
+.cart--checkout, .Cart---continueShopping{
+    
+    border-radius: 5px;
+    padding: 10px;
+    color: #F4F4F4;
+    font-size: 15px;
+    border: none;
+    width: 100%;
+    margin-top: 1.3em;
+    cursor: pointer;
+}
+
+.Cart---continueShopping{
+    color: #141B34;
+    background: none;
+    border: 1px solid #141B34;
+}
+
+/* .Cart---DeliveryFee{
+  border: 1px solid linear-gradient(90deg, #FB6969 0%, #B91D1D 100%); 
+  color: linear-gradient(90deg, #FB6969 0%, #B91D1D 100%);
+  margin-top: 1em;
+  padding: 5px;
+} */
+
+
+
+
+.Cart---DeliveryFee {
+  position: relative;
+  border-image: linear-gradient(90deg, #FB6969 0%, #B91D1D 100%); 
+  border-image-slice: 1; 
+  background: -webkit-linear-gradient(90deg, #FB6969 0%, #B91D1D 100%);
+  -webkit-background-clip: text;  
+   background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  margin-top: 1em;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Cart---DeliveryFee p{
+  margin-top: -0.5em;
+}
+.Cart---DeliveryFee img{
+ margin-bottom: -0.6em;
+ padding: 4px; 
+}
+
+
+
+.Cart---DeliveryFee::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Place pseudo-element behind the main element */
+  border-radius: 8px; /* Add border-radius to the pseudo-element */
+  padding: 1px;
+   border: 1px solid #FB6969; 
+}
+
+
 
 .fdhgf{
 
+/* Text 2 */
+color: #F4F4F4;
+
+/* grey */
+border: 1px solid #646464;
+border-radius: 5px;
 
 /* Danger */
 background: linear-gradient(90deg, #FB6969 0%, #B91D1D 100%);
+
+/* Primary Color */
+background: #141B34;
+
+
+
+/* Frame 3473202 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px;
+gap: 14px;
+
+width: 381px;
+height: 44px;
+
+background: #ECEFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
 
 
 

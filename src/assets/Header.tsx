@@ -3,9 +3,23 @@ import * as Ci from "react-icons/ci"
 
 import CartImage from "../images/Vector.png"
 import { NavLink } from "react-router-dom"
+// import { useCart } from "react-use-cart";
+import { useContext } from "react";
+// import { useState, useEffect } from "react";
+// import { useCart } from "react-use-cart";
+import {ShoppingContext} from "./ShopContext";
 
- function Header() {
 
+
+interface HeaderProps {
+  // size: number;
+}
+
+const Header: React.FC<HeaderProps> = () => {
+//  function Header({size}:{size:string}) {
+  const GlobalState = useContext(ShoppingContext)
+ 
+  const state = GlobalState.state;
 
     return (
       <>
@@ -21,7 +35,7 @@ import { NavLink } from "react-router-dom"
               <ul>
               <NavLink to="/" >  <li>HOME</li></NavLink>
              <NavLink to="Shop"> <li>SHOP</li></NavLink>     
-             <NavLink to="Sales">   <li>SALES</li></NavLink>  
+             <NavLink to="Sales"> <li>SALES</li></NavLink>  
               </ul>
             </div>  
           </div>
@@ -29,7 +43,8 @@ import { NavLink } from "react-router-dom"
           </div>
           <div className="Menue--icon">
             <Ci.CiSearch className="search--icon"/>
-          <img src={CartImage} alt="Cart"  />
+            <NavLink to="/Cart" className="cartIcon">   <img src={CartImage} alt="Cart"  /></NavLink> 
+            <span className="Cart-countHolder">{state.length}</span>  
             </div>
         </div>
     </div>

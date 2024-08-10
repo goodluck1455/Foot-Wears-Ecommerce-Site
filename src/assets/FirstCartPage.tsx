@@ -11,6 +11,8 @@ import InputRange from "./InputRange";
 // import NavigationPanel from "./Navigation";
 import ProductDisplay from "./ProductDisplay";
 import ReactPaginate from "react-paginate";
+// import Navigation from "./Navigation";
+// import { useCart } from "react-use-cart";
 // import ProductLayout from "./ProductLayout";
 // import ProductDisplaySec from "./ProductDisplaySec";
 
@@ -38,9 +40,13 @@ import ReactPaginate from "react-paginate";
    
 // )
 
+interface FirstCartPageProps {
+  // handleClick: () => void;
+}
 
 
-const FirstCartPage: React.FC = () => {
+const FirstCartPage: React.FC<FirstCartPageProps> = () => {
+// const FirstCartPage: React.FC = ({handleClick}) => {
 
 
   const [productDisplay] = useState(priceData4ProductDisplay.slice(0, 200))
@@ -51,14 +57,17 @@ const FirstCartPage: React.FC = () => {
 
   const productDisplayElement = productDisplay.slice(pageVisited, pageVisited + userPerPage)
   .map((product) => {
+  
     return (
       <ProductDisplay
-        key={product.id}
+        id={product.id}
         images={product.Image}
         productName={product.productName}
         itemContainer={product.itemContainer}
         oldPrice={product.oldPrice}
         newPrice={product.newPrice}
+        item={product}
+       
       />
     );
   });
@@ -306,6 +315,7 @@ const changePage = ({selected}: { selected: number })=>{
 
               <div className="FirstCarPge---ProductDisplay">
                 {productDisplayElement}
+                {/* <Navigation data={productDisplayElement}/> */}
                 {/* <RouterProvider router={router}/> */}
               </div>
 

@@ -52,6 +52,7 @@ color: #F4F4F4;
 .Menue--icon{
   color: #F4F4F4;
   font-weight: bolder;
+  cursor: pointer;
  
 }
 
@@ -64,5 +65,68 @@ color: #F4F4F4;
   font-size: 2em;
 }
 
+/* .Cart-countHolder{
 
+} */
+.popup-message-A{
+  position: fixed;
+  top: 20px;
+  right: 5px;
+color: #F4F4F4;
+background-color:#141B34 ;
+/* text-align: center; */
+width: auto;
+z-index: 1000;
+/* left: 40em;
+top: 7em; */
+border-radius: 10px;
+padding: 5px;
+display: flex;
+gap: 4px;
+/* animation: fadeOut 3s forwards; */
 
+}
+.popup-message{
+  position: fixed;
+    top: 20px;
+    right: 20px;
+  color: #F4F4F4;
+  background-color:#141B34 ;
+  /* text-align: center; */
+  width: auto;
+  z-index: 1000;
+  /* left: 40em;
+  top: 7em; */
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  gap: 4px;
+  animation: fadeOut 5s forwards;
+}
+
+.popup-message .popup-icon{
+  font-size: 1.5em;
+}
+.popup-message p{
+margin-top: 2.5px;
+padding-right: 5px;
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}
+
+.cartIcon{
+  cursor: pointer;
+}
