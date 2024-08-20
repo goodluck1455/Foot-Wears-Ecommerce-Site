@@ -352,7 +352,7 @@ const changePage = ({selected}: { selected: number })=>{
             activeClassName={"paginationActive"}
 
 
-            pageRangeDisplayed={isMobile ? 1 : 1}  // Adjust the center range
+            pageRangeDisplayed={isMobile ? 2 : 2}  // Adjust the center range
           marginPagesDisplayed={isMobile ? 1 : 1}
          
          />

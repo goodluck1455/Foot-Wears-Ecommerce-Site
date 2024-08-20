@@ -224,7 +224,7 @@
       width: 80%;
     }
     .swiper-slide {
-      margin-right: -20px !important; /* This should match your spaceBetween value */
+      margin-right: -20px; /* This should match your spaceBetween value */
     }
 
     .scrolingPage--container {
@@ -239,4 +239,11 @@
     padding: 1em 0.1em 0.5em 0.1em;
 }
   
+}
+
+@media screen and (max-width:360px){
+
+
+
+
 }
