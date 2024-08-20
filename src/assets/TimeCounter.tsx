@@ -33,7 +33,7 @@ const getFormattedTime = (milliseconds:number)=> {
   return (
     <>
     <div className="ScrollingPage---timeCountDown">
-                <p>Ends in: {getFormattedTime(time)}</p>
+                <p className="scrolingPage---paragraph">Ends in: {getFormattedTime(time)}</p>
                </div>
     </>
   )

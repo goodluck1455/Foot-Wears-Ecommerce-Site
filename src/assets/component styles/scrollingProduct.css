@@ -233,11 +233,13 @@
   }
   
   .scrolingPage---deals h3{
-    font-size: 1.2em;
+    font-size: 1.1em;
+    margin-top: 7px;
   }
   .scrolingPage---deals {
     padding: 1em 0.1em 0.5em 0.1em;
 }
+
   
 }
 
