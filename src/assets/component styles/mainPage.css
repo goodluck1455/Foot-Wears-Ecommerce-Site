@@ -87,7 +87,7 @@
  
 
 
-@media screen and (max-width:375px){
+@media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 
   .mainPage---container {
     flex-direction: column;
@@ -96,22 +96,29 @@
   }
 
   .mainPage--title {
-    font-size: 1.2em;}
+    font-size: 1.7em;
+  }
 
     .TagCircle {
    
-      margin-left: 0em;
+      margin-left: 1.5em;
       width: 20%;
   }
 
   .ShoeImage--wahala {
-    width: 80%;
-    margin-left: 0em;
+    width: 100%;
+    margin-left: 2em;
     height: unset;
+    margin-top: 3em;
 }
 
 .mainPage--tile--Container {
-  /* width: 110%; */
-  margin-top: 2em;}
+ margin-top: 0.7em;
+}
+
+.MainPage--paragraph {
+  line-height: 25px;}
+
+  .mainPage--button {width: 40%;}
 
 }

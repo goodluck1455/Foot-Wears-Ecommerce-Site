@@ -61,7 +61,7 @@ function ScrollingProduct() {
             breakpoints={{
               375: {
                 slidesPerView: 1.5,
-                spaceBetween: 0,
+                spaceBetween: 5,
               },
               768: {
                 slidesPerView: 4,

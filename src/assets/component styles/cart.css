@@ -697,3 +697,27 @@ font-weight: bolder;
   cursor: pointer;
 }
 
+
+
+@media screen and (max-width:430px){
+.Cart--container {
+  margin: 3em 0.6em 2em 0.6em;
+}
+
+.Cart--Basket-Container {
+ flex-direction: column;
+}
+
+.cart--product {
+  width: unset;}
+
+
+  .DeleteOption--Info { 
+    width: unset;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+
+
+}

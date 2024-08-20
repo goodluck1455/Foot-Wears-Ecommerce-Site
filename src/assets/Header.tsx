@@ -17,6 +17,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = () => {
   const [activeOpen, setOpen] = useState(false)
+ 
 //  function Header({size}:{size:string}) {
   const GlobalState = useContext(ShoppingContext);
 
@@ -64,7 +65,7 @@ const closeSideBar = () => {
           <div className="Menue--icon">
             <Ci.CiSearch className="search--icon"/>
             <NavLink to="/Cart" className="cartIcon">   <img src={CartImage} alt="Cart"  /></NavLink> 
-            <span className="Cart-countHolder">{state.length}</span>  
+            <span className={state.length > 0 ? "Cart-countHolder": "Cart-countHolder--empty" }>{state.length}</span>  
             </div>
         </div>
     </div>

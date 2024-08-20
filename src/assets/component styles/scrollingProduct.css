@@ -217,7 +217,7 @@
   /* cursor: not-allowed;  */   /* Change cursor to indicate disabled state */
 }
 
-@media screen and (max-width:375px){
+@media screen and (max-width:375px), (max-width:414px), (max-width:430px){
     .imageSlider--container {
       margin-left: 0; 
       margin-right: 0; /* Remove margin between slides */

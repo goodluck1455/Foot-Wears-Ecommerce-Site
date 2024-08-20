@@ -41,7 +41,7 @@
    top: 7em;
   }
 
-  @media screen and (max-width:375px){
+  @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
   .ProductDisplay---add-to-cart {
     top: -0.5em;
     left: 5.6em;}
