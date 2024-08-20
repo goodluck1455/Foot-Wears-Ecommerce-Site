@@ -1,9 +1,9 @@
-import  {createContext, Dispatch, useReducer,  useEffect, useState} from 'react';
+import  {createContext, Dispatch, useReducer,  useEffect} from 'react';
 // import {priceData4ProductDisplay} from "../assets/PriceData"
 import { GrStatusGood as AddedToCartIcon } from "react-icons/gr";
 import { MdOutlineDangerous as NotAddedToCart } from "react-icons/md";
-// type ShopContextProps = {
-//   children: any,
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
   
 //  }
 
@@ -34,8 +34,8 @@ export const ShoppingContext = createContext<ShopContextType | null>(null);
 
 
 export const ShopContextProvider = (props:any) => {
-  const [message, setMessage] = useState<string | null>(null);
-  const [popupVisible, setPopupVisible] = useState(false);
+  // const [message, setMessage] = useState<string | null>(null);
+  // const [popupVisible, setPopupVisible] = useState(false);
  
     // const [cartItems, SetCartItems] = useState();
 
@@ -52,19 +52,25 @@ export const ShopContextProvider = (props:any) => {
         case 'ADD':
         const itemExists = state.some((item: any) => item.id === action.payload.id);
         if (itemExists) {
-          setMessage(`${action.payload.productName} is already in the cart`);
-          setPopupVisible(true);
-                    setTimeout(() => {
-                        setPopupVisible(false);
-                    }, 7000);
+          toast.error(`${action.payload.productName} is already in the cart`, {
+            icon: <NotAddedToCart style={{ color: 'red',  fontSize: "1.5em" }} />,
+          });
+          // setMessage(`${action.payload.productName} is already in the cart`);
+          // setPopupVisible(true);
+          //           setTimeout(() => {
+          //               setPopupVisible(false);
+          //           }, 7000);
           return state; // Do not add the item if it already exists
         } else {
           const newState = [...state, action.payload];
-          setMessage(`${action.payload.productName} is successfully  added to cart`);
-          setPopupVisible(true);
-                    setTimeout(() => {
-                        setPopupVisible(false);
-                    }, 7000);
+          toast.success(`${action.payload.productName} is successfully added to the cart`, {
+            icon: <AddedToCartIcon style={{ color: 'green',  fontSize: "1.5em" }} />,
+          });
+          // setMessage(`${action.payload.productName} is successfully  added to cart`);
+          // setPopupVisible(true);
+          //           setTimeout(() => {
+          //               setPopupVisible(false);
+          //           }, 7000);
           localStorage.setItem('cart', JSON.stringify(newState)); // Save the updated cart state to localStorage
           return newState;
         }
@@ -78,6 +84,13 @@ export const ShopContextProvider = (props:any) => {
           ? { ...item, quantity: action.payload.quantity }
           : item
       );
+
+      case "UPDATE_SIZE":
+        return state.map((item: any) =>
+          item.id === action.payload.id
+            ? { ...item, size: action.payload.size }
+            : item
+        );
 
       default:
         return state;
@@ -96,15 +109,23 @@ export const ShopContextProvider = (props:any) => {
     <>
       <ShoppingContext.Provider value={contextValue}>
             {props.children}
-            {/* {message && (
-                 <div className="popup-message">
-                 <AddedToCartIcon  className='popup-icon'/> <p>{message}</p>
-                    </div>
-                )} */}
+        
                  
       </ShoppingContext.Provider>
 
-      {popupVisible && (
+      <ToastContainer
+        position="top-right"
+        autoClose={7000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+
+      {/* {popupVisible && (
                 <div className={popupVisible ? "popup-message":"popup-message-A" }>
 
           {message?.includes("already") ? (
@@ -114,7 +135,7 @@ export const ShopContextProvider = (props:any) => {
           )}
             <p>{message}</p> 
                 </div>
-            )}
+            )} */}
     </>
   );
 };

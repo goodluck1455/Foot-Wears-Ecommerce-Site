@@ -44,7 +44,11 @@ item: {
 
   //  const {addToCart}= useContext(ShopContextProvider)
 
-  const globalVersion = useContext(ShoppingContext)!;
+  const globalVersion = useContext(ShoppingContext);
+
+  if (!globalVersion) {
+    return <div>Error: Shopping context not available</div>;
+  }
         //  const state = globalVersion.state;
          const dispatch = globalVersion.dispatch;
         //  const { dispatch } = useContext(ShoppingContext);

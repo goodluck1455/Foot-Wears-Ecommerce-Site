@@ -7,6 +7,7 @@ import HomePage from './assets/HomePage';
 import Shop from './assets/Shop';
 import Cart from './assets/Cart';
 import NotFound from './assets/NotFound';
+import CheckOutPage from './assets/CheckOutPage';
 // import { useState } from "react";
 
 
@@ -65,6 +66,7 @@ const App: React.FC<AppProps> = () => {
         <Route index element={<HomePage  />}/>
         <Route path='Shop' element={<Shop /> }/>
         <Route path='Cart' element={<Cart  /> }/>
+		<Route path='CheckOutPage' element={<CheckOutPage /> }/>
         <Route path='*' element={<NotFound /> }/>
         </Routes>
       

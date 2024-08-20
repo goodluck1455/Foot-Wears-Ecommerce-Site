@@ -40,7 +40,7 @@ function ScrollingProduct() {
                <div>
                 <h3>Today Best Deals!</h3>
                </div>
-               <TimeCounter />
+               <TimeCounter duration={5 * 22 * 60 * 60 * 1000}/>
                {/* <div className="ScrollingPage---timeCountDown">
                 <p>Ends in: {12}h : {10}m : {10}s</p>
                </div> */}
@@ -60,8 +60,8 @@ function ScrollingProduct() {
 
             breakpoints={{
               375: {
-                slidesPerView: 2,
-                spaceBetween: 5,
+                slidesPerView: 1.5,
+                spaceBetween: 0,
               },
               768: {
                 slidesPerView: 4,

@@ -1,10 +1,10 @@
 
 import * as Ci from "react-icons/ci"
-
+import * as FaIcons from "react-icons/fa"
 import CartImage from "../images/Vector.png"
 import { NavLink } from "react-router-dom"
 // import { useCart } from "react-use-cart";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 // import { useState, useEffect } from "react";
 // import { useCart } from "react-use-cart";
 import {ShoppingContext} from "./ShopContext";
@@ -16,26 +16,46 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = () => {
+  const [activeOpen, setOpen] = useState(false)
 //  function Header({size}:{size:string}) {
-  const GlobalState = useContext(ShoppingContext)!;
+  const GlobalState = useContext(ShoppingContext);
+
+  if (!GlobalState) {
+    return <div>Error: Item not not available</div>;
+  }
  
   const state = GlobalState.state;
+
+  const showSideBar = ()=>{
+
+    setOpen(!activeOpen)
+    // setIsOpen(!isOpen);
+}
+
+const closeSideBar = () => {
+    setOpen(false);
+  };
+
 
     return (
       <>
     <div>
       <div className="Header">
         <div className="testing">
-        <div>
+          <div className="Menubar--handle" onClick={showSideBar}>
+          {activeOpen ? <FaIcons.FaTimes className="hamburger-" size={20}/>  : 
+          <FaIcons.FaBars className= "hamburger" size={20}/>}
+          </div>
+          <div>
         <h1 className='Header--logo'>FOOTFASHION</h1>
         </div>
 
           <div className="Menubar--container">
-            <div className="Menuebar">
+            <div className={`Menuebar ${activeOpen ? "open" : "close"}` }>
               <ul>
-              <NavLink to="/" >  <li>HOME</li></NavLink>
-             <NavLink to="Shop"> <li>SHOP</li></NavLink>     
-             <NavLink to="Sales"> <li>SALES</li></NavLink>  
+                {/* <li>HOME</li> */}
+             <NavLink to="/"> <li onClick={() => { closeSideBar() }}>SHOP</li></NavLink>     
+             <NavLink to="Shop"> <li onClick={() => { closeSideBar() }} >SALES</li></NavLink>  
               </ul>
             </div>  
           </div>

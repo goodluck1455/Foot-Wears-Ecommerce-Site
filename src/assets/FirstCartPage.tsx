@@ -1,7 +1,7 @@
 import "./component styles/firstCartPage.css"
 import "../assets/component styles/scrollingProduct.css";
 // import KswissHeel from "../images/Group 18.png"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
 
 import {priceData4ProductDisplay} from "../assets/PriceData"
@@ -47,7 +47,7 @@ interface FirstCartPageProps {
 
 const FirstCartPage: React.FC<FirstCartPageProps> = () => {
 // const FirstCartPage: React.FC = ({handleClick}) => {
-
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
 
   const [productDisplay] = useState(priceData4ProductDisplay.slice(0, 200))
 
@@ -125,6 +125,15 @@ const pageCount = Math.ceil(productDisplay.length / userPerPage);
 const changePage = ({selected}: { selected: number })=>{
   setPageNumber(selected)
 }
+
+
+
+  // Update state on window resize
+ useEffect (() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 375);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
 
     return (
@@ -330,6 +339,7 @@ const changePage = ({selected}: { selected: number })=>{
 
 
          </div>
+         <div className="Pagination--mainHolder">
          <ReactPaginate 
             previousLabel={"Previous"}
             nextLabel={"Next"}
@@ -341,8 +351,12 @@ const changePage = ({selected}: { selected: number })=>{
             disabledClassName={"paginationDisabled"}
             activeClassName={"paginationActive"}
 
+
+            pageRangeDisplayed={isMobile ? 1 : 1}  // Adjust the center range
+          marginPagesDisplayed={isMobile ? 1 : 1}
          
          />
+         </div>
          {/* <NavigationPanel /> */}
          {/* <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, alias.</p> */}
        </div>

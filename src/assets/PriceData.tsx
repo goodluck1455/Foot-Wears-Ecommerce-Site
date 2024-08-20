@@ -69,6 +69,14 @@ const priceData4ScrollingPage = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$50,000"
+},
+{
+    id: 9,
+    Image:KswissHeel,
+    productName: "K-swiss puma",
+    itemContainer: "10 items left",
+    oldPrice: "$40,000",
+    newPrice: "$40,000"
 }
 
 

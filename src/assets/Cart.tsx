@@ -5,20 +5,29 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 // import image from "../images/nike-sneakers-11.png";
 import informationDiamond from "../images/information-diamond.png"
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 // import { useState, useEffect } from "react";
 // import { useCart } from "react-use-cart";
 import {ShoppingContext} from "./ShopContext";
+import { FaCartPlus as EmptyCart } from "react-icons/fa";
+
 
 
 function Cart() {
 
-const GlobalState = useContext(ShoppingContext)!;
+const GlobalState = useContext(ShoppingContext);
+
+if (!GlobalState) {
+  return <div>Error: Shopping context not available</div>;
+}
  
 const state = GlobalState.state;
 
+
         //  const state = globalVersion.state;
          const dispatch = GlobalState.dispatch;
+ const [openModal, setOpenModal] = useState(false);
+        //  const initialState = JSON.parse(localStorage.getItem('cart') || '[]');
 // const dispatch = GlobalState.dispatch;
 // const productName = state.reduce((product: string, item: any) =>  item.productName, product);
 
@@ -28,13 +37,9 @@ const totalPrice = state.reduce((acc: number, item: any) => {
   // return acc + priceNumber;
   return acc + priceNumber * (item.quantity || 1);
 }, 0);
-  //  const numTocuren = (num:number, currencyCode = "USD")=>{
-  //   return num.toLocaleString("en-US", {
-  //     style: "currency",
-  //     currency: currencyCode,
-  //     minimumFractionDigits: 2,
-  //   })
-  //  }
+ 
+
+ 
 
 
   const grandTotalPrice = totalPrice - 5000;
@@ -44,6 +49,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
     currency: "USD",
     minimumFractionDigits: 2,
   });
+
     const cartTotal =  totalPrice.toLocaleString("en-US", {
       style: "currency",
       currency: "USD",
@@ -51,26 +57,25 @@ const totalPrice = state.reduce((acc: number, item: any) => {
     });
 
     const handleQuantityChange = (id: number, quantity: number) => {
+      localStorage.setItem(id.toString(), quantity.toString());
       dispatch({
         type: "UPDATE_QUANTITY",
         payload: { id, quantity },
       });
     };
 
-  
-//  const toNumber = parseFloat(totalPrice.replace(/[^0-9.-]+/g,""));
-//     const grandTotal = toNumber.toLocaleString("en-US", {
-//           style: "currency",
-//           currency: "USD",
-//           minimumFractionDigits: 2,
-//         })
-  //  const currencyTonumber = (toNumber:any)=>{
-  //   return parseFloat(toNumber.replace(/[^0-9.-]+/g,""))
-  //  };
-  //  const formatToCurrency = (currencyTonumber:any) => {
-  //   return `$${currencyTonumber.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
-  // };
+    const handleSize = (id: any, size: any) => {
+      localStorage.setItem(`size_${id}`, size);
 
+      dispatch({
+        type: "UPDATE_SIZE",
+        payload: { id, size },
+      });
+    };
+
+           const deleteOption = ()=>{
+            setOpenModal(!openModal)
+           }
 
   return (
     <>
@@ -132,10 +137,30 @@ const totalPrice = state.reduce((acc: number, item: any) => {
             </div>
         ))}
              </div>   */}
-             <div className="cart--product">
+             <div className={state.length === 0 ? "cart--productLength":"cart--product" }>
+             {state.length === 0 ? (
+             
+            <div className="cart--EmptyCart">
+              <div className="Emptycart---Image">
+               <EmptyCart size={30}/>
+              </div>
+            
+              <h3 className="emptyCart--paragrap">Your cart is empty!</h3>
+              <p>Browse our categories and discover our best deals!</p>
 
-              {/* {state.length = 0 ? <div>Cart is emptyCart</div> :  */}
-              {state.map((item:any,  index:number) => ( 
+              <div>
+                 <NavLink to="/shop"> 
+                 <button type="button" className="EmptyCart---startShopping">
+                  Start Shopping</button></NavLink> 
+                  </div>
+              </div>
+             
+          ) : ( state.map((item:any,  index:number) => {
+            const savedSize = localStorage.getItem(`size_${item.id}`) || "20-30L";
+            const savedQuantity = localStorage.getItem(item.id.toString()) || 1;
+            
+            return( 
+
                   
                <div className="Cart--BasketItems" key={index}>
                    
@@ -150,14 +175,22 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                    <p className="Cart--Edition">Black lasted edition</p>
                    <div className="cart--sizeQuantity">
                     <span > Size: 
-                      <select name="" id="" className="Cart--size">
+                      <select name="" id="" className="Cart--size"
+                      value={savedSize}
+                        onChange={(e) =>
+                          handleSize(
+                            item.id,
+                            e.target.value
+                          )
+                        }
+                      >
                         <option value="20-30L" >20-30L</option>
                         <option value="30-40L" >30-40L</option>
                         <option value="40-50L" >40-50L</option>
                       </select>
                       </span> <span className="Cart--quantityContainer">Quantity: 
                       <select name="" className="Cart--quantity"
-                          // value={item.quantity || 1}
+                        value={savedQuantity}
                           onChange={(e) =>
                             handleQuantityChange(
                               item.id,
@@ -165,8 +198,12 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                             )
                           }
                       >
-                        <option value="01">01</option>
-                        <option value="02">02</option>
+                        {[...Array(10).keys()].map(n => (
+                         
+                        <option key={n + 1} value={n + 1}>{ n + 1 }</option>
+                
+                      ))}
+                        {/* <option value="02">02</option>
                         <option value="03">03</option>
                         <option value="04">04</option>
                         <option value="05">05</option>
@@ -174,7 +211,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                         <option value="07">07</option>
                         <option value="08">08</option>
                         <option value="09">09</option>
-                        <option value="10">10</option>
+                        <option value="10">10</option> */}
                       </select>
                       </span>
                       </div>
@@ -186,19 +223,45 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                   <div className="cart--amount">
                       <span>
                         <p>
-                     {(parseFloat(item.newPrice.replace(/[^0-9.-]+/g, "")) *
+                          {item.newPrice}
+                     {/* {(parseFloat(item.newPrice.replace(/[^0-9.-]+/g, "")) *
                       (item.quantity || 1)).toLocaleString("en-US", {
                       style: "currency",
                       currency: "USD",
                       minimumFractionDigits: 0,
-                    })}
+                    })} */}
                         </p>
-                        <HiOutlineTrash  className="cart--DeleteBTN" onClick={()=> dispatch({ type: "REMOVE", payload: { id: item.id } })} />
+                        <HiOutlineTrash size={25} 
+                        className="cart--DeleteBTN" 
+                        onClick={deleteOption}
+                         />
                       </span>
                     </div>
-               </div>
 
- ))} 
+                    <div className={openModal ? "DeleteOption" : "DeleteOptionClose" }
+                    onClick={deleteOption}>
+
+                      <div className="Overlay">
+                        <div className="DeleteOption--Info">
+                           <h3>Remove from Cart</h3>
+                           <p>Do you really want to remove this item from cart?</p>
+                           <div>
+                           <div>
+                     <button type="button" className="Cart---SaveItem">No</button> 
+                     <button type="button" className="cart--DeleteOption"
+                     onClick={()=> dispatch({ type: "REMOVE", payload: { id: item.id } })}
+                     >Delete</button> 
+                       </div>
+                           </div>
+                        </div>
+                         
+                      </div>
+                    </div>
+               </div>
+              
+  
+ )}) 
+)}
  {/* }  */}
 
 
@@ -208,7 +271,14 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                    </div>
 
                    {/* //----- */}
+
+                 
                
+                    
+                    {state.length === 0 ? (""): (
+
+
+                   
                     <div>
                  <div className="Cart--Order--container">
                   <div className="cart--secondContainer">
@@ -240,10 +310,10 @@ const totalPrice = state.reduce((acc: number, item: any) => {
 
                     </div>
                     <div>
-                    <button type="button" className="cart--checkout">Checkout</button>
+                 <NavLink to="/CheckOutPage"> <button type="button" className="cart--checkout">Checkout</button></NavLink> 
                     </div>
                   <div>
-                  <button type="button" className="Cart---continueShopping">Continue Shopping</button>
+                 <NavLink to="/shop"> <button type="button" className="Cart---continueShopping">Continue Shopping</button></NavLink> 
                   </div>
                    
 
@@ -259,6 +329,8 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                   <p>   <img src={informationDiamond} alt="" /> Delivery fees is calculated at checkout</p>
                   </div>
                  </div>
+ )}
+
         </div>
              
            

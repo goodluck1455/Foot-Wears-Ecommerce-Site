@@ -124,6 +124,11 @@
 
   }
   
+  .imageSlider--container:hover{
+    transform: scale(1.1);
+    transition: 1s ease-in-out;
+  }
+
   .imageSlide--A {
     background-color: #9DAEEA;
     border-radius: 10px;
@@ -214,8 +219,24 @@
 
 @media screen and (max-width:375px){
     .imageSlider--container {
-      margin-left: 0; /* Remove margin between slides */
+      margin-left: 0; 
+      margin-right: 0; /* Remove margin between slides */
+      width: 80%;
     }
+    .swiper-slide {
+      margin-right: -20px !important; /* This should match your spaceBetween value */
+    }
+
+    .scrolingPage--container {
+     padding:0.2em;
+      margin: 0.3em 0em 0.2em 0.3em;
   }
   
-
+  .scrolingPage---deals h3{
+    font-size: 1.2em;
+  }
+  .scrolingPage---deals {
+    padding: 1em 0.1em 0.5em 0.1em;
+}
+  
+}

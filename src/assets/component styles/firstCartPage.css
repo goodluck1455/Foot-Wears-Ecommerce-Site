@@ -42,11 +42,7 @@
     margin: 5px 0px 5px 0px;
 }
 
-/* .FirstCartPgae---checkBoxContainer-A input[type="checkbox"], .FirstCartPgae---checkBoxContainer-B input[type="checkbox"]{
-    background-color: #151414;
-    color: white;
-} */
-/* nsdivnijdcnbvndkovnkodfngfv */
+
 .FirstCartPgae---checkBoxContainer-A input[type="checkbox"], .FirstCartPgae---checkBoxContainer-B input[type="checkbox"] {
     position: relative;
     appearance: none;
@@ -127,33 +123,28 @@
 }
 
 
+@media screen and (max-width:375px){
 
+.FirstCartPage---SearchPanel {
+    display: none;
+}
 
-.vshdvbhs{
-/* Male shoes */
+.FirstCartPage---container {
+    margin: 0.5em 0.7em 0.1em 0.7em;
+}
 
-width: 110px;
-height: 30px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
-display: flex;
-align-items: center;
-text-align: center;
-
-/* text */
-color: #151414;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
+.FirstCarPge---ProductDisplay {
+    grid-template-columns:  1fr 1fr;
+    gap: 1em;
+  
+}
+.scrollingPage---productName {
+    font-size: 0.8em;
+}
 
 
 
 }
+
+
+

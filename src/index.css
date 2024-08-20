@@ -27,6 +27,9 @@ margin-left: 3em;
 color: #F4F4F4;
 /* letter-spacing: -3.5px; */
 }
+.Menuebar{
+  position: relative;
+}
 
 .Menuebar ul{
   display: flex;
@@ -53,7 +56,8 @@ color: #F4F4F4;
   color: #F4F4F4;
   font-weight: bolder;
   cursor: pointer;
- 
+ position: relative;
+ margin-right: 6em;
 }
 
 .Menue--icon img{
@@ -65,9 +69,19 @@ color: #F4F4F4;
   font-size: 2em;
 }
 
-/* .Cart-countHolder{
+.Cart-countHolder{
+  position: absolute;
+  left: 4.7em;
+  top: -0.3em;
+  background-color: #141B34;
+  border-radius: 50%;
+  padding: 5px;
 
-} */
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+}
 .popup-message-A{
   position: fixed;
   top: 20px;
@@ -101,7 +115,7 @@ gap: 4px;
   padding: 5px;
   display: flex;
   gap: 4px;
-  animation: fadeOut 5s forwards;
+  animation: fadeOut 4s forwards;
 }
 
 .popup-message .popup-icon{
@@ -129,4 +143,94 @@ padding-right: 5px;
 
 .cartIcon{
   cursor: pointer;
+}
+.Menubar--handle{
+  display: none;
+}
+/********************************************
+MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE 
+***********************************************/
+
+@media screen and (max-width:375px), (max-width:414px){
+  .testing {  
+    flex-direction: column;
+}
+.Header {
+
+  height: 1.5em;}
+
+.Menuebar ul {
+  flex-direction: column;
+  position: absolute;
+  background: #141B34;
+  padding: 10px;
+  width: 7em;
+  height: 7em;
+  margin-top: -1.5em;
+  /* border-top: 2px solid white; */
+}
+.Menubar--handle{
+ display: block;
+ margin-left: -0.2rem;
+position: absolute;
+top: 1.5em;
+color: white;
+
+}
+
+.open{
+  /* display: block; */
+  position: absolute;
+  left: -0.5rem;
+  transition: 1s ease-in-out; 
+   /* z-index: 1;
+  top: 1.5em; */
+}
+
+.close{
+  position: absolute;
+    left: -14rem;
+transition: 1s ease-in-out;
+/* z-index: 1; */
+
+}
+
+
+.Menuebar ul .active {
+  border-bottom: none;
+}
+
+.Menuebar ul li{
+  margin-left: 8px;
+  padding-top: 7px;
+}
+
+.Header--logo {
+  margin-left: 4em;
+  font-size: 1.3em;
+ margin-top: 0.3em;
+}
+
+.Menue--icon {
+  display: flex;
+margin-top: 0.2em;
+}
+
+
+.Menue--icon img {
+  width: 25%;
+  margin-top: -0.1em;
+}
+/* .Menue--icon img {
+  margin-left: 2em;} */
+
+  .search--icon {
+    margin-left: 2em;
+    margin-right: -0.3em;
+    font-size: 1.7em;
+}
+
+.Cart-countHolder {
+  left: 6.1em;}
+
 }

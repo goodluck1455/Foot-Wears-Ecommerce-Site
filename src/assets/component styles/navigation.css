@@ -28,6 +28,9 @@
     color: #D7D7D7;
      background-color:  #141B34;
 }
+
+
+
 /* .paginationDisabled a{
     background-color:#D7D7D7;
     color: #D7D7D7;
@@ -57,84 +60,16 @@
    cursor: pointer;
 } */
 
+@media screen and (max-width:375px){
 
-
-.bnhbs{
-    /* Frame 3473149 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 5px;
-gap: 10px;
-
-width: 29px;
-height: 29px;
-
-/* Primary Color */
-border: 1px solid #141B34;
-border-radius: 5px;
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-
-
-
-
-/* Frame 3473147 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 5px;
-gap: 10px;
-
-width: 29px;
-height: 29px;
-
-/* Primary Color */
-background: #141B34;
-/* Primary Color */
-border: 1px solid #141B34;
-border-radius: 5px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-
-/* 1 */
-
-width: 8px;
-height: 19px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 19px;
-text-align: center;
-
-/* grey */
-color: #D7D7D7;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
+.Pagination--mainHolder{
+    width:50%;
+    }
+    
+    .Navigation---container {
+        margin-left: 11em;
+        margin-bottom: 1em;
+    }
+    
+   
 }

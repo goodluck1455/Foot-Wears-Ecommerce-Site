@@ -11,6 +11,10 @@
     position: relative;
   }
 
+  .ProductDisplay--container:hover{
+    transform: scale(1.1);
+    transition: 1s ease-in-out;
+  }
 
 
   .ProductDisplay--cartBal {
@@ -35,4 +39,10 @@
    font-size: 1.5em;
    left: 8em;
    top: 7em;
+  }
+
+  @media screen and (max-width:375px){
+  .ProductDisplay---add-to-cart {
+    top: -0.5em;
+    left: 5.6em;}
   }

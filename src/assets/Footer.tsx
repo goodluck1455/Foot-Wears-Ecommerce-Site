@@ -15,7 +15,7 @@ function Footer() {
          <div className="Footer-secondLayer---container">
 
                 
-            <div>
+            <div className="footer--logoContiner">
             <h1 className='Footer--logo'>FOOTFASHION</h1> 
             <p className="Footer---paragraph">Sustainable footwear for every step. Discover 
                <br /> stylish and comfortable shoes</p> 
