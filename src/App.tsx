@@ -2,7 +2,7 @@
 import './App.css'
 import Header from "./assets/Header";
 import Footer from './assets/Footer';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import {HashRouter as BrowserRouter, Routes, Route} from 'react-router-dom';
 import HomePage from './assets/HomePage';
 import Shop from './assets/Shop';
 import Cart from './assets/Cart';

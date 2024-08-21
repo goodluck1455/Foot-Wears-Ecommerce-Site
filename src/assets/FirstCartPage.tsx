@@ -48,7 +48,7 @@ interface FirstCartPageProps {
 const FirstCartPage: React.FC<FirstCartPageProps> = () => {
 // const FirstCartPage: React.FC = ({handleClick}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
-  const [openFilter, setOpenFilter] = useState(false);
+  const [openFilter, setOpenFilter] = useState(true);
 
   const [productDisplay] = useState(priceData4ProductDisplay.slice(0, 200))
 
@@ -137,11 +137,11 @@ const changePage = ({selected}: { selected: number })=>{
   }, []);
 
      const openFilterBtn = ()=>{
-        setOpenFilter(true)
+        setOpenFilter(false)
      }
 
      const closeFilterBTN = ()=>{
-      setOpenFilter(false)
+      setOpenFilter(true)
      }
 
     return (
@@ -157,7 +157,7 @@ const changePage = ({selected}: { selected: number })=>{
          </div>
 
          <div className="FirstCartPage---ViewPanel">
-            <div className={openFilter ? "FirstCartPage---SearchPanel": "Close---SearchPanel"}>
+            <div className={!openFilter ? "Close---SearchPanel": "FirstCartPage---SearchPanel"}>
               <FilterCloseBtn size={25} className="filtercloseBTN" onClick={closeFilterBTN}/>
                <h3>Filters</h3>
                <div>
