@@ -122,11 +122,39 @@
     margin-top: 20px;
 }
 
+.firstCARTpAGE---filterTag{
+    display: none;
+}
+.filtercloseBTN{
+    display: none;
+}
+
 
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 
 .FirstCartPage---SearchPanel {
-    display: none;
+    z-index: 1;
+    position: absolute;
+    width: 40%;
+    height: auto;
+  margin-top: -6.5em;
+  font-size: 0.8em;
+  margin-left: 0em;
+  transition: 1s ease-in;
+}
+
+.Close---SearchPanel{
+    position: absolute;
+    margin-left: -13em;
+    margin-top: -6.5em;
+    z-index: 1;
+    transition: 1s ease-out;
+}
+.filtercloseBTN{
+    display: block;
+    margin-left: 5em;
+    margin-bottom: 1.5em;
+     cursor: pointer;
 }
 
 .FirstCartPage---container {
@@ -142,9 +170,61 @@
     font-size: 0.8em;
 }
 
-
-
+.FirstCartPage---titlePage h2 {
+    font-size: 1.2em;
 }
 
 
+.FirstCartPage---titlePage p {
+    line-height: 16px;
+    font-size: 0.8em;}
+
+    .firstCARTpAGE---filterTag{
+        display: inline-flex;
+        color: white;
+        background: #141B34;
+        box-shadow: 0px 4px 4px 1px rgba(138, 135, 135, 0.3);
+        border-radius: 8px;
+        padding: 9px 9px;
+        gap: 7px;
+        margin-left: 16em;
+        margin-top: 1.5em;
+        cursor: pointer;
+    }
+
+    .FirstCartPage---titlePage {
+        margin: 0.9em 2em 2em 3em;}
+        .filterIcon{
+            font-weight: 700;
+            color: white;
+        }
+
+        
+
+}
+
+.hvbhusf{
+    /* Frame 3472780 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 15px 12px;
+gap: 10px;
+
+width: 113px;
+height: 54px;
+
+/* Primary Color */
+background: #141B34;
+box-shadow: 0px 4px 4px 1px rgba(138, 135, 135, 0.3);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
 

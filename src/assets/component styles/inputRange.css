@@ -22,13 +22,20 @@
     cursor: pointer;
   }
 
-  .RangeStyle{
+  /* .RangeStyle{
     font-size: 14px;
     padding: 4px 0px 0px 0px;
    
-  }
+  } */
+
   .RangeStyle{
     font-size: 13px;
     padding-top: 9px;
   }
   
+@media screen and (max-width:375px), (max-width:414px), (max-width:430px){
+
+  .RangeStyle {
+    font-size: 0.8em;}
+
+}

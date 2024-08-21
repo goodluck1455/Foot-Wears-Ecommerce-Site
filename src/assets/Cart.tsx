@@ -18,7 +18,7 @@ function Cart() {
 const GlobalState = useContext(ShoppingContext);
 
 if (!GlobalState) {
-  return <div>Error: Shopping context not available</div>;
+  return <div>Error: Shopping context not available</div>; 
 }
  
 const state = GlobalState.state;
@@ -26,7 +26,8 @@ const state = GlobalState.state;
 
         //  const state = globalVersion.state;
          const dispatch = GlobalState.dispatch;
- const [openModal, setOpenModal] = useState(false);
+ const [openModal, setOpenModal] = useState<number | null>(null);
+
         //  const initialState = JSON.parse(localStorage.getItem('cart') || '[]');
 // const dispatch = GlobalState.dispatch;
 // const productName = state.reduce((product: string, item: any) =>  item.productName, product);
@@ -73,9 +74,8 @@ const totalPrice = state.reduce((acc: number, item: any) => {
       });
     };
 
-           const deleteOption = ()=>{
-            setOpenModal(!openModal)
-           }
+         
+          
 
   return (
     <>
@@ -233,13 +233,13 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                         </p>
                         <HiOutlineTrash size={25} 
                         className="cart--DeleteBTN" 
-                        onClick={deleteOption}
+                        onClick={() => setOpenModal(item.id)}
                          />
                       </span>
                     </div>
 
-                    <div className={openModal ? "DeleteOption" : "DeleteOptionClose" }
-                    onClick={deleteOption}>
+                    <div className={openModal === item.id ? "DeleteOption" : "DeleteOptionClose" }
+                    onClick={() => setOpenModal(null)}>
 
                       <div className="Overlay">
                         <div className="DeleteOption--Info">
@@ -247,9 +247,15 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                            <p>Do you really want to remove this item from cart?</p>
                            <div>
                            <div>
-                     <button type="button" className="Cart---SaveItem">No</button> 
+                     <button type="button" className="Cart---SaveItem" onClick={() => setOpenModal(null)} >No</button> 
                      <button type="button" className="cart--DeleteOption"
-                     onClick={()=> dispatch({ type: "REMOVE", payload: { id: item.id } })}
+                     onClick={()=> {
+                        dispatch({ type: "REMOVE", payload: { id: openModal } });
+                        setOpenModal(null); 
+                      }}
+                      
+                      // ()=>confirmDelete}
+                    //  onClick={()=> dispatch({ type: "REMOVE", payload: {id: item.id } })}
                      >Delete</button> 
                        </div>
                            </div>

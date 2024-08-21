@@ -3,9 +3,9 @@ import "../assets/component styles/scrollingProduct.css";
 // import KswissHeel from "../images/Group 18.png"
 import { useState, useEffect } from "react";
 // import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
-
+import { CiFilter as FilterIcon } from "react-icons/ci";
 import {priceData4ProductDisplay} from "../assets/PriceData"
-
+import { IoCloseSharp as FilterCloseBtn} from "react-icons/io5";
 import InputRange from "./InputRange";
 // import { Navigation } from "swiper/modules";
 // import NavigationPanel from "./Navigation";
@@ -48,6 +48,7 @@ interface FirstCartPageProps {
 const FirstCartPage: React.FC<FirstCartPageProps> = () => {
 // const FirstCartPage: React.FC = ({handleClick}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
+  const [openFilter, setOpenFilter] = useState(false);
 
   const [productDisplay] = useState(priceData4ProductDisplay.slice(0, 200))
 
@@ -135,10 +136,20 @@ const changePage = ({selected}: { selected: number })=>{
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+     const openFilterBtn = ()=>{
+        setOpenFilter(true)
+     }
+
+     const closeFilterBTN = ()=>{
+      setOpenFilter(false)
+     }
 
     return (
       <>
        <div className="FirstCartPage---container">
+            <div className="firstCARTpAGE---filterTag" onClick={openFilterBtn}>
+              <p>Filter</p> <FilterIcon size={20} className="filterIcon"/>
+            </div>
          <div className="FirstCartPage---titlePage">
            <h2>Shop Now, Turn Heads Later</h2>
            <p>Don’t wait to upgrade your wardrobe! Grab your favorites now and be <br />
@@ -146,7 +157,8 @@ const changePage = ({selected}: { selected: number })=>{
          </div>
 
          <div className="FirstCartPage---ViewPanel">
-            <div className="FirstCartPage---SearchPanel">
+            <div className={openFilter ? "FirstCartPage---SearchPanel": "Close---SearchPanel"}>
+              <FilterCloseBtn size={25} className="filtercloseBTN" onClick={closeFilterBTN}/>
                <h3>Filters</h3>
                <div>
                <span className="FirstCartPgae---checkBoxContainer-A">

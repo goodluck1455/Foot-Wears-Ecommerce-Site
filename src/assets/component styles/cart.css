@@ -275,7 +275,7 @@ padding: 5px;
 
 .DeleteOption{
   position: absolute;
- 
+  z-index: 1;
   /* border: 2px solid #141B34; */
   box-sizing: border-box;
   /* width: 80%; */
@@ -667,6 +667,7 @@ font-weight: bolder;
      font-weight: bolder;
      margin-bottom: 1em;
      margin-top: 1em;
+    
 }
 
 .Emptycart---Image{
