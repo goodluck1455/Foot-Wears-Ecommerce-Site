@@ -221,7 +221,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
 
 
                   <div className="cart--amount">
-                      <span>
+                      <span className="cart--amount-onMobile">
                         <p>
                           {item.newPrice}
                      {/* {(parseFloat(item.newPrice.replace(/[^0-9.-]+/g, "")) *

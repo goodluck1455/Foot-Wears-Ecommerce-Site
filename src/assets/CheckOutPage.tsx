@@ -199,7 +199,7 @@ const CheckOutPage: React.FC<CheckOutPageProps> = () => {
                           return(
                             <>
                      
-                                  <div className="CheckOutInfo_OnItem--Container" key={index}>
+                              <div className="CheckOutInfo_OnItem--Container" key={index} >
                                   <div className="CheckOut--BasketItemInfor--Container">
                                     {/* <div className="checkout--Cssadjustment"> */}
                                     <div className="CheckOutItem--image--container">
@@ -231,7 +231,7 @@ const CheckOutPage: React.FC<CheckOutPageProps> = () => {
                                     </div>
                                     </div>
                                   
-                                    </>
+                                </>
                         )})}
                               {/* <div className="CheckOutInfo_OnItem--Container">
                                 <div className="CheckOut--BasketItemInfor--Container">
