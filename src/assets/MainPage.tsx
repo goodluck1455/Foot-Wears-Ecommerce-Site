@@ -34,7 +34,9 @@ const MainPage: React.FC<MainPageProps> = () => {
   const handleClick = () => {
     if (gamesRef.current) {
       console.log('Scrolling to:', gamesRef.current);
-      gamesRef.current.scrollIntoView({ behavior: 'smooth' });
+      gamesRef.current.scrollIntoView({ behavior: 'smooth', 
+        block: 'start', // Ensure the block is properly set
+        inline: 'nearest'});
     } else {
       console.log('gamesRef.current is null or undefined');
     }
@@ -72,6 +74,7 @@ const MainPage: React.FC<MainPageProps> = () => {
             step. Discover stylish and confortable shoes
            </p>
            <button className="mainPage--button" 
+           onTouchStart={handleClick}
            onClick={handleClick}
            >
               
