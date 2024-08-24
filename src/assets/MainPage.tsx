@@ -31,6 +31,17 @@ const MainPage: React.FC<MainPageProps> = () => {
 
   const { gamesRef } = globalVersion;
 
+  const handleClick = () => {
+    if (gamesRef.current) {
+      console.log('Scrolling to:', gamesRef.current);
+      gamesRef.current.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.log('gamesRef.current is null or undefined');
+    }
+  };
+  
+
+
    
   function getScreenSize() {
     const width = window.innerWidth;
@@ -48,6 +59,8 @@ const MainPage: React.FC<MainPageProps> = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+
+
     return (
       <>
       <div className='mainPage---color'>
@@ -58,9 +71,12 @@ const MainPage: React.FC<MainPageProps> = () => {
            <p className="MainPage--paragraph">Step lightly:sustainble footwear for Every <br />
             step. Discover stylish and confortable shoes
            </p>
-           <button className="mainPage--button"
-             onClick={() => gamesRef.current?.scrollIntoView({ behavior: 'smooth' })}
-           ><span className="mainPage--button--text">Shop Now</span> <MdKeyboardDoubleArrowRight className="mainPage--arrow" /></button>
+           <button className="mainPage--button" 
+           onClick={handleClick}
+           >
+              
+            <span className="mainPage--button--text">Shop Now</span> 
+            <MdKeyboardDoubleArrowRight className="mainPage--arrow" /></button>
         </div>
          
          <div className="ShoeImage----container">

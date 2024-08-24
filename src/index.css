@@ -193,7 +193,14 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
 .Header {
   /* position: sticky;
   z-index: 999; */
+  
   height: 1.5em;}
+
+
+  .Header.active{
+    top: 3em;
+  
+  }
 
 .Menuebar ul {
   flex-direction: column;
