@@ -217,6 +217,19 @@
   /* cursor: not-allowed;  */   /* Change cursor to indicate disabled state */
 }
 
+.---timeCountDownShopView{
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 68.5em;
+  margin-top: 2em; 
+  /* top: 26.6em;
+  border-radius: 10px;
+  margin-left: 70em;
+  margin-right: 4em;
+  margin-top: 2em; */
+}
+
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
     .imageSlider--container {
       margin-left: 0; 
@@ -240,12 +253,43 @@
     padding: 1em 0.1em 0.5em 0.1em;
 }
 
+
+.---timeCountDownShopView {
+  display: block;
+  position: absolute;
+  top: 24.4em;
+  border-radius: 10px;
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+
   
 }
 
-@media screen and (max-width:360px){
 
 
 
+.jbshdv{
+  /* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 5px;
+gap: 10px;
+
+width: 257px;
+height: 64px;
+
+/* Danger */
+background: linear-gradient(90deg, #FB6969 0%, #B91D1D 100%);
+border-radius: 10px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
 
 }

@@ -3,19 +3,34 @@
   padding: 0;
   box-sizing: 0;
   font-family: 'Arial';
-
-
-
 }
+
+html{
+  scroll-padding-top: 100px;
+}
+
 body{
   background: #E8EBF8;
+  margin-top: 3.5em;
 }
+
+
 .Header{
   background: #141B34;
   display: flex;
   justify-content: space-between;
   padding: 1em;
+  margin-top: -3.5em;
+
+}
+
+.Header.active{
+  position: fixed;
  
+  width: 100%;
+  /* top: 0; */
+  z-index: 99;
+  transition: 1s ease-in;
 }
 
 .Header--logo{
@@ -38,7 +53,7 @@ color: #F4F4F4;
   gap: 2em;
   margin-top: 10px;
 }
-.Menuebar ul a{
+.Menuebar ul a, .Menue--icon a{
   text-decoration: none;
   color: #F4F4F4;
   cursor: pointer;
@@ -58,6 +73,7 @@ color: #F4F4F4;
   cursor: pointer;
  position: relative;
  margin-right: 6em;
+
 }
 
 .Menue--icon img{
@@ -76,10 +92,12 @@ color: #F4F4F4;
   background-color: #141B34;
   border-radius: 50%;
   padding: 5px;
+  
   justify-content: center;
   align-self: center;
   align-items: center;
   text-align: center;
+   /* border: 2px solid #F4F4F4; */
 }
 
 .Cart-countHolder--empty{
@@ -173,7 +191,8 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
     flex-direction: column;
 }
 .Header {
-
+  /* position: sticky;
+  z-index: 999; */
   height: 1.5em;}
 
 .Menuebar ul {

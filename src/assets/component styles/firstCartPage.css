@@ -9,6 +9,9 @@
    text-align: center;
 }
 
+.FirstCartPage---noViewForSale{
+    display: none;
+}
 
 .FirstCartPage---titlePage h2{
     color: #151414;
@@ -133,21 +136,25 @@
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 
 .FirstCartPage---SearchPanel {
-    z-index: 1;
+   z-index: 1;
     position: absolute;
-    width: 40%;
-    height: auto;
-  margin-top: -6.5em;
-  font-size: 0.8em;
-  margin-left: 0em;
-  transition: 1s ease-in;
+    margin-left: -13em;
+   height: auto;
+   transition: 1s ease-in;
+   border: none;
 }
 
 .Close---SearchPanel{
+    background: #F4F4F4;
     position: absolute;
-    margin-left: -13em;
+    font-size: 0.8em;
     margin-top: -6.5em;
+     border-radius: 20px;
+    padding: 13px;
+    width: 40%;
+    height: auto;
     z-index: 1;
+    border: 2px solid #141B34;
     transition: 1s ease-out;
 }
 .filtercloseBTN{
@@ -205,26 +212,27 @@
 
 .hvbhusf{
     /* Frame 3472780 */
+/* Frame 3473186 */
+
+box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
+justify-content: center;
 align-items: center;
-padding: 15px 12px;
-gap: 10px;
+padding: 10px 20px;
+gap: 34px;
 
-width: 113px;
-height: 54px;
+position: relative;
+width: 259px;
+height: 849px;
 
+background: #FFFFFF;
 /* Primary Color */
-background: #141B34;
-box-shadow: 0px 4px 4px 1px rgba(138, 135, 135, 0.3);
-border-radius: 8px;
+border: 2px solid #141B34;
+border-radius: 20px;
 
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
 
 }
 

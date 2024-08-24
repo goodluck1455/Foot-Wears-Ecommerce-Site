@@ -11,6 +11,7 @@ import InputRange from "./InputRange";
 // import NavigationPanel from "./Navigation";
 import ProductDisplay from "./ProductDisplay";
 import ReactPaginate from "react-paginate";
+import TurnHeadsLater from "./TurnHeadsLater";
 // import Navigation from "./Navigation";
 // import { useCart } from "react-use-cart";
 // import ProductLayout from "./ProductLayout";
@@ -41,11 +42,13 @@ import ReactPaginate from "react-paginate";
 // )
 
 interface FirstCartPageProps {
+  showTurnHeadsLater?: boolean;
+  gamesRef: React.RefObject<HTMLDivElement>;
   // handleClick: () => void;
 }
 
 
-const FirstCartPage: React.FC<FirstCartPageProps> = () => {
+const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true, gamesRef}) => {
 // const FirstCartPage: React.FC = ({handleClick}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
   const [openFilter, setOpenFilter] = useState(true);
@@ -146,18 +149,14 @@ const changePage = ({selected}: { selected: number })=>{
 
     return (
       <>
-       <div className="FirstCartPage---container">
+       <div className="FirstCartPage---container" ref={gamesRef}>
             <div className="firstCARTpAGE---filterTag" onClick={openFilterBtn}>
               <p>Filter</p> <FilterIcon size={20} className="filterIcon"/>
             </div>
-         <div className="FirstCartPage---titlePage">
-           <h2>Shop Now, Turn Heads Later</h2>
-           <p>Don’t wait to upgrade your wardrobe! Grab your favorites now and be <br />
-            ready to turn heads wherever you go.</p>
-         </div>
-
+            {showTurnHeadsLater && <TurnHeadsLater />}
+           {/* <TurnHeadsLater  media="HomeComponent"/> */}
          <div className="FirstCartPage---ViewPanel">
-            <div className={!openFilter ? "Close---SearchPanel": "FirstCartPage---SearchPanel"}>
+            <div className={openFilter ? "FirstCartPage---SearchPanel": "Close---SearchPanel"}>
               <FilterCloseBtn size={25} className="filtercloseBTN" onClick={closeFilterBTN}/>
                <h3>Filters</h3>
                <div>

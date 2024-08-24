@@ -17,6 +17,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = () => {
   const [activeOpen, setOpen] = useState(false)
+  const [navbar, setNavbar] = useState(false)
  
 //  function Header({size}:{size:string}) {
   const GlobalState = useContext(ShoppingContext);
@@ -37,12 +38,24 @@ const closeSideBar = () => {
     setOpen(false);
   };
 
+  const stickHeader = ()=>{
+    if(window.scrollY >= 40){
+      setNavbar(true)
+      console.log(window.scrollY)
+    }else{
+      setNavbar(false)
+    }
+    
+  }
+
+  window.addEventListener("scroll", stickHeader);
+
 
     return (
       <>
-    <div>
-      <div className="Header">
-        <div className="testing">
+    <div className="header--container">
+       <div className={`Header ${navbar && "Header active"} `}>
+         <div className="testing">
           <div className="Menubar--handle" onClick={showSideBar}>
           {activeOpen ? <FaIcons.FaTimes className="hamburger-" size={20}/>  : 
           <FaIcons.FaBars className= "hamburger" size={20}/>}
@@ -52,7 +65,7 @@ const closeSideBar = () => {
         </div>
 
           <div className="Menubar--container">
-            <div className={`Menuebar ${activeOpen ? "open" : "close"}` }>
+            <div className={`Menuebar ${activeOpen ? "open" : "close"} `}>
               <ul>
                 {/* <li>HOME</li> */}
              <NavLink to="/"> <li onClick={() => { closeSideBar() }}>SHOP</li></NavLink>     
@@ -64,8 +77,9 @@ const closeSideBar = () => {
           </div>
           <div className="Menue--icon">
             <Ci.CiSearch className="search--icon"/>
-            <NavLink to="/Cart" className="cartIcon">   <img src={CartImage} alt="Cart"  /></NavLink> 
-            <span className={state.length > 0 ? "Cart-countHolder": "Cart-countHolder--empty" }>{state.length}</span>  
+            <NavLink to="/Cart" className="cartIcon">   <img src={CartImage} alt="Cart"  />
+            <span className={state.length > 0 ? "Cart-countHolder": "Cart-countHolder--empty" }>
+              {state.length}</span>  </NavLink> 
             </div>
         </div>
     </div>

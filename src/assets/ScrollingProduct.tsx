@@ -40,7 +40,9 @@ function ScrollingProduct() {
                <div>
                 <h3>Today Best Deals!</h3>
                </div>
-               <TimeCounter duration={5 * 22 * 60 * 60 * 1000}/>
+               <TimeCounter duration={5 * 22 * 60 * 60 * 1000}
+               media="defaultView"
+               />
                {/* <div className="ScrollingPage---timeCountDown">
                 <p>Ends in: {12}h : {10}m : {10}s</p>
                </div> */}

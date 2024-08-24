@@ -5,12 +5,13 @@ import "../assets/component styles/scrollingProduct.css";
 
 interface TimerProps {
   duration: number;
-
+  
+  media:string 
     
 }
 
 
-const TimeCounter: React.FC<TimerProps> = ({ duration }) => {
+const TimeCounter: React.FC<TimerProps> = ({ duration,  media }) => {
 const [time, setTime] = useState(duration);
 
 useEffect(()=>{
@@ -32,7 +33,7 @@ const getFormattedTime = (milliseconds:number)=> {
 
   return (
     <>
-    <div className="ScrollingPage---timeCountDown">
+    <div className={`ScrollingPage---timeCountDown ${media ==="shopView" && "---timeCountDownShopView"} `}>
                 <p className="scrolingPage---paragraph">Ends in: {getFormattedTime(time)}</p>
                </div>
     </>

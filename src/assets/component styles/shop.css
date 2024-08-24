@@ -18,3 +18,30 @@
     padding: 10px;
     margin-top: -1em;
 }
+
+.Shop--Firstcartpage{
+  margin-top: 5em;
+}
+
+@media screen and (max-width:375px), (max-width:414px), (max-width:430px){
+
+.Shop---container {
+    text-align: center;
+    flex-direction: column;
+}
+.Shop---title {margin-top: 1em;}
+.Shop---title h1 {font-size: 2em;}
+
+.Shop---imageContainer img{
+ width: 65%;
+}
+
+.shop--giftBreak{
+display: none;
+}
+
+.Shop--Firstcartpage {
+    margin-top: -0.2em;
+}
+
+}
