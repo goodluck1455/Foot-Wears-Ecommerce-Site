@@ -5,16 +5,32 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import CanvasImage from "../images/Group 8.png";
 import { useState, useEffect} from "react";
 import heroImage from "../images/Hero images.png"
+import { useContext } from "react";
+import {ShoppingContext} from "./ShopContext";
+
+
+
+
 
 interface MainPageProps {
-  gamesRef: React.RefObject<HTMLDivElement>;
+  // gamesRef: React.RefObject<HTMLDivElement>;
 }
 
 
 
-const MainPage: React.FC<MainPageProps> = ({ gamesRef }) => {
+const MainPage: React.FC<MainPageProps> = () => {
 
   const [screenSize, setScreenSize] = useState(getScreenSize());
+
+
+  const globalVersion = useContext(ShoppingContext);
+
+  if (!globalVersion) {
+    return <div>Error: Shopping context not available</div>;
+  }
+
+  const { gamesRef } = globalVersion;
+
    
   function getScreenSize() {
     const width = window.innerWidth;

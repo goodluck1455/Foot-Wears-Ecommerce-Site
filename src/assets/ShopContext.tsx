@@ -1,4 +1,4 @@
-import  {createContext, Dispatch, useReducer,  useEffect} from 'react';
+import  {createContext, Dispatch, useReducer,  useEffect, useRef} from 'react';
 // import {priceData4ProductDisplay} from "../assets/PriceData"
 import { GrStatusGood as AddedToCartIcon } from "react-icons/gr";
 import { MdOutlineDangerous as NotAddedToCart } from "react-icons/md";
@@ -17,6 +17,7 @@ type ShopContextType = {
   // g: number;
   dispatch: Dispatch<any>;
   state: any;
+  gamesRef: React.RefObject<HTMLDivElement>;
 
 };
 
@@ -36,7 +37,7 @@ export const ShoppingContext = createContext<ShopContextType | null>(null);
 export const ShopContextProvider = (props:any) => {
   // const [message, setMessage] = useState<string | null>(null);
   // const [popupVisible, setPopupVisible] = useState(false);
- 
+  const gamesRef = useRef<HTMLDivElement| null>(null);
     // const [cartItems, SetCartItems] = useState();
 
     //  const addToCart = (itemId)=>{
@@ -102,7 +103,7 @@ export const ShopContextProvider = (props:any) => {
     localStorage.setItem('cart', JSON.stringify(state));
   }, [state]);
 
-     const contextValue = {state,  dispatch};
+     const contextValue = {state,  dispatch, gamesRef};
        
 
   return (

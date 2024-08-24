@@ -4,8 +4,8 @@ import "./component styles/navigation.css"
 import MainPage from "./MainPage";
 import MovingText from './MovingText';
 import FirstCartPage from "./FirstCartPage"
-import { useRef } from "react";
-
+// import { useContext } from "react";
+// import {ShoppingContext} from "./ShopContext";
 
 
 
@@ -16,17 +16,23 @@ interface HomePageProps {
 const HomePage: React.FC<HomePageProps> = () => {
 // function HomePage({handleClick}) {
 
-      const gamesRef = useRef<HTMLDivElement| null>(null);
+// const globalVersion = useContext(ShoppingContext);
+
+// if (!globalVersion) {
+//   return <div>Error: Shopping context not available</div>;
+// }
+    //  const gamesRef = globalVersion.gamesRef;
+      // const gamesRef = useRef<HTMLDivElement| null>(null);
 
     return (
      
 
 
       <>
-        <MainPage gamesRef={gamesRef} />
+        <MainPage  />
           <MovingText />
           <ScrollingProduct />
-          <FirstCartPage gamesRef={gamesRef}/>
+          <FirstCartPage />
       </>
     )
   }

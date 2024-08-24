@@ -12,6 +12,8 @@ import InputRange from "./InputRange";
 import ProductDisplay from "./ProductDisplay";
 import ReactPaginate from "react-paginate";
 import TurnHeadsLater from "./TurnHeadsLater";
+import { useContext } from "react";
+import {ShoppingContext} from "./ShopContext";
 // import Navigation from "./Navigation";
 // import { useCart } from "react-use-cart";
 // import ProductLayout from "./ProductLayout";
@@ -43,15 +45,31 @@ import TurnHeadsLater from "./TurnHeadsLater";
 
 interface FirstCartPageProps {
   showTurnHeadsLater?: boolean;
-  gamesRef: React.RefObject<HTMLDivElement>;
+  // gamesRef: React.RefObject<HTMLDivElement>;
   // handleClick: () => void;
 }
 
 
-const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true, gamesRef}) => {
+const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true}) => {
 // const FirstCartPage: React.FC = ({handleClick}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
   const [openFilter, setOpenFilter] = useState(true);
+
+
+
+
+  //nbsijbjksnbkjdnfv
+
+  const globalVersion = useContext(ShoppingContext);
+
+  if (!globalVersion) {
+    return <div>Error: Shopping context not available</div>;
+  }
+
+  const { gamesRef } = globalVersion;
+
+
+  //jbsdijvfjds
 
   const [productDisplay] = useState(priceData4ProductDisplay.slice(0, 200))
 
