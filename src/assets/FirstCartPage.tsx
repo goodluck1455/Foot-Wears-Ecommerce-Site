@@ -172,7 +172,7 @@ const changePage = ({selected}: { selected: number })=>{
               <p>Filter</p> <FilterIcon size={20} className="filterIcon"/>
             </div>
             {showTurnHeadsLater && <TurnHeadsLater />}
-           {/* <TurnHeadsLater  media="HomeComponent"/> */}
+          
          <div className="FirstCartPage---ViewPanel">
             <div className={openFilter ? "FirstCartPage---SearchPanel": "Close---SearchPanel"}>
               <FilterCloseBtn size={25} className="filtercloseBTN" onClick={closeFilterBTN}/>

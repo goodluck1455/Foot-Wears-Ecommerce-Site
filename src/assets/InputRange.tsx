@@ -1,15 +1,12 @@
-import { useState } from 'react';
-import { Range, getTrackBackground } from 'react-range';
-import "../assets/component styles/inputRange.css"
-
-
+import { useState } from "react";
+import { Range, getTrackBackground } from "react-range";
+import "../assets/component styles/inputRange.css";
 
 const MIN = 0;
 const MAX = 1000000;
 
-
 const InputRange = () => {
-    const [values, setValues] = useState([30000, 500000]);
+  const [values, setValues] = useState([30000, 500000]);
 
   return (
     <div className="range-slider-container">
@@ -26,23 +23,21 @@ const InputRange = () => {
             style={{
               background: getTrackBackground({
                 values,
-                colors: ['#151414', '#151414', '#151414'],
+                colors: ["#151414", "#151414", "#151414"],
                 min: MIN,
-                max: MAX
-              })
-            }}
-          >
+                max: MAX,
+              }),
+            }}>
             {children}
           </div>
         )}
         renderThumb={({ props }) => (
-          <div
-            {...props}
-            className="range-slider-thumb"
-          />
+          <div {...props} className="range-slider-thumb" />
         )}
       />
-      <p className="RangeStyle">Range: ${values[0]} - ${values[1]}</p>
+      <p className="RangeStyle">
+        Range: ${values[0]} - ${values[1]}
+      </p>
     </div>
   );
 };

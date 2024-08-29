@@ -640,6 +640,10 @@ font-weight: bolder;
 
 }
 
+.checkout--OrderSummary{
+  display: none;
+}
+
 /* CSS FOR EMPTY CART BEGINS HERE */
 
 .cart--productLength{
@@ -765,7 +769,72 @@ font-weight: bolder;
     margin-left: 56px;
 }
 
+/* Media query for checkoutpage begins here */
 
+.checkoutInfoContainer {
+flex-direction: column;
+position: relative;
 
+}
+
+.checkOutInput--Container {
+  flex-direction: column;
+}
+
+.checkOutExpiration--Container input, .checkOutExpiration--Container .ExpiringIput {
+  width: unset;
+}
+.checkOutInput--Container input:focus{
+  outline: none;
+}
+.checkout--selectedOption {
+  width: 100%;}
+
+.checkOutExpiration--Container{
+    gap: 28px;
+}
+.checkOutExpiration--Container input{
+  width: 88.5%;
+}
+
+.checkOutExpiration--Container input:focus{
+  outline: none;
+}
+.checkOutExpiration--Container .ExpiringIput{
+  width: 100%;
+}
+
+.checkoutInfor {
+  border-radius: 20px;
+}
+
+.Checkout--summary {
+ position: absolute;
+ border-radius: 0px;
+ margin-left: -28em;
+}
+.Checkout--summaryClose{
+  margin-left: 0;
+  transition: 1s ease-in;
+}
+
+.checkout--breakTag{
+    display: none;
+}
+
+.checkout--OrderSummary{
+  display: block;
+  background: #141B34;
+  color: white;
+  padding: 10px;
+  font-size: 0.9em;
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.checkout---summaryContainer{
+  display: flex;
+  gap: 5px;
+}
 
 }

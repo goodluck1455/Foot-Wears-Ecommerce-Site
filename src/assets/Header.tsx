@@ -41,7 +41,7 @@ const closeSideBar = () => {
   const stickHeader = ()=>{
     if(window.scrollY >= 40){
       setNavbar(true)
-      console.log(window.scrollY)
+      // console.log(window.scrollY)
     }else{
       setNavbar(false)
     }

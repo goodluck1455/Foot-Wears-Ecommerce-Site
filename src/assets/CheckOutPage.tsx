@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import { FaAnglesDown } from "react-icons/fa6";
 import "./component styles/cart.css"
 import FirstNameIcon from "../images/notification-bubble.png"
 import EmailIcon from "../images/mail-open-01.png"
@@ -24,7 +25,7 @@ interface CheckOutPageProps {
 }
 
 const CheckOutPage: React.FC<CheckOutPageProps> = () => {
-
+const [opeOderSummary, setOpeOderSummary] = useState(false);
   const GlobalState = useContext(ShoppingContext)!;
  
      const state = GlobalState.state;
@@ -51,7 +52,9 @@ const CheckOutPage: React.FC<CheckOutPageProps> = () => {
       minimumFractionDigits: 2,
     });
 
-  
+       const opencheckOutSummary = ()=>{
+        setOpeOderSummary(true)
+       }
 
     return (
       <>
@@ -61,14 +64,23 @@ const CheckOutPage: React.FC<CheckOutPageProps> = () => {
         <h4>Continue shopping</h4>
         </div>  </NavLink> 
 
-
+              <div className='checkout--OrderSummary'>
+                    <div className='checkout---summaryContainer' onClick={opencheckOutSummary}>
+                    <p>Show order summary</p> <span><FaAnglesDown /> </span>
+                    </div>
+                        <div>
+                           <p>{formattedTotalPrice}</p>
+                        </div>
+                      </div>
 
                 <div className='checkoutInfoContainer'>
 
                     <div className='checkoutInfor'>
                         <h3>Checkout Details</h3>
-                        <p>Ready to checkout? Enter your payment information to <br />
+                        <p>Ready to checkout? Enter your payment information to <br className="checkout--breakTag"/>
                       secure your order.</p>
+
+  
 
                       <form action="" className='checkoutForm'>
                           <h4 className='checkoutForm---shippingHading'>Shipping Information </h4>
@@ -188,24 +200,24 @@ const CheckOutPage: React.FC<CheckOutPageProps> = () => {
                       </form>
                    
                     </div>
-                    <div className='Checkout--summary'>
+                    <div className={`Checkout--summary ${opeOderSummary && "Checkout--summaryClose"} `}>
                         <h3>Order Summary</h3>
                         <p className='checkOut--OrderDetailsInfor'>Check your order details</p>
 
                         <div className='Checkout--summaryItems'>
 
-                              {/* summary begins here */}
+                             
                         {state.map((item:any,  index:number)=>{
                           return(
                             <>
                      
                               <div className="CheckOutInfo_OnItem--Container" key={index} >
                                   <div className="CheckOut--BasketItemInfor--Container">
-                                    {/* <div className="checkout--Cssadjustment"> */}
+                                   
                                     <div className="CheckOutItem--image--container">
                                     <img src={item.Image} alt="" />
                                     </div>
-                                   {/* </div> */}
+                                   
                                       
                                     <div className="Checkout--ItemInfo">
                                     <h4>{item.productName}</h4>

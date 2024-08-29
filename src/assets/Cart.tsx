@@ -256,7 +256,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                       
                       // ()=>confirmDelete}
                     //  onClick={()=> dispatch({ type: "REMOVE", payload: {id: item.id } })}
-                     >Delete</button> 
+                     >Remove</button> 
                        </div>
                            </div>
                         </div>
