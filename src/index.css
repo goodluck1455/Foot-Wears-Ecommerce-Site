@@ -210,6 +210,11 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
 }
 
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
+
+  html{
+    scroll-padding-top: 50px;
+  }
+
   .testing {  
     flex-direction: column;
 }
