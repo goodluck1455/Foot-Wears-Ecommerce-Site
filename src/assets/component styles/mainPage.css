@@ -119,6 +119,22 @@
 .MainPage--paragraph {
   line-height: 25px;}
 
-  .mainPage--button {width: 40%;}
+  .mainPage--button {
+    z-index: 999;
+    width: 40%;}
 
 }
+
+@media screen and (max-width:320px){
+  .MainPage--paragraph {
+    font-size: 0.9em;
+}
+
+.mainPage--title {
+  font-size: 1.6em;
+}
+
+
+
+}
+
