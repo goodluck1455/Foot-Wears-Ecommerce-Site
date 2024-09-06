@@ -133,6 +133,33 @@
     display: none;
 }
 
+@media screen and (max-width:430px){
+    .firstCARTpAGE---filterTag{ 
+        margin-left: 19.8em; 
+          }
+}
+
+@media screen and (max-width:414px){
+
+    .firstCARTpAGE---filterTag{ 
+  margin-left: 19.5em; 
+    }
+}
+
+
+@media screen and (max-width:390px){
+    .firstCARTpAGE---filterTag{ 
+        margin-left: 17.5em; 
+          }
+}
+
+@media screen and (max-width:375px){
+    .firstCARTpAGE---filterTag{ 
+        margin-left: 16em; 
+          }
+}
+
+
 
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 
@@ -195,7 +222,7 @@
         border-radius: 8px;
         padding: 9px 9px;
         gap: 7px;
-        margin-left: 16em;
+        /* margin-left: 16em; */
         margin-top: 1.5em;
         cursor: pointer;
     }

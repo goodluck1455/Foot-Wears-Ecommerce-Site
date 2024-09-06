@@ -173,17 +173,40 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
 @media screen and (max-width:430px){
   .search--icon {
     margin-left: 3.2em;}
+    .Cart-countHolder {
+      top: -0.5em;
+      left: 8.6em;}
 }
 
 @media screen and (max-width:414px){
   .search--icon {
     margin-left: 2.5em;}
+    .Cart-countHolder {
+      top: -0.5em;
+      left: 7.6em;}
 }
 
+
+@media screen and (max-width:390px){
+  .search--icon {
+  margin-left: 2em;}
+
+
+  .Cart-countHolder {
+    top: -0.5em;
+    left: 6.6em;
+}
+
+
+}
 
 @media screen and (max-width:375px){
   .search--icon {
   margin-left: 1.5em;}
+
+  .Cart-countHolder {
+    top: -0.5em;
+    left: 5.6em;}
 }
 
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
@@ -276,9 +299,7 @@ margin-right: unset;
     font-size: 1.7em;
 }
 
-.Cart-countHolder {
-  top: -0.5em;
-  left: 5.6em;}
+
 
 }
 

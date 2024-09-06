@@ -231,6 +231,36 @@
   margin-top: 2em; */
 }
 
+
+@media screen and (max-width:430px){
+ 
+}
+
+@media screen and (max-width:414px){
+
+
+}
+
+
+@media screen and (max-width:390px){
+  
+}
+
+@media screen and (max-width:375px){
+  .---timeCountDownShopView {
+    top: 24.4em;
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
     .imageSlider--container {
       margin-left: 0; 
@@ -258,7 +288,7 @@
 .---timeCountDownShopView {
   display: block;
   position: absolute;
-  top: 24.4em;
+  /* top: 24.4em; */
   border-radius: 10px;
   margin-left: 8px;
   font-size: 0.9em;
@@ -275,7 +305,8 @@
 @media screen and (max-width:320px){
 
   .---timeCountDownShopView {
-    top: 23em}
+    top: 26.2em; 
+  }
 
     /* .imageSlide--A {
     

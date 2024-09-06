@@ -838,3 +838,12 @@ position: relative;
 }
 
 }
+
+
+@media screen and (max-width:320px){
+
+.cart--DeleteOption, .Cart---SaveItem {
+  width: 30%;
+}
+
+}
