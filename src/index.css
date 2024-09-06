@@ -281,3 +281,20 @@ margin-right: unset;
   left: 5.6em;}
 
 }
+
+
+@media screen and (max-width:320px){
+  .Header--logo {
+    margin-left: 2.5em;}
+
+    .search--icon {
+      margin-left: 1em;
+  }
+
+  .Cart-countHolder {
+    left: 5em;
+}
+
+
+
+}

@@ -46,3 +46,35 @@
     top: -0.5em;
     left: 5.6em;}
   }
+
+
+
+  @media screen and (max-width:320px){
+    /* .ProductDisplay--container {
+      height:12em
+    } */
+
+    .ProductDisplay--container {
+      width: 90%;
+      overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        height: 11em;
+  }
+
+  .scrollingPage---productName {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.ProductDisplay---add-to-cart {
+  top: 0.1em;
+  left: 4em;}
+
+
+
+  
+  
+  }

@@ -73,3 +73,10 @@
     
    
 }
+
+@media screen and (max-width:320px){
+.Pagination--mainHolder {
+    font-size: 0.8em;
+    margin-left: 1em;
+}
+}

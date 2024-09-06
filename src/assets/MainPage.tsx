@@ -5,10 +5,11 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import CanvasImage from "../images/Group 8.png";
 import { useState, useEffect } from "react";
 import heroImage from "../images/Hero images.png";
-import { useContext } from "react";
-import { ShoppingContext } from "./ShopContext";
+// import { useContext } from "react";
+// import { ShoppingContext } from "./ShopContext";
 import { fadeIn } from "../Variant";
 import { motion } from "framer-motion";
+import { HashLink } from "react-router-hash-link";
 
 interface MainPageProps {
   // gamesRef: React.RefObject<HTMLDivElement>;
@@ -17,26 +18,34 @@ interface MainPageProps {
 const MainPage: React.FC<MainPageProps> = () => {
   const [screenSize, setScreenSize] = useState(getScreenSize());
 
-  const globalVersion = useContext(ShoppingContext);
+  // const globalVersion = useContext(ShoppingContext);
 
-  if (!globalVersion) {
-    return <div>Error: Shopping context not available</div>;
-  }
+  // if (!globalVersion) {
+  //   return <div>Error: Shopping context not available</div>;
+  // }
 
-  const { gamesRef } = globalVersion;
+  // const { gamesRef } = globalVersion;
 
-  const handleClick = () => {
-    if (gamesRef.current) {
-      console.log("Scrolling to:", gamesRef.current);
-      gamesRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start", // Ensure the block is properly set
-        inline: "nearest",
-      });
-    } else {
-      console.log("gamesRef.current is null or undefined");
-    }
-  };
+  // const handleClick = () => {
+  //   if (gamesRef.current) {
+  //     console.log("gamesRef.current:", gamesRef.current);
+  //     gamesRef.current.scrollIntoView({
+  //       behavior: "smooth",
+        // block: "start", 
+        // inline: "nearest",
+  //     });
+  //   } else {
+  //     console.log("gamesRef.current is null or undefined");
+  //   }
+  // };
+
+  // const handleClick = (elementRef:any)=>{
+  // window.scrollTo({
+  // top: elementRef.current.offsetTop,
+  // behavior: "smooth",
+  // })
+  // }
+
 
   function getScreenSize() {
     const width = window.innerWidth;
@@ -72,17 +81,19 @@ const MainPage: React.FC<MainPageProps> = () => {
               Step lightly:sustainble footwear for Every <br />
               step. Discover stylish and confortable shoes
             </p>
-            <button
+            
+             <HashLink  to="#mainPage" smooth > <button
               className="mainPage--button"
-              onTouchStart={handleClick}
-              onClick={handleClick}>
+              // onTouchStart={handleClick}
+              // onClick={()=>handleClick(gamesRef )}
+              >
               <span className="mainPage--button--text">Shop Now</span>
               <MdKeyboardDoubleArrowRight className="mainPage--arrow" />
-            </button>
+            </button> </HashLink> 
           </motion.div>
 
           <motion.div
-            variants={fadeIn("left", 0.3)}
+            variants={fadeIn("down", 0.2)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}

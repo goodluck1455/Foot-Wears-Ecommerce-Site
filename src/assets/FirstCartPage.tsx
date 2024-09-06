@@ -167,7 +167,7 @@ const changePage = ({selected}: { selected: number })=>{
 
     return (
       <>
-       <div className="FirstCartPage---container" ref={gamesRef}>
+       <div className="FirstCartPage---container" ref={gamesRef} id="mainPage">
             <div className="firstCARTpAGE---filterTag" onClick={openFilterBtn}>
               <p>Filter</p> <FilterIcon size={20} className="filterIcon"/>
             </div>

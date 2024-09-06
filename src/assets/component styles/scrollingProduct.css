@@ -146,6 +146,7 @@
   }
   
   .scrollingPage---productName {
+    /* white-space: nowrap; */
     color: #151414;
     font-size: 14px;
     font-weight: 600;
@@ -263,33 +264,49 @@
   font-size: 0.9em;
 }
 
+.scrollingPage---productName {
+  white-space: nowrap;
+}
+
   
 }
 
 
+@media screen and (max-width:320px){
+
+  .---timeCountDownShopView {
+    top: 23em}
+
+    /* .imageSlide--A {
+    
+      height: 64%;
+  } */
+  .Scrolling--Oldprice {
+    font-size: 0.7em;
+  }
+
+  .Scrolling--NewPrice {
+    font-size: 0.8em;
+}
+
+.imageSlide--A {
+  height: 62%;}
+
+ 
+  .imageSlider--container {
+    height: 11em;
+    width: 70%;
+  }
 
 
-.jbshdv{
-  /* Button */
+  .ScrollingPage---timeCountDown {
+    font-size: 0.8em;
+}
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 5px;
-gap: 10px;
+.scrolingPage---deals h3 {
+  font-size: 0.8em;
+}
 
-width: 257px;
-height: 64px;
-
-/* Danger */
-background: linear-gradient(90deg, #FB6969 0%, #B91D1D 100%);
-border-radius: 10px;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
 
 }
+

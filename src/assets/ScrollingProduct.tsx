@@ -6,6 +6,8 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { fadeIn } from "../Variant";
+import { motion } from "framer-motion";
 
 
 // import KswissHeel from "../images/Group 18.png"
@@ -34,7 +36,12 @@ function ScrollingProduct() {
 
     return (
       <>
-     <div>
+     <motion.div
+     variants={fadeIn("right", 0.2)}
+     initial="hidden"
+     whileInView={"show"}
+    //  viewport={{ once: false, amount: 0.3 }}
+     >
         <div className="scrolingPage--container">
             <div className="scrolingPage---deals">
                <div>
@@ -68,6 +75,10 @@ function ScrollingProduct() {
               360: {
                 slidesPerView: 1.5,
                 spaceBetween: -20,
+              },
+              320: {
+                slidesPerView: 1.5,
+                spaceBetween: -40,
               },
               768: {
                 slidesPerView: 4,
@@ -104,7 +115,7 @@ function ScrollingProduct() {
 
 
         </div>
-     </div>
+     </motion.div>
       </>
     )
   }

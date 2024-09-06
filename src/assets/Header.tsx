@@ -4,7 +4,7 @@ import * as FaIcons from "react-icons/fa"
 import CartImage from "../images/Vector.png"
 import { NavLink } from "react-router-dom"
 // import { useCart } from "react-use-cart";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect} from "react";
 // import { useState, useEffect } from "react";
 // import { useCart } from "react-use-cart";
 import {ShoppingContext} from "./ShopContext";
@@ -39,7 +39,7 @@ const closeSideBar = () => {
   };
 
   const stickHeader = ()=>{
-    if(window.scrollY >= 40){
+    if(window.scrollY >= 70){
       setNavbar(true)
       // console.log(window.scrollY)
     }else{
@@ -48,7 +48,14 @@ const closeSideBar = () => {
     
   }
 
-  window.addEventListener("scroll", stickHeader);
+  useEffect(() => {
+    window.addEventListener("scroll", stickHeader);
+    return () => {
+      window.removeEventListener("scroll", stickHeader);
+    };
+  }, []);
+
+  // window.addEventListener("scroll", stickHeader);
 
 
     return (

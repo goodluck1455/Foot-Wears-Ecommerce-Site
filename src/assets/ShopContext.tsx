@@ -56,11 +56,7 @@ export const ShopContextProvider = (props:any) => {
           toast.error(`${action.payload.productName} is already in the cart`, {
             icon: <NotAddedToCart style={{ color: 'red',  fontSize: "1.5em" }} />,
           });
-          // setMessage(`${action.payload.productName} is already in the cart`);
-          // setPopupVisible(true);
-          //           setTimeout(() => {
-          //               setPopupVisible(false);
-          //           }, 7000);
+         
           return state; // Do not add the item if it already exists
         } else {
           const newState = [...state, action.payload];

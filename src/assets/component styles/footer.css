@@ -67,7 +67,6 @@ padding-bottom: 15px;
         gap: 2em;
         flex-direction: column;
         padding: 1em 0.8em 1em 0.8em;
-      
        align-items: center;
     }
     
@@ -86,3 +85,15 @@ padding-bottom: 15px;
         margin-left: 6em}
 }
 
+@media screen and (max-width:320px){
+
+
+    .Footer---left-section {
+        gap: 2em;
+    }
+
+
+
+   
+
+}
