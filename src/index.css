@@ -11,7 +11,7 @@ html{
 
 body{
   background: #E8EBF8;
-  margin-top: 3.5em;
+  /* margin-top: 3.5em; */
 }
 
 
@@ -20,7 +20,7 @@ body{
   display: flex;
   justify-content: space-between;
   padding: 1em;
-  margin-top: -3.5em;
+  /* margin-top: -3.5em; */
 
 }
 
@@ -28,7 +28,7 @@ body{
   position: fixed;
  
   width: 100%;
-  /* top: 0; */
+  top: 0;
   z-index: 99;
   transition: 1s ease-in;
 }
@@ -170,6 +170,69 @@ padding-right: 5px;
 /********************************************
 MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE 
 ***********************************************/
+@media screen and (max-width:768px), (max-width:600px),  (max-width:820px){
+  .testing {  
+    flex-direction: column;
+}
+.Header {
+  height: 1.5em;}
+
+  .Menuebar ul {
+    flex-direction: column;
+    position: absolute;
+    background: #141B34;
+    padding: 10px;
+    width: 9em;
+    height: 7em;
+    margin-top: -1.5em;
+    text-align: center;
+    
+  }
+
+  .Menuebar ul li{
+    margin-top: 0.7em;
+  }
+  .Menubar--handle{
+   display: block;
+   margin-left: 0.5rem;
+  position: absolute;
+  top: 1em;
+  color: white;
+  }
+  
+  .open{
+    position: absolute;
+    left: -0.5rem;
+    transition: 1s ease-in-out; 
+  }
+  
+  .close{
+    position: absolute;
+      left: -14rem;
+  transition: 1s ease-in-out;
+  }
+
+
+  .Header--logo {
+   font-size: 28px;
+  margin-left: 7.5em;
+   margin-top: -0.1em;
+  }
+
+  .Menue--icon {
+    margin-right: 0.2em;
+    margin-top: -0.3em;
+}
+  
+.Menuebar ul .active {
+  border-bottom: none;
+}
+  
+}
+
+
+
+
 @media screen and (max-width:430px){
   .search--icon {
     margin-left: 3.2em;}
@@ -209,6 +272,11 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
     left: 5.6em;}
 }
 
+
+
+
+
+
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 
   html{
@@ -219,16 +287,13 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
     flex-direction: column;
 }
 .Header {
-  /* position: sticky;
-  z-index: 999; */
-  
   height: 1.5em;}
 
 
-  .Header.active{
-    top: 3em;
+  /* .Header.active{ */
+    /* width: unse; */
   
-  }
+  /* } */
 
 .Menuebar ul {
   flex-direction: column;
@@ -239,7 +304,7 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
   height: 7em;
   margin-top: -1.5em;
   text-align: center;
-  /* border-top: 2px solid white; */
+  
 }
 .Menubar--handle{
  display: block;
@@ -247,24 +312,18 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
 position: absolute;
 top: 1.4em;
 color: white;
-
 }
 
 .open{
-  /* display: block; */
   position: absolute;
   left: -0.5rem;
   transition: 1s ease-in-out; 
-   /* z-index: 1;
-  top: 1.5em; */
 }
 
 .close{
   position: absolute;
     left: -14rem;
 transition: 1s ease-in-out;
-/* z-index: 1; */
-
 }
 
 
@@ -280,12 +339,13 @@ transition: 1s ease-in-out;
 .Header--logo {
   margin-left: 4em;
   font-size: 1.3em;
- margin-top: 0.3em;
+  margin-top: 0.3em;
 }
 
 .Menue--icon {
   display: flex;
 margin-top: 0.2em;
+margin-right: 3em;
 }
 
 
@@ -299,7 +359,6 @@ margin-right: unset;
   margin-left: 2em;} */
 
   .search--icon {
-
     margin-right: -0.3em;
     font-size: 1.7em;
 }

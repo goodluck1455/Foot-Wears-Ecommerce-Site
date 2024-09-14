@@ -45,12 +45,13 @@ import {ShoppingContext} from "./ShopContext";
 
 interface FirstCartPageProps {
   showTurnHeadsLater?: boolean;
+  containerClassName?: string;
   // gamesRef: React.RefObject<HTMLDivElement>;
   // handleClick: () => void;
 }
 
 
-const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true}) => {
+const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true, containerClassName}) => {
 // const FirstCartPage: React.FC = ({handleClick}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
   const [openFilter, setOpenFilter] = useState(true);
@@ -66,7 +67,7 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true}
     return <div>Error: Shopping context not available</div>;
   }
 
-  const { gamesRef } = globalVersion;
+ 
 
 
   //jbsdijvfjds
@@ -167,7 +168,7 @@ const changePage = ({selected}: { selected: number })=>{
 
     return (
       <>
-       <div className="FirstCartPage---container" ref={gamesRef} id="mainPage">
+       <div className={containerClassName || "FirstCartPage---container"} id="mainPage">
             <div className="firstCARTpAGE---filterTag" onClick={openFilterBtn}>
               <p>Filter</p> <FilterIcon size={20} className="filterIcon"/>
             </div>

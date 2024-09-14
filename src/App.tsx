@@ -8,6 +8,7 @@ import Shop from './assets/Shop';
 import Cart from './assets/Cart';
 import NotFound from './assets/NotFound';
 import CheckOutPage from './assets/CheckOutPage';
+import ScrollToTop from './assets/ScrollTop';
 // import { useState } from "react";
 
 
@@ -58,11 +59,14 @@ const App: React.FC<AppProps> = () => {
   return (
     <>
     <BrowserRouter>
- 
+ 	<ScrollToTop />
      <Header  />
 
      <main>
        <Routes>
+
+	
+
         <Route index element={<HomePage  />}/>
         <Route path='Shop' element={<Shop /> }/>
         <Route path='Cart' element={<Cart  /> }/>

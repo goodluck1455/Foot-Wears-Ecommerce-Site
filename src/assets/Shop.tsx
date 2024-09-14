@@ -14,6 +14,7 @@ function Shop() {
      if (width <= 414) return 'medium';
      if (width <= 430) return 'large';
      if (width <= 768) return 'xLarge';
+     if (width <= 820) return 'size_820';
      return 'default';
    }
  
@@ -44,10 +45,13 @@ function Shop() {
     
        <div className="Shop--Firstcartpage">
        <FirstCartPage 
+          containerClassName="FirstCartPageB---container"
            showTurnHeadsLater={
             screenSize === 'small' ||
             screenSize === "medium" ||
-            screenSize === "large" 
+            screenSize === "large" ||
+            screenSize === "size_820" ||
+            screenSize === "xLarge" 
          }
        />
        </div>

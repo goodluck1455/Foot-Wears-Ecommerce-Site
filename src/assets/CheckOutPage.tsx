@@ -11,11 +11,20 @@ import VisaLogo from "../images/visa (1).png"
 import MasterCardLogo from "../images/mastercard.png"
 import PaypalLogo from "../images/paypal.png"
 import CreditCard from "../images/credit-card.png"
+import { IoCloseSharp as FilterCloseBtn} from "react-icons/io5";
+import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 // import image from "../images/nike-sneakers-11.png";
 import { useContext} from "react";
 // import { useState, useEffect } from "react";
 // import { useCart } from "react-use-cart";
 import {ShoppingContext} from "./ShopContext";
+
+// for image sider
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import 'swiper/css/navigation';
+import { Navigation, Pagination } from 'swiper/modules';
 
 
 
@@ -54,6 +63,10 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
 
        const opencheckOutSummary = ()=>{
         setOpeOderSummary(true)
+       }
+
+       const closeOpencheckOutSummary = ()=>{
+        setOpeOderSummary(false)
        }
 
     return (
@@ -203,14 +216,53 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
                     <div className={`Checkout--summary ${opeOderSummary && "Checkout--summaryClose"} `}>
                         <h3>Order Summary</h3>
                         <p className='checkOut--OrderDetailsInfor'>Check your order details</p>
-
+                        <FilterCloseBtn size={25} className="CheckOutcloseBTN" onClick={closeOpencheckOutSummary}/>
                         <div className='Checkout--summaryItems'>
 
+                            
+
+                        <Swiper
+                          
+                          spaceBetween={15}
+                          slidesPerView={1.3}
+                          // scrollbar={{ draggable: true }}
+                          navigation={{
+                            nextEl: '.checkout-next',
+                            prevEl: '.checkout-prev',
+                          }}
+                          pagination
+                          modules={[Navigation, Pagination]}
+                          breakpoints={{
+                            375: {
+                              slidesPerView: 1,
+                              spaceBetween: 20,
+                            },
+                            360: {
+                              slidesPerView: 1,
+                              spaceBetween: 20,
+                            },
+                            320: {
+                              slidesPerView: 1,
+                              spaceBetween: 20,
+                            },
+                            768: {
+                              slidesPerView: 1.5,
+                              spaceBetween: 10,
+                            },
+                            1024: {
+                              slidesPerView: 1.5,
+                              spaceBetween: 15,
+                            },
+                          }}
+                          // navigation
+                          // pagination={{ clickable: true }}
+                          >
                              
                         {state.map((item:any,  index:number)=>{
                           return(
                             <>
-                     
+                         
+                       <SwiperSlide >
                               <div className="CheckOutInfo_OnItem--Container" key={index} >
                                   <div className="CheckOut--BasketItemInfor--Container">
                                    
@@ -242,9 +294,14 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
                                       <p>x {item.quantity || 1}</p>
                                     </div>
                                     </div>
-                                  
+                                    </SwiperSlide>
+                                   
                                 </>
                         )})}
+                            <div className="checkout-prev "><MdKeyboardDoubleArrowLeft  /></div>
+                            <div className="checkout-next"><MdKeyboardDoubleArrowRight /></div>
+                         </Swiper>
+                         
                               {/* <div className="CheckOutInfo_OnItem--Container">
                                 <div className="CheckOut--BasketItemInfor--Container">
                                   <div className="CheckOutItem--image--container">
