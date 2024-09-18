@@ -198,6 +198,38 @@
 
 
 }
+@media screen and (max-width:568px){
+    .firstCARTpAGE---filterTag {
+        margin-left: 24em;}
+
+
+        .FirstCartPage---ViewPanel {
+            justify-content: center;
+            /* margin-left: 12px; */
+        }
+    
+        .FirstCartPage---SearchPanel {
+            margin-left: -43em;}
+    
+            .FirstCarPge---ProductDisplay {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1em;  
+            }
+    
+    
+         
+              .ProductDisplay---add-to-cart {
+                    left: 3em;
+                    top: 0em;
+            } 
+    
+            .Close---SearchPanel{
+                width: 50%;
+            }
+}
+
+
+
 
 @media screen and (max-width:430px){
     .firstCARTpAGE---filterTag{ 
@@ -232,7 +264,7 @@
 .FirstCartPage---SearchPanel {
    z-index: 1;
     position: absolute;
-    margin-left: -13em;
+    margin-left: -35em;
    height: auto;
    transition: 1s ease-in;
    border: none;

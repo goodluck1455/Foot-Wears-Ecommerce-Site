@@ -67,6 +67,16 @@ white-space: nowrap;
 
   }
 
+  @media screen and (max-width:568px){
+    .imageSlide--A {height: 61%;}
+
+    .ProductDisplay--container {
+      height: 12em;
+        width: 10em;
+        overflow: visible;}
+
+  }
+
 
   @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
   .ProductDisplay---add-to-cart {
@@ -75,7 +85,12 @@ white-space: nowrap;
 
     .ProductDisplay--container {
       overflow: visible;
+      height: unset;
+      width: unset;
   }
+
+
+
 }
 
 

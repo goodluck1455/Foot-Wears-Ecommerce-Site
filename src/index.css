@@ -229,7 +229,29 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
 }
   
 }
+@media screen and (max-width:568px){
+  .Header--logo { 
+    margin-left: 4em;}
 
+    .Menue--icon {
+      margin-left: 1em;
+      /* width: 100%; */
+  }
+
+  /* .Menue--icon img {
+    margin-right: 2em;
+} */
+
+
+
+
+html{
+  scroll-padding-top: 150px;
+}
+
+
+
+}
 
 
 
@@ -346,6 +368,7 @@ transition: 1s ease-in-out;
   display: flex;
 margin-top: 0.2em;
 margin-right: 3em;
+margin-left: unset;
 }
 
 
@@ -380,6 +403,8 @@ margin-right: unset;
     left: 5em;
 }
 
-
+.Menue--icon {
+  margin-left: -0.4em;
+}
 
 }

@@ -968,6 +968,7 @@ position: relative;
  position: absolute;
  border-radius: 0px;
  margin-left: -28em;
+ height: 22em;
 }
 .Checkout--summaryClose{
   margin-left: 1em;
@@ -1000,11 +1001,12 @@ position: relative;
 
 
   .CheckOut--numberOfItemSelected {
-    width: 12%;
-}
+    margin-right: 0px;
+    width: 19%;
+    margin-left: 1em;}
 
-.Checkout--ItemInfo h4{
-  text-overflow: ellipsis;
+.Checkout--ItemInfo{
+  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -1019,6 +1021,20 @@ position: relative;
 
 .swiper-pagination-bullet {
   background: white;}
+
+
+  .checkout-ProductName, .Cart--Edition{
+    overflow: hidden;
+    text-overflow: ellipsis;
+   }
+
+   .CheckOutItem--image--container { 
+    height: 4em;
+    margin-top: 0.3em;
+}
+
+
+   
 }
 
 
@@ -1028,9 +1044,48 @@ position: relative;
   width: 30%;
 }
 
+.checkoutInfor {
+  width: 18em;
+}
+
+.CheckOut---checkBoxContainer-A input[type="checkbox"] {
+  margin-right: 8px;
+}
+.checkOutExpiration--Container input, .checkOutExpiration--Container .ExpiringIput {
+  width: 83.5%;
+}
+.checkOutExpiration--Container {
+  gap: 0px;
+}
+.Checkout--summaryItems {
+  width: 14em;
+}
+
+.Checkout--summaryClose {
+  margin-left: 0.5em;}
+
+  .Checkout--summaryClose p, .Checkout--summaryClose h5{
+   font-size: 0.8em; 
+  }
+  .Checkout--ItemInfo {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.CheckOut--numberOfItemSelected {
+  margin-right: 0px;
+  width: 19%;
+  margin-left: 1em;}
 
 
+  .checkout-ProductName, .Cart--Edition{
+   overflow: hidden;
+   text-overflow: ellipsis;
+  }
 
-
+  .CheckOutItem--image--container {
+    height: 3em; 
+    margin-top: 1em;
+}
 
 }

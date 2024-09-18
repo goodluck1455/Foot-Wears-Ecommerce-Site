@@ -97,10 +97,30 @@
 .mainPage--button {
   width: 20%;}
 
-
  }
   
 
+ @media screen and (max-width:568px){
+  .ShoeImage----container {
+    margin-top: 1em;
+    margin-left: -4em;
+  }
+
+  .ShoeImage--wahala {
+    width: 86%;
+    margin-left: 4em;
+    height: unset;
+  }
+
+  .TagCircle {
+    margin-top: 0em;
+    margin-left: 8em;}
+
+    .mainPage--button {
+      width: 25%;
+    }
+
+ }
 
 
  
@@ -119,7 +139,7 @@
   }
 
     .TagCircle {
-   
+      margin-top:3em;
       margin-left: 1.5em;
       width: 20%;
   }
@@ -132,6 +152,7 @@
 }
 
 .ShoeImage----container {
+  margin-left: unset;
   margin-top: -4em;
 }
 
@@ -156,7 +177,8 @@
 .mainPage--title {
   font-size: 1.6em;
 }
-
+.mainPage--button {
+  width: 42%;}
 
 
 }

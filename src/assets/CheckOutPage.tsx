@@ -272,7 +272,7 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
                                    
                                       
                                     <div className="Checkout--ItemInfo">
-                                    <h4>{item.productName}</h4>
+                                    <h4 className="checkout-ProductName">{item.productName}</h4>
                                     <p className="Cart--Edition">Black lasted edition</p>
                                     <div className="checkOut--sizeQuantity">
                                     <p className="Cart--Edition">{item.size || `20-30L` }</p>
