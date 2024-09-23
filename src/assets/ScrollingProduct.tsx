@@ -90,7 +90,7 @@ function ScrollingProduct() {
               },
 
               1024: {
-                slidesPerView: 6,
+                slidesPerView: 5,
                 spaceBetween: 15,
               },
             }}

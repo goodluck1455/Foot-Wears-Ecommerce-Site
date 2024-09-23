@@ -134,6 +134,23 @@
 }
 
 
+@media screen and (max-width:1024px){
+    .FirstCartPage---SearchPanel {
+        z-index: 1;
+        position: absolute;
+        margin-left: -17em;
+       height: auto;
+       transition: 1s ease-in;
+       border: none;
+    }
+
+   
+
+
+}
+
+
+
 @media screen and (max-width:768px),  (max-width:600px), (max-width:820px){
     .FirstCarPge---ProductDisplay {
         /* grid-template-columns:  1fr 1fr 1fr 1fr; */

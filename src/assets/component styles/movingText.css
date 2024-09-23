@@ -46,6 +46,14 @@
     
 }
 
+
+@media screen and (max-width:1024px){
+  .MovingText---container {
+    margin-top: -14em;
+  }
+}
+
+
 @media screen and (max-width:768px), (max-width:600px),  (max-width:820px){
   .MovingText---container {
     margin-top: 12.8em;

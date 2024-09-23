@@ -63,6 +63,14 @@ padding-bottom: 15px;
 }
 
 
+@media screen and (max-width:1024px){
+    .Footer-secondLayer---container {
+        gap: 16em;}
+
+}
+
+
+
 @media screen and (max-width:768px), (max-width:600px),  (max-width:820px){
     .Footer-secondLayer---container {
         gap: 7em;
