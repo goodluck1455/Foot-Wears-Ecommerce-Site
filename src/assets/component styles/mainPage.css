@@ -161,6 +161,8 @@
 
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 
+
+
   .mainPage---container {
     flex-direction: column;
     padding: 1em;
@@ -191,6 +193,7 @@
 
 .mainPage--tile--Container {
  margin-top: 0.7em;
+ width: unset;
 }
 
 .MainPage--paragraph {
@@ -202,7 +205,21 @@
 
 }
 
+
+@media screen and (max-width:360px){
+  .mainPage--tile--Container {
+    width: unset;
+  }
+
+}
+
+
+
+
+
 @media screen and (max-width:320px){
+ 
+
   .MainPage--paragraph {
     font-size: 0.9em;
 }
