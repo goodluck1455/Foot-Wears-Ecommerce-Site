@@ -194,7 +194,7 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
                                 <div className="checkOutExpiration--Container">
                             <span className='checkOutInput---inputLayout'>
                              <label>Expiration date</label> 
-                            <input type="date" placeholder="Enter your first nam"  className='ExpiringIput'/>
+                            <input type="date" placeholder="Enter your expiration date"  className='ExpiringIput'/>
                             </span> 
                               <span className='checkOutInput---inputLayout'>  
                               <label>CVC</label> 

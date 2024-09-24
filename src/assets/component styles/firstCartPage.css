@@ -144,8 +144,45 @@
        border: none;
     }
 
-   
+    .firstCARTpAGE---filterTag{
+        display: inline-flex;
+        color: white;
+        background: #141B34;
+        box-shadow: 0px 4px 4px 1px rgba(138, 135, 135, 0.3);
+        border-radius: 8px;
+        padding: 10px 10px;
+        gap: 7px;
+        margin-left: 50em;
+        /* margin-top: 1.5em; */
+        cursor: pointer;
+    }
+    .firstCARTpAGE---filterTag p{
+        font-size: 1.2em;
+    }
 
+
+
+
+    .Close---SearchPanel{
+        background: #F4F4F4;
+        position: absolute;
+        font-size: 0.8em;
+        margin-top: -6.5em;
+         border-radius: 20px;
+        padding: 13px;
+        width: 16%;
+        height: auto;
+        z-index: 1;
+        border: 2px solid #141B34;
+        transition: 1s ease-out;
+        /* z-index: 9999; */
+    }
+    .filtercloseBTN{
+        display: block;
+        margin-left: 5em;
+        margin-bottom: 1.5em;
+         cursor: pointer;
+    }
 
 }
 
@@ -257,7 +294,7 @@
 @media screen and (max-width:414px){
 
     .firstCARTpAGE---filterTag{ 
-  margin-left: 19.5em; 
+  margin-left: 18.5em; 
     }
 }
 

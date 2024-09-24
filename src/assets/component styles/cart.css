@@ -762,6 +762,56 @@ cursor: pointer;
 display: none;
 }
 
+
+
+
+@media screen and (max-width:1024px){
+  .Cart--container {
+    margin: 3em 3em 2em 3em;
+  }
+
+  .cart--product {
+    width: 60%;}
+
+
+    .Checkout--summaryItems {
+      width: 25em;}
+
+      .Checkout--ItemInfo {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 7em;
+    }
+    
+  
+    
+      .checkout-ProductName, .Cart--Edition{
+       overflow: hidden;
+       text-overflow: ellipsis;
+      }
+
+
+      .swiper-pagination {
+        margin-top: 0.5em;
+        display: block;
+        position: unset;}
+      
+        .swiper-pagination-bullet-active {
+          background: #9DAEEA;
+      }
+      
+      .swiper-pagination-bullet {
+        background: white;}
+
+        .CheckOut--numberOfItemSelected {
+         width: 2em;}
+
+
+
+}
+
+
+
 @media screen and (max-width:768px), (max-width:600px), (max-width:820px){
 .Cart--container {
   margin: 3em 4em 2em 4em;
