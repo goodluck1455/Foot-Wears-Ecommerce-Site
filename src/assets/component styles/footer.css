@@ -100,6 +100,10 @@ padding-bottom: 15px;
         }
   
 }
+
+
+
+
 @media screen and (max-width:667px), (max-width:684px){
     .Footer-secondLayer---container {
         gap: 3em;}
