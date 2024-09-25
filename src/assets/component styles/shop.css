@@ -36,6 +36,16 @@
     }
 }
 
+@media screen and (max-width:667px){
+    .Shop---container {
+        flex-direction: column;
+        align-items: center;}
+
+
+
+}
+
+
 @media screen and (max-width:568px){
     .Shop--Firstcartpage {
         margin-top: 5em;

@@ -253,7 +253,15 @@
 
 }
 
+@media screen and (max-width:667px){
+    .firstCARTpAGE---filterTag {
+        margin-left: 30em;}
 
+
+        .FirstCarPge---ProductDisplay {
+            grid-template-columns: 1fr 1fr 1fr;}
+
+}
 
 
 @media screen and (max-width:568px){

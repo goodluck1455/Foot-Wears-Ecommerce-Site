@@ -67,6 +67,15 @@ white-space: nowrap;
 
   }
 
+  @media screen and (max-width:667px){
+    .ProductDisplay---add-to-cart {
+      left: 6.5em;}
+
+  }
+
+
+
+
   @media screen and (max-width:568px){
     .imageSlide--A {height: 61%;}
 

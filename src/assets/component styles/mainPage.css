@@ -104,7 +104,7 @@
   width: 35%;}
 
   .mainPage---container {
-    padding: 4em 8em 4em 4em;
+    padding: 4em 4em 4em 4em;
 }
 
  }
@@ -144,6 +144,14 @@
 
  }
   
+ @media screen and (max-width:667px){
+  .ShoeImage----container {
+    margin-top: 0em;
+  }
+
+ }
+
+
 
  @media screen and (max-width:568px){
   .ShoeImage----container {
