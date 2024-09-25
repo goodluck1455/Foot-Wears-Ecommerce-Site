@@ -15,6 +15,7 @@ function Shop() {
      if (width <= 430) return 'large';
      if (width <= 768) return 'xLarge';
      if (width <= 820) return 'size_820';
+     if (width <= 1024) return 'size_1024';
      return 'default';
    }
  
@@ -51,6 +52,7 @@ function Shop() {
             screenSize === "medium" ||
             screenSize === "large" ||
             screenSize === "size_820" ||
+            screenSize === "size_1024" ||
             screenSize === "xLarge" 
          }
        />

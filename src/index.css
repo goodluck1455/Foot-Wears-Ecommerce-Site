@@ -254,13 +254,30 @@ html{
 }
 
 
+@media screen and (max-width:480px){
+  .Cart-countHolder {
+    left: 3.5em;
+    top: -0.5em;}
 
+    /* .Menue--icon {
+      margin-right: 1em;} */
+
+      .Header--logo {
+        margin-left: 6em;}
+
+
+}
 @media screen and (max-width:430px){
   .search--icon {
     margin-left: 3.2em;}
     .Cart-countHolder {
       top: -0.5em;
       left: 8.6em;}
+
+      .Menue--icon {
+        margin-right: 3em;}
+        .Header--logo {
+          margin-left: 4em;}
 }
 
 @media screen and (max-width:414px){
@@ -269,6 +286,12 @@ html{
     .Cart-countHolder {
       top: -0.5em;
       left: 7.6em;}
+
+      /* .Menue--icon {
+        margin-right: 3em;} */
+
+        .Header--logo {
+          margin-left: 4em;}
 }
 
 
@@ -281,7 +304,11 @@ html{
     top: -0.5em;
     left: 6.6em;
 }
+.Menue--icon {
+  margin-right: 3em;}
 
+  .Header--logo {
+    margin-left: 4em;}
 
 }
 
@@ -292,6 +319,13 @@ html{
   .Cart-countHolder {
     top: -0.5em;
     left: 5.6em;}
+
+
+    .Menue--icon {
+    margin-right: 3em;}
+
+    .Header--logo {
+      margin-left: 4em;}
 }
 
 
@@ -299,7 +333,7 @@ html{
 
 
 
-@media screen and (max-width:375px), (max-width:414px), (max-width:430px){
+@media screen and (max-width:375px), (max-width:414px), (max-width:430px),(max-width:480px){
 
   html{
     scroll-padding-top: 50px;
@@ -309,6 +343,7 @@ html{
     flex-direction: column;
 }
 .Header {
+  width: 100%;
   height: 1.5em;}
 
 
@@ -359,7 +394,7 @@ transition: 1s ease-in-out;
 }
 
 .Header--logo {
-  margin-left: 4em;
+  /* margin-left: 4em; */
   font-size: 1.3em;
   margin-top: 0.3em;
 }

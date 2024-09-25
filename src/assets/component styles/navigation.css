@@ -73,7 +73,11 @@
         margin-left: unset;}
 }
 
-
+@media screen and (max-width:480px){
+    .Navigation---container {
+        margin-bottom: 1em;
+    }
+}
 
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 

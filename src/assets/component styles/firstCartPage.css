@@ -252,6 +252,10 @@
 
 
 }
+
+
+
+
 @media screen and (max-width:568px){
     .firstCARTpAGE---filterTag {
         margin-left: 24em;}
@@ -283,12 +287,22 @@
 }
 
 
+@media screen and (max-width:480px){
+    .firstCARTpAGE---filterTag{ 
+        margin-left: 20.8em; 
+          }
 
+
+          .FirstCartPage---SearchPanel {
+            margin-left: -40em;}
+}
 
 @media screen and (max-width:430px){
     .firstCARTpAGE---filterTag{ 
         margin-left: 19.8em; 
           }
+          .FirstCartPage---SearchPanel {
+            margin-left: -35em;}
 }
 
 @media screen and (max-width:414px){
@@ -296,6 +310,8 @@
     .firstCARTpAGE---filterTag{ 
   margin-left: 18.5em; 
     }
+    .FirstCartPage---SearchPanel {
+        margin-left: -35em;}
 }
 
 
@@ -303,22 +319,30 @@
     .firstCARTpAGE---filterTag{ 
         margin-left: 17.5em; 
           }
+
+          .FirstCartPage---SearchPanel {
+            margin-left: -35em;}
+
+
 }
 
 @media screen and (max-width:375px){
     .firstCARTpAGE---filterTag{ 
         margin-left: 16em; 
           }
+
+          .FirstCartPage---SearchPanel {
+             margin-left: -35em;}
 }
 
 
 
-@media screen and (max-width:375px), (max-width:414px), (max-width:430px){
+@media screen and (max-width:375px), (max-width:414px), (max-width:430px), (max-width:480px){
 
 .FirstCartPage---SearchPanel {
    z-index: 1;
     position: absolute;
-    margin-left: -35em;
+    /* margin-left: -35em; */
    height: auto;
    transition: 1s ease-in;
    border: none;

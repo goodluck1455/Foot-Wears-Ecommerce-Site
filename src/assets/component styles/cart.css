@@ -909,6 +909,26 @@ display: none;
 
 }
 
+
+@media screen and (max-width:568px){
+  .Cart--container {
+    margin: 3em 3em 2em 3em;
+  }
+
+
+  .checkoutInfor {
+    padding: 13px;
+    width: 29em;}
+
+    .Checkout--summaryClose {
+      margin-left: 0.4em;
+      height: 23em;
+    }
+
+
+}
+
+
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 .Cart--container {
   margin: 3em 0.6em 2em 0.6em;

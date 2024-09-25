@@ -80,7 +80,15 @@ function ScrollingProduct() {
                 slidesPerView: 1.5,
                 spaceBetween: -40,
               },
+              480: {
+                slidesPerView: 2.5,
+                spaceBetween: 40,
+              },
               568: {
+                slidesPerView: 2.5,
+                spaceBetween: 10,
+              },
+              540: {
                 slidesPerView: 2.5,
                 spaceBetween: 10,
               },

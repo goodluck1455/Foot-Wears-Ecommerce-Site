@@ -121,7 +121,9 @@
 
   .mainPage--tile--Container {
     margin-top: 1em;
+    width: unset;
 }
+
 
 .ShoeImage----container {
   margin-top: -2em;
@@ -129,6 +131,16 @@
 
 .mainPage--button {
   width: 20%;}
+
+
+  .ShoeImage--wahala {
+    width: 76%;
+    margin-left: 4em;
+}
+.TagCircle {
+  margin-left: 10em;
+  margin-top: 1em;
+}
 
  }
   
@@ -152,6 +164,12 @@
     .mainPage--button {
       width: 25%;
     }
+
+    .mainPage--tile--Container {
+      width: unset;
+     }
+
+ 
 
  }
 
