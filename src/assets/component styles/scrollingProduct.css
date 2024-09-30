@@ -120,13 +120,38 @@
     box-sizing: border-box;
     margin-bottom: 4px;
     cursor: pointer;
-
-
+    position: relative;
   }
+
+
+  .imageSlider----sales{
+    padding: 0px 1px;
+    width: 19px;
+    height: 66.28px;
+    left: 19px;
+    padding: 3px;
+    background: #141B34;
+    position: absolute;
+    color: white;
+    border-radius: 0px 0px 20px 20px;
+  }
+  .imageSlider----sales p{
+    margin-top: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: rotate(90deg);
+   
+  }
+
+
+
+
+
+
   
   .imageSlider--container:hover{
-    transform: scale(1.1);
-    transition: 1s ease-in-out;
+    transform: scale(1.02);
+    transition: 0.1s ease-in-out;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); */
   }
 
   .imageSlide--A {
@@ -177,7 +202,7 @@
     position: relative;
   }
   
-  .custom-next,
+   .custom-next,
   .custom-prev {
     position: absolute;
     top: 50%;
@@ -193,28 +218,32 @@
     background-color: #151414;
     color: white;
     border-radius: 50%;
-   padding: 3px; /* Adjust padding for better alignment */
+   padding: 3px; 
    display: flex;
-   justify-content: center; /* Center horizontally */
+   justify-content: center; 
    align-items: center;
   }
   
   .custom-prev {
     left: 20px;
     border-radius: 50%;
-    background-color: #151414;;
+    background-color: #141B34;
     color: white;
-    padding: 3px; /* Adjust padding for better alignment */
+    padding: 3px; 
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: center; 
   align-items: center;
+  
   }
+
+ 
 
   .custom-next.swiper-button-disabled,
 .custom-prev.swiper-button-disabled {
     background-color: white;
     color: #151414;; 
-    border: 1px solid #151414;;
+    border: 1px solid #151414;
+    display: none;
   /* cursor: not-allowed;  */   /* Change cursor to indicate disabled state */
 }
 
@@ -236,6 +265,14 @@
 
   .---timeCountDownShopView {
     margin-left: 2em;}
+
+    .custom-next.swiper-button-disabled,
+    .custom-prev.swiper-button-disabled {
+        background-color: white;
+        color: #151414;; 
+       display: none;
+      /* cursor: not-allowed;  */   /* Change cursor to indicate disabled state */
+    }
 
 
 }
@@ -342,6 +379,12 @@
 
 .scrollingPage---productName {
   white-space: nowrap;
+}
+
+
+.custom-next,
+.custom-prev {
+ display: none;
 }
 
   

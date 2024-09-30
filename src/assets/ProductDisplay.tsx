@@ -5,6 +5,7 @@ import "./component styles/ProductDisplay.css";
 import "./component styles/firstCartPage.css"
 import { useContext } from "react";
 // import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import {ShoppingContext} from "./ShopContext";
 // import { useCart } from 'react-use-cart';
 
@@ -54,6 +55,20 @@ item: {
         //  const { dispatch } = useContext(ShoppingContext);
         //  console.log(globalVersion);
 
+         const newPriceNumber = parseFloat(newPrice.replace(/[^0-9.-]+/g, ""));
+         const oldPriceNumber = parseFloat(oldPrice.replace(/[^0-9.-]+/g, ""));
+
+        const currencyNewPrice = newPriceNumber.toLocaleString("en-NG", {
+          style: "currency",
+          currency: "NGN",
+          minimumFractionDigits: 0,
+        });
+        const currencyOldPrice = oldPriceNumber.toLocaleString("en-NG", {
+          style: "currency",
+          currency: "NGN",
+          minimumFractionDigits: 0,
+        });
+
          
     return (
       <>
@@ -64,14 +79,13 @@ item: {
                 </div>
                 <p className="scrollingPage---productName">{productName}</p>
                 <span className="ProductDisplay--cartBal">{itemContainer}</span> <br />
-                <span className="Scrolling--Oldprice">{oldPrice}</span> <span className="Scrolling--NewPrice">{newPrice}</span>
+                <span className="Scrolling--Oldprice">{currencyOldPrice}</span> <span className="Scrolling--NewPrice">{currencyNewPrice}</span>
           
-              <FaPlusCircle  className="ProductDisplay---add-to-cart" onClick={()=> dispatch({type: "ADD", payload:item})}/>
+                <NavLink to="/ProductDescription">   
+               <FaPlusCircle  className="ProductDisplay---add-to-cart" onClick={()=> dispatch({type: "ADD", payload:item})}/>
+                </NavLink> 
              
-               {/* <FaPlusCircle 
-                className="ProductDisplay---add-to-cart" 
-                onClick={() => dispatch({ type: "ADD", payload: { id, productName, newPrice } })} 
-            /> */}
+            
                 </div>
 
 

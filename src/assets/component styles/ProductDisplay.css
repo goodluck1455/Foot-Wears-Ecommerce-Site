@@ -12,8 +12,9 @@
   }
 
   .ProductDisplay--container:hover{
-    transform: scale(1.1);
-    transition: 1s ease-in-out;
+    transform: scale(1.02);
+    transition: 0.1s ease-in-out;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); */
   }
 
 

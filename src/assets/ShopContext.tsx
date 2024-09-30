@@ -63,31 +63,50 @@ export const ShopContextProvider = (props:any) => {
           toast.success(`${action.payload.productName} is successfully added to the cart`, {
             icon: <AddedToCartIcon style={{ color: 'green',  fontSize: "1.5em" }} />,
           });
-          // setMessage(`${action.payload.productName} is successfully  added to cart`);
-          // setPopupVisible(true);
-          //           setTimeout(() => {
-          //               setPopupVisible(false);
-          //           }, 7000);
+          
           localStorage.setItem('cart', JSON.stringify(newState)); // Save the updated cart state to localStorage
           return newState;
         }
 
         case "REMOVE":
-        return state.filter((item: any) => item.id !== action.payload.id);
+          const filteredState = state.filter((item: any) => item.id !== action.payload.id);
+
+          localStorage.setItem('cart', JSON.stringify(filteredState));
+      
+      // If size and quantity are stored as separate keys in localStorage
+       localStorage.removeItem(`size_${action.payload.id}`);
+       localStorage.removeItem(`quantity_${action.payload.id}`);
+      
+      return filteredState;
+        // return state.filter((item: any) => item.id !== action.payload.id);
 
         case "UPDATE_QUANTITY":
-      return state.map((item: any) =>
-        item.id === action.payload.id
-          ? { ...item, quantity: action.payload.quantity }
-          : item
-      );
+          const updatedQuantityState = state.map((item: any) =>
+            item.id === action.payload.id
+              ? { ...item, quantity: action.payload.quantity }
+              : item
+          );
+          localStorage.setItem(`quantity_${action.payload.id}`, action.payload.quantity.toString());
+          return updatedQuantityState;
+      // return state.map((item: any) =>
+      //   item.id === action.payload.id
+      //     ? { ...item, quantity: action.payload.quantity }
+      //     : item
+      // );
 
       case "UPDATE_SIZE":
-        return state.map((item: any) =>
-          item.id === action.payload.id
-            ? { ...item, size: action.payload.size }
-            : item
-        );
+      const updatedSizeState = state.map((item: any) =>
+        item.id === action.payload.id
+          ? { ...item, size: action.payload.size }
+          : item
+      );
+      localStorage.setItem(`size_${action.payload.id}`, action.payload.size);
+      return updatedSizeState;
+        // return state.map((item: any) =>
+        //   item.id === action.payload.id
+        //     ? { ...item, size: action.payload.size }
+        //     : item
+        // );
 
       default:
         return state;
@@ -100,6 +119,8 @@ export const ShopContextProvider = (props:any) => {
   }, [state]);
 
      const contextValue = {state,  dispatch, gamesRef};
+
+     
        
 
   return (

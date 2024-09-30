@@ -9,6 +9,7 @@ import Cart from './assets/Cart';
 import NotFound from './assets/NotFound';
 import CheckOutPage from './assets/CheckOutPage';
 import ScrollToTop from './assets/ScrollTop';
+import ProductDescription from './assets/ProductDescription';
 // import { useState } from "react";
 
 
@@ -71,6 +72,7 @@ const App: React.FC<AppProps> = () => {
         <Route path='Shop' element={<Shop /> }/>
         <Route path='Cart' element={<Cart  /> }/>
 		<Route path='CheckOutPage' element={<CheckOutPage /> }/>
+		<Route path='ProductDescription' element={<ProductDescription /> }/>
         <Route path='*' element={<NotFound /> }/>
         </Routes>
       

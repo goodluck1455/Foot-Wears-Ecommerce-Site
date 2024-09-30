@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {  useState } from "react";
 import "../assets/component styles/scrollingProduct.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -19,16 +19,28 @@ function ScrollingProduct() {
   const [priceData]= useState(priceData4ScrollingPage);
 
 
+ 
+
+  const currencyPrice = (newPrice:string)=>{
+    const PriceNumber = parseFloat(newPrice.replace(/[^0-9.-]+/g, ""));
+    return PriceNumber.toLocaleString("en-NG", {
+    style: "currency",
+    currency: "NGN",
+    minimumFractionDigits: 0,
+  });}
+
+
   const priceDataElement = 
     priceData.map(price =>(
       <SwiperSlide key={price.id}>
       <div className="imageSlider--container">
+       <div className="imageSlider----sales"><p>SALES</p></div> 
                 <div className="imageSlide--A">
                   <img src={price.Image} alt="" />
                 </div>
                 <p className="scrollingPage---productName">{price.productName}</p>
                 <span className="scrollingPage--cartBal">{price.itemContainer}</span> <br />
-                <span className="Scrolling--Oldprice">{price.oldPrice}</span> <span className="Scrolling--NewPrice">{price.newPrice}</span>
+                <span className="Scrolling--Oldprice">{currencyPrice(price.oldPrice)}</span> <span className="Scrolling--NewPrice">{currencyPrice(price.newPrice)}</span>
                 </div>
                 </SwiperSlide>
     ))
@@ -60,7 +72,7 @@ function ScrollingProduct() {
 
             <Swiper
             spaceBetween={50}
-            slidesPerView={5}
+            slidesPerView={5.4}
             navigation={{
               nextEl: '.custom-next',
               prevEl: '.custom-prev',
@@ -138,3 +150,17 @@ function ScrollingProduct() {
   }
   
   export default ScrollingProduct
+
+
+
+
+
+
+// converting it to naira currency
+  // const currencyOldPrice = (oldPrice:string)=>{
+  //   const oldPriceNumber = parseFloat(oldPrice.replace(/[^0-9.-]+/g, ""));
+  //   return oldPriceNumber.toLocaleString("en-NG", {
+  //   style: "currency",
+  //   currency: "NGN",
+  //   minimumFractionDigits: 0,
+  // });}

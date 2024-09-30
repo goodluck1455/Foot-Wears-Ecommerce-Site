@@ -28,9 +28,6 @@ const state = GlobalState.state;
          const dispatch = GlobalState.dispatch;
  const [openModal, setOpenModal] = useState<number | null>(null);
 
-        //  const initialState = JSON.parse(localStorage.getItem('cart') || '[]');
-// const dispatch = GlobalState.dispatch;
-// const productName = state.reduce((product: string, item: any) =>  item.productName, product);
 
 const totalPrice = state.reduce((acc: number, item: any) => {
   // Convert item.newPrice from string to number, removing the currency symbol and commas
@@ -45,20 +42,30 @@ const totalPrice = state.reduce((acc: number, item: any) => {
 
   const grandTotalPrice = totalPrice - 5000;
 
-  const formattedTotalPrice = grandTotalPrice.toLocaleString("en-US", {
+  const formattedTotalPrice = grandTotalPrice.toLocaleString("en-NG", {
     style: "currency",
-    currency: "USD",
+    currency: "NGN",
     minimumFractionDigits: 2,
   });
 
-    const cartTotal =  totalPrice.toLocaleString("en-US", {
+    const cartTotal =  totalPrice.toLocaleString("en-NG", {
       style: "currency",
-      currency: "USD",
+      currency: "NGN",
       minimumFractionDigits: 2,
     });
 
+    const currencyCatPrice = (newPrice:string)=>{
+      const oldPriceNumber = parseFloat(newPrice.replace(/[^0-9.-]+/g, ""));
+      return oldPriceNumber.toLocaleString("en-NG", {
+      style: "currency",
+      currency: "NGN",
+      minimumFractionDigits: 0,
+    });}
+
+
+
     const handleQuantityChange = (id: number, quantity: number) => {
-      localStorage.setItem(id.toString(), quantity.toString());
+      // localStorage.setItem(id.toString(), quantity.toString());
       dispatch({
         type: "UPDATE_QUANTITY",
         payload: { id, quantity },
@@ -66,14 +73,19 @@ const totalPrice = state.reduce((acc: number, item: any) => {
     };
 
     const handleSize = (id: any, size: any) => {
-      localStorage.setItem(`size_${id}`, size);
+      // localStorage.setItem(`size_${id}`, size.toString());
 
       dispatch({
         type: "UPDATE_SIZE",
         payload: { id, size },
       });
     };
-
+       const validate = ()=>{
+        if(state.size === "" ){
+          alert("select your size")
+          return false
+        }else return true
+       }
          
           
 
@@ -89,54 +101,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
 
 
         <div className="Cart--Basket-Container">
-        {/* <div className="Cart--BasketItem--Container"> */}
-        {/* {items.map((item) => (
-          <div>
-            <div className="Cart--image--container" key={item.id}>
-              <img src={item.image} alt={item.name} />
-            </div>
-            <div className="Cart--Info">
-              <h4>{item.name}</h4>
-              <p className="Cart--Edition">{item.description}</p>
-              <div className="cart--sizeQuantity">
-                <span>
-                  Size:
-                  <select
-                    value={item.size}
-                    onChange={(e) => updateItemQuantity(item.id, item.quantity)}
-                    className="Cart--size"
-                  >
-                    <option value="20-30L">20-30L</option>
-                    <option value="30-40L">30-40L</option>
-                    <option value="40-50L">40-50L</option>
-                  </select>
-                </span>
-                <span className="Cart--quantityContainer">
-                  Quantity:
-                  <select
-                    value={item.quantity}
-                    onChange={(e) => updateItemQuantity(item.id, parseInt(e.target.value))}
-                    className="Cart--quantity"
-                  >
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </span>
-              </div>
-            </div>
-            <div className="cart--amount">
-              <span>
-                <p>${ item.id * item.price }</p>
-                <HiOutlineTrash
-                  className="cart--DeleteBTN"
-                  onClick={() => removeItem(item.id)}
-                />
-              </span>
-            </div>
-            </div>
-        ))}
-             </div>   */}
+       
              <div className={state.length === 0 ? "cart--productLength":"cart--product" }>
              {state.length === 0 ? (
              
@@ -156,8 +121,8 @@ const totalPrice = state.reduce((acc: number, item: any) => {
               </div>
              
           ) : ( state.map((item:any,  index:number) => {
-            const savedSize = localStorage.getItem(`size_${item.id}`) || "20-30L";
-            const savedQuantity = localStorage.getItem(item.id.toString()) || 1;
+            const savedSize = localStorage.getItem(`size_${item.id}`) || " ";
+            const savedQuantity = localStorage.getItem(`quantity_${item.id}`) || 1;
             
             return( 
 
@@ -184,6 +149,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                           )
                         }
                       >
+                           <option value=" " ></option>
                         <option value="20-30L" >20-30L</option>
                         <option value="30-40L" >30-40L</option>
                         <option value="40-50L" >40-50L</option>
@@ -203,15 +169,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                         <option key={n + 1} value={n + 1}>{ n + 1 }</option>
                 
                       ))}
-                        {/* <option value="02">02</option>
-                        <option value="03">03</option>
-                        <option value="04">04</option>
-                        <option value="05">05</option>
-                        <option value="06">06</option>
-                        <option value="07">07</option>
-                        <option value="08">08</option>
-                        <option value="09">09</option>
-                        <option value="10">10</option> */}
+                        
                       </select>
                       </span>
                       </div>
@@ -223,13 +181,8 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                   <div className="cart--amount">
                       <span className="cart--amount-onMobile">
                         <p>
-                          {item.newPrice}
-                     {/* {(parseFloat(item.newPrice.replace(/[^0-9.-]+/g, "")) *
-                      (item.quantity || 1)).toLocaleString("en-US", {
-                      style: "currency",
-                      currency: "USD",
-                      minimumFractionDigits: 0,
-                    })} */}
+                          {currencyCatPrice(item.newPrice)}
+                 
                         </p>
                         <HiOutlineTrash size={25} 
                         className="cart--DeleteBTN" 
@@ -254,8 +207,6 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                         setOpenModal(null); 
                       }}
                       
-                      // ()=>confirmDelete}
-                    //  onClick={()=> dispatch({ type: "REMOVE", payload: {id: item.id } })}
                      >Remove</button> 
                        </div>
                            </div>
@@ -302,11 +253,11 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                       </span>
                       <span className="Cart---balanceBreakdown">
                         <h5>Discount</h5>
-                        <p>$5,000</p>
+                        <p>{currencyCatPrice("$5,000")}</p>
                       </span>
                       <span className="Cart---balanceBreakdown">
                         <h5>Delivery fee</h5>
-                        <p>$0000</p>
+                        <p>{currencyCatPrice("$0000")}</p>
                       </span>
                       <span className="Cart---balanceBreakdown Cart-Total">
                         <h5>Total</h5>
@@ -316,7 +267,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
 
                     </div>
                     <div>
-                 <NavLink to="/CheckOutPage"> <button type="button" className="cart--checkout">Checkout</button></NavLink> 
+                 <NavLink to="/CheckOutPage"> <button type="button" className="cart--checkout" onClick={validate}>Checkout</button></NavLink> 
                     </div>
                   <div>
                  <NavLink to="/shop"> <button type="button" className="Cart---continueShopping">Continue Shopping</button></NavLink> 
@@ -347,3 +298,12 @@ const totalPrice = state.reduce((acc: number, item: any) => {
 }
 
 export default Cart
+
+
+
+// ******TO CONVERT TO USD CURRENCY****
+// const formattedTotalPrice = grandTotalPrice.toLocaleString("en-US", {
+//   style: "currency",
+//   currency: "USD",
+//   minimumFractionDigits: 2,
+// });

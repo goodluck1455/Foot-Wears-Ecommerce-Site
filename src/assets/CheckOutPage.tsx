@@ -49,15 +49,23 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
  
   
     const grandTotalPrice = totalPrice - 5000;
-    const formattedTotalPrice = grandTotalPrice.toLocaleString("en-US", {
+    const formattedTotalPrice = grandTotalPrice.toLocaleString("en-NG", {
       style: "currency",
-      currency: "USD",
+      currency: "NGN",
       minimumFractionDigits: 2,
     });
 
-    const cartTotal =  totalPrice.toLocaleString("en-US", {
+    const currencyCatPrice = (newPrice:string)=>{
+      const oldPriceNumber = parseFloat(newPrice.replace(/[^0-9.-]+/g, ""));
+      return oldPriceNumber.toLocaleString("en-NG", {
       style: "currency",
-      currency: "USD",
+      currency: "NGN",
+      minimumFractionDigits: 0,
+    });}
+
+    const cartTotal =  totalPrice.toLocaleString("en-NG", {
+      style: "currency",
+      currency: "NGN",
       minimumFractionDigits: 2,
     });
 
@@ -68,6 +76,11 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
        const closeOpencheckOutSummary = ()=>{
         setOpeOderSummary(false)
        }
+
+       const sliderItems = state.length;
+
+// Dynamically adjust slidesPerView based on the number of items
+    const slidesPerView = sliderItems === 1 ? 1 : 1.3;
 
     return (
       <>
@@ -224,7 +237,7 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
                         <Swiper
                           
                           spaceBetween={15}
-                          slidesPerView={1.3}
+                          slidesPerView={slidesPerView}
                           // scrollbar={{ draggable: true }}
                           navigation={{
                             nextEl: '.checkout-next',
@@ -250,7 +263,7 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
                               spaceBetween: 10,
                             },
                             1024: {
-                              slidesPerView: 1.5,
+                              slidesPerView: slidesPerView,
                               spaceBetween: 15,
                             },
                           }}
@@ -278,7 +291,7 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
                                     <p className="Cart--Edition">{item.size || `20-30L` }</p>
                                     <p>
 
-                                      {item.newPrice}
+                                      {currencyCatPrice(item.newPrice)}
                                       {/* {(parseFloat(item.newPrice.replace(/[^0-9.-]+/g, "")) *
                                         (item.quantity || 1)).toLocaleString("en-US", {
                                         style: "currency",
@@ -338,11 +351,11 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
                       </span>
                       <span className="Cart---balanceBreakdown">
                         <h5>Discount</h5>
-                        <p>$5,000</p>
+                        <p>{currencyCatPrice("$5,000")}</p>
                       </span>
                       <span className="Cart---balanceBreakdown">
                         <h5>Delivery fee</h5>
-                        <p>$0000</p>
+                        <p>{currencyCatPrice("$0000")}</p>
                       </span>
                       <span className="Cart---balanceBreakdown Cart-Total">
                         <h5>Total</h5>
