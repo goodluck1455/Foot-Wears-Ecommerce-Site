@@ -55,7 +55,7 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true,
 // const FirstCartPage: React.FC = ({handleClick}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
   const [openFilter, setOpenFilter] = useState(true);
-
+  const [isFiltering, setIsFiltering] = useState(false);
 
 
 
@@ -75,10 +75,39 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true,
   const [productDisplay] = useState(priceData4ProductDisplay.slice(0, 200))
 
   const [pageNumber, setPageNumber] = useState(0);
-  const userPerPage = 12;
+  let userPerPage = 12;
   const pageVisited = pageNumber * userPerPage;
 
-  const productDisplayElement = productDisplay.slice(pageVisited, pageVisited + userPerPage)
+
+
+    const [checkedItems, setCheckedItems] = useState({
+     all: false,
+    maleShoes: false,
+    femaleShoes: false,
+    childrenShoes: false,
+    Nike: false,
+    Kswiss: false,
+    Puma: false,
+    Encap: false
+    }
+   )
+
+  // Filter products based on search term
+  const filteredProducts = isFiltering
+  ? productDisplay.filter((product) => {
+      if (checkedItems.all) return true; // Return all products if "All" is checked
+      if (checkedItems.maleShoes && product.category === 'male Shoes') return true;
+      if (checkedItems.femaleShoes && product.category === 'female Shoes') return true;
+      if (checkedItems.childrenShoes && product.category === 'children Shoes') return true;
+      if (checkedItems.Nike && product.Brand === 'Nike') return true;
+      if (checkedItems.Puma && product.Brand === 'Puma') return true;
+      if (checkedItems.Kswiss && product.Brand === 'Kswiss') return true;
+      if (checkedItems.Encap && product.Brand === 'Encap') return true;
+      return false;
+    })
+  : productDisplay; // Default product list if no filter is applied
+
+  const productDisplayElement = filteredProducts.slice(pageVisited, pageVisited + userPerPage)
   .map((product) => {
   
     return (
@@ -99,14 +128,13 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true,
 
 
 
-   const [checkedItems, setCheckedItems] = useState(
-    {
-     all: false,
-    maleShoes: false,
-    femaleShoes: false,
-    childrenShoes: false,
-    }
-   )
+  //  const [checkedItems, setCheckedItems] = useState({
+  //    all: false,
+  //   maleShoes: false,
+  //   femaleShoes: false,
+  //   childrenShoes: false,
+  //   }
+  //  )
 
  
 
@@ -115,6 +143,9 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true,
 
     const { name, checked } = event.target;
 
+    // Set `isFiltering` to true when a filter is applied
+    setIsFiltering(true);
+
     if (name === 'all') {
       setCheckedItems({
      
@@ -122,6 +153,10 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true,
         maleShoes: checked,
         femaleShoes: checked,
         childrenShoes: checked,
+        Nike: checked,
+        Puma: checked,
+        Kswiss: checked,
+        Encap: checked,
       });
     } else {
       setCheckedItems((prevState) => {
@@ -129,7 +164,6 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true,
 
         if (name === 'femaleShoes' && checked) {
           newCheckedItems.maleShoes = false;
-      
           newCheckedItems.childrenShoes = false;
         } else if (name === 'maleShoes' && checked) {
           newCheckedItems.femaleShoes = false;
@@ -137,16 +171,36 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({showTurnHeadsLater = true,
         }else if (name === 'childrenShoes' && checked) {
           newCheckedItems.femaleShoes= false;
           newCheckedItems.maleShoes = false;
+        }else if (name === 'Nike' && checked) {
+          newCheckedItems.Kswiss = false;
+          newCheckedItems.Puma = false;
+          newCheckedItems.Encap = false;
+        }else if (name === 'Puma' && checked) {
+          newCheckedItems.Kswiss= false;
+          newCheckedItems.Nike = false;
+          newCheckedItems.Encap = false;
+        }else if (name === 'Kswiss' && checked) {
+          newCheckedItems.Nike= false;
+          newCheckedItems.Puma = false;
+          newCheckedItems.Encap = false;
+        }else if (name === 'Encap' && checked) {
+          newCheckedItems.Kswiss= false;
+          newCheckedItems.Puma = false;
+          newCheckedItems.Nike = false;
         }
 
         return newCheckedItems;
       });
+    
     }
+
+    
   };
 
 const pageCount = Math.ceil(productDisplay.length / userPerPage);
+
 const changePage = ({selected}: { selected: number })=>{
-  setPageNumber(selected)
+    setPageNumber(selected)
 }
 
 
@@ -157,6 +211,19 @@ const changePage = ({selected}: { selected: number })=>{
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (!checkedItems.all && !checkedItems.maleShoes && !checkedItems.femaleShoes 
+      && !checkedItems.childrenShoes
+      && !checkedItems.Nike
+      && !checkedItems.Puma
+      && !checkedItems.Kswiss
+      && !checkedItems.Encap) {
+      setIsFiltering(false);
+    } else {
+      setIsFiltering(true);
+    }
+  }, [checkedItems]);
 
      const openFilterBtn = ()=>{
         setOpenFilter(false)
@@ -175,7 +242,7 @@ const changePage = ({selected}: { selected: number })=>{
             {showTurnHeadsLater && <TurnHeadsLater />}
           
          <div className="FirstCartPage---ViewPanel">
-            <div className={openFilter ? "FirstCartPage---SearchPanel": "Close---SearchPanel"}>
+            <div className={openFilter ? "FirstCartPage---SearchPanel": "Close---SearchPanel"} >
               <FilterCloseBtn size={25} className="filtercloseBTN" onClick={closeFilterBTN}/>
                <h3>Filters</h3>
                <div>
@@ -186,7 +253,7 @@ const changePage = ({selected}: { selected: number })=>{
                    id="all"
                    name="all"
                    checked={checkedItems.all}
-                   onChange={handleCheckboxChange}      /> 
+                   onChange={handleCheckboxChange}   /> 
                <label htmlFor="" className="FirstCartPgae---labelContent-A">All</label> 
                <label htmlFor="" >150</label>  
                </span>
@@ -242,7 +309,7 @@ const changePage = ({selected}: { selected: number })=>{
              
                <input 
                  type="checkbox"
-                 id="childrenShoes"
+                 id="size-A"
                  name="size-A"
                 //  checked={checkedItems.childrenShoes}
                 //  onChange={handleCheckboxChange}
@@ -254,7 +321,7 @@ const changePage = ({selected}: { selected: number })=>{
                <span className="FirstCartPgae---checkBoxContainer-B">
                <input 
                  type="checkbox"
-                 id="childrenShoes"
+                 id="size-B"
                  name="size-B"
                 //  checked={checkedItems.childrenShoes}
                 //  onChange={handleCheckboxChange}
@@ -267,7 +334,7 @@ const changePage = ({selected}: { selected: number })=>{
                <span className="FirstCartPgae---checkBoxContainer-B">
                <input 
                  type="checkbox"
-                 id="childrenShoes"
+                 id="size-C"
                  name="size-C"
                 //  checked={checkedItems.childrenShoes}
                 //  onChange={handleCheckboxChange}
@@ -280,7 +347,7 @@ const changePage = ({selected}: { selected: number })=>{
                <span className="FirstCartPgae---checkBoxContainer-B">
                <input 
                  type="checkbox"
-                 id="childrenShoes"
+                 id="size-D"
                  name="size-D"
                 //  checked={checkedItems.childrenShoes}
                 //  onChange={handleCheckboxChange}
@@ -296,11 +363,11 @@ const changePage = ({selected}: { selected: number })=>{
               <span className="FirstCartPgae---checkBoxContainer-B">
                <input 
                  type="checkbox"
-                 id="childrenShoes"
-                 name="size-A"
-                //  checked={checkedItems.childrenShoes}
-                //  onChange={handleCheckboxChange}
-                //  disabled={checkedItems.all}
+                 id="Nike"
+                 name="Nike"
+                 checked={checkedItems.Nike}
+                 onChange={handleCheckboxChange}
+                 disabled={checkedItems.all}
                /> 
                <label htmlFor="" className="FirstCartPgae---labelContent-F">Nike</label> 
                <label htmlFor="" >120</label>  
@@ -308,11 +375,11 @@ const changePage = ({selected}: { selected: number })=>{
                <span className="FirstCartPgae---checkBoxContainer-B">
                <input 
                  type="checkbox"
-                 id="childrenShoes"
-                 name="size-B"
-                //  checked={checkedItems.childrenShoes}
-                //  onChange={handleCheckboxChange}
-                //  disabled={checkedItems.all}
+                 id="Puma"
+                 name="Puma"
+                 checked={checkedItems.Puma}
+                 onChange={handleCheckboxChange}
+                 disabled={checkedItems.all}
                /> 
                <label htmlFor="" className="FirstCartPgae---labelContent-F">Puma</label> 
                <label htmlFor="" >03</label>  
@@ -321,11 +388,11 @@ const changePage = ({selected}: { selected: number })=>{
                <span className="FirstCartPgae---checkBoxContainer-B">
                <input 
                  type="checkbox"
-                 id="childrenShoes"
-                 name="size-C"
-                //  checked={checkedItems.childrenShoes}
-                //  onChange={handleCheckboxChange}
-                //  disabled={checkedItems.all}
+                 id="Kswiss"
+                 name="Kswiss"
+                 checked={checkedItems.Kswiss}
+                 onChange={handleCheckboxChange}
+                 disabled={checkedItems.all}
                /> 
                <label htmlFor="" className="FirstCartPgae---labelContent-G">K-swiss</label> 
                <label htmlFor="" >01</label>  
@@ -334,11 +401,11 @@ const changePage = ({selected}: { selected: number })=>{
                <span className="FirstCartPgae---checkBoxContainer-B">
                <input 
                  type="checkbox"
-                 id="childrenShoes"
-                 name="size-D"
-                //  checked={checkedItems.childrenShoes}
-                //  onChange={handleCheckboxChange}
-                //  disabled={checkedItems.all}
+                 id="Encap"
+                 name="Encap"
+                 checked={checkedItems.Encap}
+                 onChange={handleCheckboxChange}
+                 disabled={checkedItems.all}
                /> 
                <label htmlFor="" className="FirstCartPgae---labelContent-H">Encap</label> 
                <label htmlFor="" >01</label>  
@@ -353,9 +420,16 @@ const changePage = ({selected}: { selected: number })=>{
 
 
               <div className="FirstCarPge---ProductDisplay">
-                {productDisplayElement}
-                {/* <Navigation data={productDisplayElement}/> */}
-                {/* <RouterProvider router={router}/> */}
+                {/* {productDisplayElement} */}
+
+                {filteredProducts.length > 0 ? (
+              productDisplayElement
+            ) : (
+              <div className="no-products-message">
+                <h2 className="NO--product">Product no longer available</h2>
+              </div>
+            )}
+              
               </div>
 
               
@@ -370,6 +444,7 @@ const changePage = ({selected}: { selected: number })=>{
 
          </div>
          <div className="Pagination--mainHolder">
+         {pageCount < 12 && ( // Only show pagination if there is more than 1 page
          <ReactPaginate 
             previousLabel={"Previous"}
             nextLabel={"Next"}
@@ -381,17 +456,27 @@ const changePage = ({selected}: { selected: number })=>{
             disabledClassName={"paginationDisabled"}
             activeClassName={"paginationActive"}
 
-
+            
             pageRangeDisplayed={isMobile ? 1 : 1}  // Adjust the center range
-          marginPagesDisplayed={isMobile ? 1 : 1}
+            marginPagesDisplayed={isMobile ? 1 : 1}
          
          />
+        )}
          </div>
-         {/* <NavigationPanel /> */}
-         {/* <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, alias.</p> */}
+        
        </div>
       </>
     )
   }
   
-  export default FirstCartPage
+  export default FirstCartPage;
+
+
+
+
+
+
+   // Filter products based on search term
+  //  const filteredProducts = productDisplay.filter((product) =>
+  //   product.productName.toLowerCase().includes(searchTerm.toLowerCase())
+  // );

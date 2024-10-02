@@ -76,7 +76,13 @@
 
 
 
-
+.no-products-message{
+    position: absolute;
+    color: #646464;
+  margin-top: 10em;
+  margin-left: 20em;
+ 
+}
 
 
 
