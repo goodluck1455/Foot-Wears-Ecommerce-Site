@@ -4,11 +4,15 @@ import App from './App.tsx'
 import './index.css'
 
 import  {ShopContextProvider }  from './assets/ShopContext.tsx'
+import { AlertProvider } from './assets/AlertContext.tsx'
+// import { ProductProvider } from './assets/ProductContext.tsx'
 // import { CartProvider } from 'react-use-cart';
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  // <React.StrictMode>
+
+    <AlertProvider > 
   <ShopContextProvider>
     <App />
   </ShopContextProvider>
-  // </React.StrictMode>,
+  </AlertProvider>
+
 )

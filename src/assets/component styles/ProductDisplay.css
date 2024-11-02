@@ -11,6 +11,20 @@
     position: relative;
   }
 
+  .ProductDisplay--percentage{
+    position: absolute;
+    content: "-25%";
+    background: rgb(20, 27, 52, 0.8);
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+    /* width: 50%; */
+    font-size: 0.9em;
+    left: 10.5em;
+    top: 1em;
+  }
+
+
   .ProductDisplay--container:hover{
     transform: scale(1.02);
     transition: 0.1s ease-in-out;
@@ -100,10 +114,14 @@ white-space: nowrap;
     left: 5.6em;}
 
     .ProductDisplay--container {
-      overflow: visible;
-      height: unset;
-      width: unset;
+      overflow: hidden;
+      /* height: unset; */
+      width: 10rem;
   }
+
+  .ProductDisplay--percentage { 
+    left: 7em;  
+}
 
 
 
@@ -117,7 +135,7 @@ white-space: nowrap;
     } */
 
     .ProductDisplay--container {
-      width: 90%;
+      width: 9rem;
       overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -135,7 +153,9 @@ white-space: nowrap;
   top: 0.1em;
   left: 4em;}
 
-
+  .ProductDisplay--percentage { 
+    left: 6em;  
+}
 
   
   

@@ -32,10 +32,16 @@
     background: #F4F4F4;
     border: 2px solid #D7D7D7;
     border-radius: 20px;
-    width: 15%;
-    height: 30em;
+    width: 17%;
+    /* max-width: 16%; */
+  
+    height: 31em;
     padding: 13px;
 }
+
+/* .searchPanel--widthIssue{
+    width: 15%;
+} */
 
 /* .FirstCartPgae---checkBoxContainer-A{
     margin: 3px 0px 3px 0px;
@@ -79,11 +85,13 @@
 .no-products-message{
     position: absolute;
     color: #646464;
-  margin-top: 10em;
-  margin-left: 20em;
- 
+   margin-top: 10em;
+   margin-left: 20em;
+    
 }
-
+.container---no-products-message{
+    width: 90%;
+}
 
 
 
@@ -105,7 +113,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     /* flex-wrap: wrap; */
-
+      width: 100%;
     gap: 2em;
     /* margin-bottom: 1em; */
 
@@ -368,6 +376,10 @@
    border: none;
 }
 
+.FirstCartPage---ViewPanel {
+    margin-left: -12px;
+}
+
 .Close---SearchPanel{
     background: #F4F4F4;
     position: absolute;
@@ -460,7 +472,7 @@
         margin-left: -43em;}
 
         .FirstCarPge---ProductDisplay {
-            gap: 0.3em;  
+            gap: 0.7em;  
         }
 
 
@@ -473,7 +485,9 @@
             width: 50%;
         }
 
-
+        .FirstCartPage---ViewPanel {
+            margin-left: -14.5px;
+        }
        
     
     }

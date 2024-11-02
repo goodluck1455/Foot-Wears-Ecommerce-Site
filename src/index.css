@@ -196,7 +196,7 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
    display: block;
    margin-left: 0.5rem;
   position: absolute;
-  top: 1em;
+  top: 1.1em;
   color: white;
   }
   
@@ -215,7 +215,7 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
 
   .Header--logo {
    font-size: 28px;
-  margin-left: 7.5em;
+  margin-left: 1.2em;
    margin-top: -0.1em;
   }
 
@@ -231,7 +231,7 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
 }
 @media screen and (max-width:568px){
   .Header--logo { 
-    margin-left: 4em;}
+    margin-left: 1.2em;}
 
     .Menue--icon {
       margin-left: 1em;
@@ -361,7 +361,7 @@ html{
   height: 7em;
   margin-top: -1.5em;
   text-align: center;
-  
+  z-index: 99;
 }
 .Menubar--handle{
  display: block;
@@ -394,7 +394,7 @@ transition: 1s ease-in-out;
 }
 
 .Header--logo {
-  /* margin-left: 4em; */
+  margin-left: 1.2em;
   font-size: 1.3em;
   margin-top: 0.3em;
 }
@@ -428,7 +428,7 @@ margin-right: unset;
 
 @media screen and (max-width:320px){
   .Header--logo {
-    margin-left: 2.5em;}
+    margin-left: 1.2em;}
 
     .search--icon {
       margin-left: 1em;

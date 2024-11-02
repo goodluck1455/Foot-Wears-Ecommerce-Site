@@ -97,10 +97,13 @@
   }  
   
   .cart--sizeQuantity{
-    margin-top: 0.8em;
+    margin-top: 0.9em;
     color: #151414;
     font-weight: 600;
     font-size: 15px;
+    display: flex;
+    gap: 15px;
+    
   }
 
   .Cart--size, .Cart--quantity {
@@ -123,6 +126,15 @@
   }
   .Cart--quantityContainer{
     margin-left: 3px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .Cart--quantityContainer .productDescription---AddMinus,  .Cart--quantityContainer .productDescription---Addition--result{
+   margin-top: -0.5rem;
+   display: flex; 
+   justify-content: center; 
+   align-items: center; 
   }
 
 .cart--amount{

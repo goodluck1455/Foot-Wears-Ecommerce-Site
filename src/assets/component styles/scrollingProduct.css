@@ -123,6 +123,20 @@
     position: relative;
   }
 
+  .imageSlider--percentage{
+    position: absolute;
+    content: "-25%";
+    background: rgb(20, 27, 52, 0.8);
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+    /* width: 50%; */
+    font-size: 0.9em;
+    left: 12em;
+    top: 1em;
+
+  }
+
 
   .imageSlider----sales{
     padding: 0px 1px;
@@ -158,7 +172,29 @@
     background-color: #9DAEEA;
     border-radius: 10px;
     height: 70%;
+    /* position: relative; */
   }
+
+   /* .imageSlider--container::before{
+   position: absolute;
+   content: "SOLD OUT";
+   width: 100%;
+   height: 100%;
+   background: rgb(0, 0, 0, 0.3);
+   border-radius: 10px;
+   text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+   display: flex; 
+  justify-content: center; 
+  align-items: center; 
+
+  color: white; 
+  font-size: 1rem; 
+  font-weight: bold; 
+  }  */
+
   .imageSlide--A img{
     width: 90%;
     margin-top: 10px;
@@ -202,6 +238,11 @@
     position: relative;
   }
   
+  .scrollingPage--navink{
+     text-decoration: none;
+     color: black;
+  }
+
    .custom-next,
   .custom-prev {
     position: absolute;
@@ -215,10 +256,10 @@
   
   .custom-next {
     right: 20px; 
-    background-color: #151414;
-    color: white;
+    background-color: rgb(21, 20, 20, 0.2);
+    color: black;
     border-radius: 50%;
-   padding: 3px; 
+   padding: 5px; 
    display: flex;
    justify-content: center; 
    align-items: center;
@@ -227,21 +268,25 @@
   .custom-prev {
     left: 20px;
     border-radius: 50%;
-    background-color: #141B34;
-    color: white;
-    padding: 3px; 
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  
+    background-color: rgb(21, 20, 20, .4);
+    color: black;
+    padding: 5px; 
+   display: flex;
+   justify-content: center; 
+   align-items: center;
   }
 
+  .custom-prev:hover, 
+  .custom-next:hover{
+    background-color: #151414;
+    color: white;
+  }
  
 
   .custom-next.swiper-button-disabled,
 .custom-prev.swiper-button-disabled {
     background-color: white;
-    color: #151414;; 
+    color: #151414; 
     border: 1px solid #151414;
     display: none;
   /* cursor: not-allowed;  */   /* Change cursor to indicate disabled state */
@@ -253,7 +298,6 @@
   border-radius: 10px;
   margin-left: 68.5em;
   margin-top: 2em; 
- 
 }
 
 @media screen and (max-width:1024px){

@@ -8,6 +8,16 @@ const MAX = 1000000;
 const InputRange = () => {
   const [values, setValues] = useState([30000, 500000]);
 
+
+  const currencyCatPrice = (newPrice:number)=>{
+    const oldPriceNumber =  Number(newPrice);
+    // const oldPriceNumber = parseFloat(newPrice.replace(/[^0-9.-]+/g, ""));
+    return oldPriceNumber.toLocaleString("en-NG", {
+    style: "currency",
+    currency: "NGN",
+    minimumFractionDigits: 0,
+  });}
+
   return (
     <div className="range-slider-container">
       <Range
@@ -36,7 +46,7 @@ const InputRange = () => {
         )}
       />
       <p className="RangeStyle">
-        Range: ${values[0]} - ${values[1]}
+        Range: {currencyCatPrice(values[0])} - {currencyCatPrice(values[1])}
       </p>
     </div>
   );

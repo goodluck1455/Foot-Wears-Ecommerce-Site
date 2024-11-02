@@ -4,15 +4,13 @@
     background-color: #141B34;
    padding: 8px;
    color: white;
-
    overflow: hidden;
    white-space: nowrap;
    /* width: 100%; */
 }
 
 .scrolingText--A, .scrolingText--B, .scrolingText--C{
-  display: flex;
-   
+  display: flex;  
 }
 
 

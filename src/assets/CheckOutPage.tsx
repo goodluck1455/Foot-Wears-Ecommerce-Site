@@ -35,6 +35,7 @@ interface CheckOutPageProps {
 
 const CheckOutPage: React.FC<CheckOutPageProps> = () => {
 const [opeOderSummary, setOpeOderSummary] = useState(false);
+
   const GlobalState = useContext(ShoppingContext)!;
  
      const state = GlobalState.state;
@@ -288,7 +289,7 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
                                     <h4 className="checkout-ProductName">{item.productName}</h4>
                                     <p className="Cart--Edition">Black lasted edition</p>
                                     <div className="checkOut--sizeQuantity">
-                                    <p className="Cart--Edition">{item.size || `20-30L` }</p>
+                                    <p className="Cart--Edition">Shoe size: {item.size || `20-30L` }</p>
                                     <p>
 
                                       {currencyCatPrice(item.newPrice)}

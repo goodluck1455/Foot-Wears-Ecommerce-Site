@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import {  useState, useContext } from "react";
 import "../assets/component styles/scrollingProduct.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -8,17 +8,34 @@ import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { fadeIn } from "../Variant";
 import { motion } from "framer-motion";
-
+import { ShoppingContext } from './ShopContext';
+import { useNavigate } from "react-router-dom";
+// import { useProductContext } from './ProductContext';
 
 // import KswissHeel from "../images/Group 18.png"
 import{ priceData4ScrollingPage } from "../assets/PriceData"
 import TimeCounter from "./TimeCounter";
+// import { NavLink } from "react-router-dom";
 
 function ScrollingProduct() {
 
   const [priceData]= useState(priceData4ScrollingPage);
+  // const { selectProduct } = useProductContext();
 
+  const navigate = useNavigate();
+  // const [priceData] = useState(priceData4ScrollingPage);
 
+  const handleProductClick = (product: any) => {
+    navigate("/ProductDescription", { state: { product } });
+  };
+
+  const globalVersion = useContext(ShoppingContext);
+
+  if (!globalVersion) {
+    return <div>Error: Shopping context not available</div>;
+  }
+        //  const state = globalVersion.state;
+        //  const dispatch = globalVersion.dispatch;
  
 
   const currencyPrice = (newPrice:string)=>{
@@ -32,18 +49,24 @@ function ScrollingProduct() {
 
   const priceDataElement = 
     priceData.map(price =>(
+
       <SwiperSlide key={price.id}>
-      <div className="imageSlider--container">
+      
+      <div className="imageSlider--container"   onClick={() => handleProductClick(price)}>
+      <span className="imageSlider--percentage">{price.discount}</span>
        <div className="imageSlider----sales"><p>SALES</p></div> 
                 <div className="imageSlide--A">
                   <img src={price.Image} alt="" />
                 </div>
                 <p className="scrollingPage---productName">{price.productName}</p>
-                <span className="scrollingPage--cartBal">{price.itemContainer}</span> <br />
+                <span className="scrollingPage--cartBal">{price.itemLeft} {price.itemContainer}</span> <br />
                 <span className="Scrolling--Oldprice">{currencyPrice(price.oldPrice)}</span> <span className="Scrolling--NewPrice">{currencyPrice(price.newPrice)}</span>
                 </div>
+                
                 </SwiperSlide>
-    ))
+          
+    )
+  ); 
   
 
     return (
@@ -55,6 +78,7 @@ function ScrollingProduct() {
     //  viewport={{ once: false, amount: 0.3 }}
      >
         <div className="scrolingPage--container">
+          
             <div className="scrolingPage---deals">
                <div>
                 <h3>Today Best Deals!</h3>
@@ -62,10 +86,7 @@ function ScrollingProduct() {
                <TimeCounter duration={5 * 22 * 60 * 60 * 1000}
                media="defaultView"
                />
-               {/* <div className="ScrollingPage---timeCountDown">
-                <p>Ends in: {12}h : {10}m : {10}s</p>
-               </div> */}
-
+              
             </div>
 
             <div className="ScrollingPage---imagesContainer">
@@ -114,16 +135,16 @@ function ScrollingProduct() {
               },
 
               1024: {
-                slidesPerView: 5,
+                slidesPerView: 5.4,
                 spaceBetween: 15,
               },
             }}
           >
             {priceDataElement}
           </Swiper>
-
-          <div className="custom-next"><MdKeyboardDoubleArrowLeft  /></div>
-          <div className="custom-prev"><MdKeyboardDoubleArrowRight /></div>
+          <div className="custom-next"><MdKeyboardDoubleArrowRight /></div>
+          <div className="custom-prev"><MdKeyboardDoubleArrowLeft  /></div>
+          
 
 
 {/* 

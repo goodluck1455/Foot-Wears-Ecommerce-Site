@@ -10,7 +10,7 @@ import { useContext, useState } from "react";
 // import { useCart } from "react-use-cart";
 import {ShoppingContext} from "./ShopContext";
 import { FaCartPlus as EmptyCart } from "react-icons/fa";
-
+import { useNavigate } from 'react-router-dom';
 
 
 function Cart() {
@@ -21,18 +21,24 @@ if (!GlobalState) {
   return <div>Error: Shopping context not available</div>; 
 }
  
-const state = GlobalState.state;
+   const state = GlobalState.state;
+     
+  const dispatch = GlobalState.dispatch;
 
-
-        //  const state = globalVersion.state;
-         const dispatch = GlobalState.dispatch;
  const [openModal, setOpenModal] = useState<number | null>(null);
+
+   const navigate = useNavigate();
+
+
+  
+ 
+
 
 
 const totalPrice = state.reduce((acc: number, item: any) => {
-  // Convert item.newPrice from string to number, removing the currency symbol and commas
+
   const priceNumber = parseFloat(item.newPrice.replace(/[^0-9.-]+/g, ""));
-  // return acc + priceNumber;
+
   return acc + priceNumber * (item.quantity || 1);
 }, 0);
  
@@ -62,30 +68,39 @@ const totalPrice = state.reduce((acc: number, item: any) => {
       minimumFractionDigits: 0,
     });}
 
+    
+    //Function to handle quantity increment and decrement
+   const updateQuantity = (id: number, quantity: number) => {
 
-
-    const handleQuantityChange = (id: number, quantity: number) => {
-      // localStorage.setItem(id.toString(), quantity.toString());
-      dispatch({
-        type: "UPDATE_QUANTITY",
-        payload: { id, quantity },
-      });
+    if(quantity >= 1){
+            
+       dispatch({ type: "UPDATE_QUANTITY", payload: { id, quantity } });
     };
+   
+   };
 
-    const handleSize = (id: any, size: any) => {
-      // localStorage.setItem(`size_${id}`, size.toString());
 
-      dispatch({
-        type: "UPDATE_SIZE",
-        payload: { id, size },
-      });
-    };
-       const validate = ()=>{
-        if(state.size === "" ){
-          alert("select your size")
-          return false
-        }else return true
-       }
+   const backToProductDescription = (product: any)=>{
+    navigate("/ProductDescription", { state: { product } });
+        
+   }
+    // const handleQuantityChange = (id: number, quantity: number) => {
+    //   localStorage.setItem(id.toString(), quantity.toString());
+    //   dispatch({
+    //     type: "UPDATE_QUANTITY",
+    //     payload: { id, quantity },
+    //   });
+    // };
+    
+    // const handleSize = (id: any, size: any) => {
+    //   localStorage.setItem(`size_${id}`, size.toString());
+
+    //   dispatch({
+    //     type: "UPDATE_SIZE",
+    //     payload: { id, size },
+    //   });
+    // };
+      
          
           
 
@@ -121,9 +136,10 @@ const totalPrice = state.reduce((acc: number, item: any) => {
               </div>
              
           ) : ( state.map((item:any,  index:number) => {
-            const savedSize = localStorage.getItem(`size_${item.id}`) || " ";
-            const savedQuantity = localStorage.getItem(`quantity_${item.id}`) || 1;
-            
+            // const savedSize = localStorage.getItem(`size_${item.id}`) || " ";
+            // const savedQuantity = localStorage.getItem(`quantity_${item.id}`) || 1;
+             
+
             return( 
 
                   
@@ -136,11 +152,13 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                   </div>
                     
                    <div className="Cart--Info">
+                    <div  className="backToProductDescription" onClick={()=> backToProductDescription(item)}>
                    <h4>{item.productName}</h4>
                    <p className="Cart--Edition">Black lasted edition</p>
+                   </div>
                    <div className="cart--sizeQuantity">
-                    <span > Size: 
-                      <select name="" id="" className="Cart--size"
+                    <span > Size:  {item.size}
+                      {/* <select name="" id="" className="Cart--size"
                       value={savedSize}
                         onChange={(e) =>
                           handleSize(
@@ -153,10 +171,14 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                         <option value="20-30L" >20-30L</option>
                         <option value="30-40L" >30-40L</option>
                         <option value="40-50L" >40-50L</option>
-                      </select>
+                      </select> */}
                       </span> <span className="Cart--quantityContainer">Quantity: 
-                      <select name="" className="Cart--quantity"
-                        value={savedQuantity}
+                        {/* <p>{item.quantity}</p> */}
+                        <div  className={`productDescription---AddMinus ${item.quantity === 1 ? 'disabled' : ''}`} onClick={() => updateQuantity(item.id, item.quantity -  1)} >-</div>
+                            <div  className='productDescription---Addition--result' >{item.quantity}</div> 
+                            <div className={`productDescription---AddMinus ${item.quantity >= item.itemLeft ? 'disabled' : ''}`} onClick={() => updateQuantity(item.id, Math.min(item.quantity + 1, item.itemLeft))} >+</div>
+                      {/* <select name="" className="Cart--quantity"
+                        value={item.quantity}
                           onChange={(e) =>
                             handleQuantityChange(
                               item.id,
@@ -170,7 +192,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                 
                       ))}
                         
-                      </select>
+                      </select> */}
                       </span>
                       </div>
                    </div>
@@ -219,19 +241,10 @@ const totalPrice = state.reduce((acc: number, item: any) => {
   
  )}) 
 )}
- {/* }  */}
 
 
-                   {/* <div>
-        <button onClick={() => emptyCart()} className="Cart--emptyCart">Empty Cart</button>
-      </div> */}
                    </div>
-
-                   {/* //----- */}
-
-                 
-               
-                    
+ 
                     {state.length === 0 ? (""): (
 
 
@@ -267,7 +280,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
 
                     </div>
                     <div>
-                 <NavLink to="/CheckOutPage"> <button type="button" className="cart--checkout" onClick={validate}>Checkout</button></NavLink> 
+                 <NavLink to="/CheckOutPage"> <button type="button" className="cart--checkout" >Proceed to Checkout</button></NavLink> 
                     </div>
                   <div>
                  <NavLink to="/shop"> <button type="button" className="Cart---continueShopping">Continue Shopping</button></NavLink> 

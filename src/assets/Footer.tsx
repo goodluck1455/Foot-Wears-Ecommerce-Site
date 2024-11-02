@@ -11,7 +11,7 @@ function Footer() {
 
     return (
       <>
-        <div className="Footer--container">
+        <div className="Footer--container" >
          <div className="Footer-secondLayer---container">
 
                 

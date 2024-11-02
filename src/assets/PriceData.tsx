@@ -2,118 +2,155 @@ import KswissHeel from "../images/Group 18.png";
 import Nike_Sneaker_11 from "../images/nike-sneakers-11.png";
 import PumTrainSneakers from "../images/puma-train-sneakers.png";
 import PumTrainSneakers_2 from "../images/pum-train-sneaker-2.png";
+import FashionSneakers_II from "../images/Fashion-sneakers-II.png";
+import EncapSneakers_n from "../images/Encap-sneakers-n.png";
+import Kswiss_sneakers_II from "../images/K_swiss_sneakers_II.png";
 
 const priceData4ScrollingPage = [
   {
-    id: 1,
+    id: 110,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: "items left",
     oldPrice: "$140,000",
     newPrice: "$200,000",
+    discount: "-25%",
+    itemLeft: 5
   },
   {
-    id: 2,
+    id: 111,
     Image: Nike_Sneaker_11,
     productName: "Nike Sneakers 11",
-    itemContainer: "5 items left",
+    itemContainer: "items left",
     oldPrice: "$290,000",
     newPrice: "$200,000",
+    discount: "-20%",
+    itemLeft: 9
   },
   {
-    id: 3,
+    id: 112,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: "items left",
     oldPrice: "$200,000",
     newPrice: "$150,000",
+    discount: "-10%",
+    itemLeft: 13
   },
   {
-    id: 4,
+    id: 113,
     Image: PumTrainSneakers_2,
     productName: "Puma train Sneakers 11",
-    itemContainer: "10 items left",
+    itemContainer: "items left",
     oldPrice: "$200,000",
     newPrice: "$150,000",
+    discount: "-9%",
+    itemLeft: 4
   },
   {
-    id: 5,
-    Image: KswissHeel,
-    productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    id: 114,
+    Image: FashionSneakers_II,
+    productName: "Fashion Sneakers II",
+    itemContainer: "items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
+    discount: "-15%",
+    itemLeft: 12
   },
   {
-    id: 6,
-    Image: KswissHeel,
-    productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    id: 115,
+    Image: EncapSneakers_n,
+    productName: "Encap Sneakers N",
+    itemContainer: "items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
+     discount: "-30%",
+     itemLeft: 7
   },
   {
-    id: 7,
-    Image: KswissHeel,
-    productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    id: 116,
+    Image: Kswiss_sneakers_II,
+    productName: "K Swiss Sneakers II",
+    itemContainer: "items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
+     discount: "-13%",
+     itemLeft: 8
   },
   {
-    id: 8,
+    id: 117,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: "items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
+     discount: "-43%",
+     itemLeft: 10
   },
   {
-    id: 9,
+    id: 118,
     Image: KswissHeel,
     productName: "K-swiss puma",
-    itemContainer: "10 items left",
+    itemContainer: "items left",
     oldPrice: "$40,000",
     newPrice: "$40,000",
+    discount: "-43%",
+    itemLeft: 5
   },
 ];
 
 const priceData4ProductDisplay = [
   {
     id: 1,
-    Image: KswissHeel,
-    productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    Image: EncapSneakers_n,
+    productName: "Encap Sneakers N",
+    itemContainer: "items left",
     oldPrice: "$40,000",
     newPrice: "$70,000",
-    category: "male Shoes",
+    category: "female Shoes",
+    Brand: "K-swiss",
+    discount: "-25%",
+    Size: "6-20",
+    itemLeft: 5
   },
   {
     id: 2,
     Image: Nike_Sneaker_11,
     productName: "Nike Sneakers 11",
-    itemContainer: "5 items left",
+    itemContainer: "items left",
     oldPrice: "$290,000",
     newPrice: "$200,000",
      category: "male Shoes",
+     discount: "-15%",
+       Brand: "Nike",
+       Size: "20-30",
+       itemLeft: 2
   },
   {
     id: 3,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$150,000",
      category: "male Shoes",
+     discount: "-30%",
+     Brand: "Puma",
+     Size: "31-40",
+     itemLeft: 10
   },
   {
     id: 4,
-    Image: PumTrainSneakers,
-    productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    Image: FashionSneakers_II,
+    productName: "Fashion Sneakers II",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$150,000",
      category: "male Shoes",
+     discount: "-20%",
+     Brand: "Puma",
+     Size: "41-50",
+     itemLeft: 8
   },
   {
     id: 5,
@@ -123,24 +160,36 @@ const priceData4ProductDisplay = [
     oldPrice: "$200,000",
     newPrice: "$150,000",
     category: "male Shoes",
+    Brand: "Puma",
+    Size: "6-20",
+    discount: "-43%",
+    itemLeft: 8
   },
   {
     id: 6,
     Image: Nike_Sneaker_11,
     productName: "Nike Sneakers 11",
-    itemContainer: "5 items left",
+    itemContainer: "items left",
     oldPrice: "$290,000",
     newPrice: "$200,000",
     category: "male Shoes",
+    Brand: "Nike",
+    Size: "20-30",
+    discount: "-43%",
+    itemLeft: 8
   },
   {
     id: 7,
-    Image: PumTrainSneakers,
-    productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    Image: Kswiss_sneakers_II,
+    productName: "K Swiss Sneaker II",
+    itemContainer: "items left",
     oldPrice: "$200,000",
     newPrice: "$150,000",
     category: "male Shoes",
+    Brand: "Puma",
+    Size: "31-40",
+    discount: "-43%",
+    itemLeft: 14
   },
   {
     id: 8,
@@ -150,6 +199,10 @@ const priceData4ProductDisplay = [
     oldPrice: "$200,000",
     newPrice: "$150,000",
     category: "male Shoes",
+    Brand: "Puma",
+    Size: "41-50",
+    discount: "-13%",
+    itemLeft: 8
   },
   {
     id: 9,
@@ -158,7 +211,10 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
-    category: "male Shoes",
+    category: "female Shoes",
+    Brand: "K-swiss",
+    Size: "6-20",
+    discount: "-23%"
   },
   {
     id: 10,
@@ -167,7 +223,8 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
-    category: "male Shoes",
+    category: "female Shoes",
+    discount: "-33%"
   },
   {
     id: 11,
@@ -176,7 +233,8 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
-    category: "male Shoes",
+    category: "female Shoes",
+    discount: "-23%"
   },
   {
     id: 12,
@@ -185,7 +243,8 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
-    category: "male Shoes",
+    category: "female Shoes",
+      discount: "-13%"
   },
 
   {
@@ -195,7 +254,8 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$670,000",
-    category: "male Shoes",
+    category: "female Shoes",
+      discount: "-31%"
   },
   {
     id: 14,
@@ -205,6 +265,7 @@ const priceData4ProductDisplay = [
     oldPrice: "$290,000",
     newPrice: "$230,000",
     category: "male Shoes",
+      discount: "-23%"
   },
   {
     id: 15,
@@ -214,6 +275,7 @@ const priceData4ProductDisplay = [
     oldPrice: "$200,000",
     newPrice: "$850,000",
     category: "male Shoes",
+      discount: "-30%"
   },
   {
     id: 16,
@@ -223,6 +285,7 @@ const priceData4ProductDisplay = [
     oldPrice: "$200,000",
     newPrice: "$450,000",
     category: "male Shoes",
+      discount: "-20%"
   },
   {
     id: 17,
@@ -232,6 +295,7 @@ const priceData4ProductDisplay = [
     oldPrice: "$200,000",
     newPrice: "$650,000",
     category: "male Shoes",
+      discount: "-21%"
   },
   {
     id: 18,
@@ -241,6 +305,7 @@ const priceData4ProductDisplay = [
     oldPrice: "$290,000",
     newPrice: "$250,000",
     category: "male Shoes",
+      discount: "-29%"
   },
   {
     id: 19,
@@ -250,6 +315,7 @@ const priceData4ProductDisplay = [
     oldPrice: "$200,000",
     newPrice: "$350,000",
     category: "male Shoes",
+      discount: "-22%"
   },
   {
     id: 20,
@@ -259,6 +325,7 @@ const priceData4ProductDisplay = [
     oldPrice: "$200,000",
     newPrice: "$750,000",
     category: "male Shoes",
+      discount: "-27%"
   },
   {
     id: 21,
@@ -267,7 +334,8 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$80,000",
-    category: "male Shoes",
+    category: "female Shoes",
+      discount: "-34%"
   },
   {
     id: 22,
@@ -276,7 +344,7 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$90,000",
-    category: "male Shoes",
+    category: "female Shoes",
   },
   {
     id: 23,
@@ -285,7 +353,7 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$60,000",
-    category: "male Shoes",
+    category: "female Shoes",
   },
   {
     id: 24,
@@ -294,7 +362,7 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$100,000",
-    category: "male Shoes",
+    category: "female Shoes",
   },
   {
     id: 25,
@@ -303,7 +371,7 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$670,000",
-    category: "male Shoes",
+    category: "female Shoes",
   },
   {
     id: 26,
@@ -340,6 +408,7 @@ const priceData4ProductDisplay = [
     oldPrice: "$200,000",
     newPrice: "$650,000",
     category: "male Shoes",
+     Brand: "Puma"
   },
   {
     id: 30,
@@ -349,6 +418,7 @@ const priceData4ProductDisplay = [
     oldPrice: "$290,000",
     newPrice: "$250,000",
     category: "male Shoes",
+     Brand: "Nike"
   },
   {
     id: 31,
@@ -358,6 +428,7 @@ const priceData4ProductDisplay = [
     oldPrice: "$200,000",
     newPrice: "$350,000",
     category: "male Shoes",
+     Brand: "Puma"
   },
   {
     id: 32,
@@ -393,7 +464,7 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$60,000",
-    category: "male Shoes",
+    category: "female Shoes",
   },
   {
     id: 37,
@@ -402,7 +473,7 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$100,000",
-    category: "male Shoes",
+    category: "female Shoes",
   },
   {
     id: 38,
