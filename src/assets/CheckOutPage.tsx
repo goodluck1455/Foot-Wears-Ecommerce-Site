@@ -199,7 +199,7 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
                             </span>
                               <span className='checkOutInput---inputLayout'>  
                              <label>Card Holder's Name</label> <img src={CreditCard} alt="" className='CheckOutForm---LastNameIcon'/>
-                              <input type="text" placeholder="Enter your last name" />
+                              <input type="text" placeholder="Card holder's name" />
                               </span>
                      
                               </div>
@@ -208,7 +208,14 @@ const [opeOderSummary, setOpeOderSummary] = useState(false);
                                 <div className="checkOutExpiration--Container">
                             <span className='checkOutInput---inputLayout'>
                              <label>Expiration date</label> 
-                            <input type="date" placeholder="Enter your expiration date"  className='ExpiringIput'/>
+                            <input type="date" 
+                              
+                              onFocus={(e) => (e.target.type = 'date')}
+                              onBlur={(e) => {
+                                if (!e.target.value) e.target.type = 'text';
+                              }}
+                            
+                            placeholder="Expiration date"  className='ExpiringIput'/>
                             </span> 
                               <span className='checkOutInput---inputLayout'>  
                               <label>CVC</label> 
