@@ -128,12 +128,16 @@
     content: "-25%";
     background: rgb(20, 27, 52, 0.8);
     color: white;
-    padding: 3px;
-    border-radius: 4px;
-    /* width: 50%; */
+    padding: 4px;
+    /* border-radius: 4px; */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 17%;
     font-size: 0.9em;
-    left: 12em;
+    left: 11em;
     top: 1em;
+    text-align: center;
 
   }
 
@@ -172,6 +176,7 @@
     background-color: #9DAEEA;
     border-radius: 10px;
     height: 70%;
+    overflow: hidden;
     /* position: relative; */
   }
 
@@ -431,6 +436,13 @@
  display: none;
 }
 
+
+
+
+.imageSlider--percentage{
+  left: 10em;
+}
+
   
 }
 
@@ -469,6 +481,11 @@
 
 .scrolingPage---deals h3 {
   font-size: 0.8em;
+}
+
+.imageSlider--percentage{
+  width: 22%;
+  left: 7em;
 }
 
 

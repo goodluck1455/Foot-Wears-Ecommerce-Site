@@ -157,7 +157,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                    <p className="Cart--Edition">Black lasted edition</p>
                    </div>
                    <div className="cart--sizeQuantity">
-                    <span > Size:  {item.size}
+                    <span className="cart--SizeControl"> Size:  {item.size}
                       {/* <select name="" id="" className="Cart--size"
                       value={savedSize}
                         onChange={(e) =>

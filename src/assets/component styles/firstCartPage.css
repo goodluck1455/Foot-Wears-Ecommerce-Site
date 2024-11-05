@@ -330,7 +330,11 @@
         margin-left: 19.8em; 
           }
           .FirstCartPage---SearchPanel {
-            margin-left: -35em;}
+            margin-left: -37em;}
+
+            .FirstCartPage---ViewPanel {
+                margin-left: 13px;
+            }
 }
 
 @media screen and (max-width:414px){
@@ -340,6 +344,10 @@
     }
     .FirstCartPage---SearchPanel {
         margin-left: -35em;}
+
+        .FirstCartPage---ViewPanel {
+            margin-left: 13px;
+        }
 }
 
 
@@ -351,6 +359,10 @@
           .FirstCartPage---SearchPanel {
             margin-left: -35em;}
 
+            .FirstCartPage---ViewPanel {
+                margin-left: -1px;
+            }
+
 
 }
 
@@ -361,6 +373,10 @@
 
           .FirstCartPage---SearchPanel {
              margin-left: -35em;}
+
+             .FirstCartPage---ViewPanel {
+                margin-left: -8px;
+            }
 }
 
 
@@ -376,9 +392,7 @@
    border: none;
 }
 
-.FirstCartPage---ViewPanel {
-    margin-left: -12px;
-}
+
 
 .Close---SearchPanel{
     background: #F4F4F4;

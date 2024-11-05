@@ -941,6 +941,58 @@ display: none;
 }
 
 
+
+
+@media screen and (max-width:480px){
+ 
+}
+
+@media screen and (max-width:430px){
+  .cart--SizeControl {
+    left: 6.8rem;
+}
+}
+
+@media screen and (max-width:414px){
+  .cart--SizeControl {
+    left: 6.5rem;
+}
+
+}
+
+
+@media screen and (max-width:390px), (max-width:393px){
+  .cart--SizeControl {
+    left: 6.2rem;
+}
+}
+
+
+
+
+
+
+@media screen and (max-width:375px){
+  .cart--SizeControl {
+    left: 6rem;
+}
+ @media  (max-width:360px){
+  .cart--SizeControl {
+    left: 5.7rem;
+}
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 .Cart--container {
   margin: 3em 0.6em 2em 0.6em;
@@ -976,7 +1028,7 @@ display: none;
   width: 100%;}
 
   .Cart--BasketItems {
-    height: 10.5em;
+    height: 11.5em;
     flex-direction: column;}
 
     .Cart--image--container {
@@ -989,6 +1041,7 @@ display: none;
   justify-content: space-between;
   margin-left: 1.1em;
   padding-bottom: 10px;
+  /* margin-top: 10px; */
   }
 
   .cart--DeleteBTN {
@@ -1003,7 +1056,8 @@ display: none;
 
 
   .Cart--quantityContainer {
-    margin-left: 56px;
+    margin-left: 3px;
+        margin-top: 0.5rem;
 }
 
 /* Media query for checkoutpage begins here */
@@ -1053,7 +1107,7 @@ position: relative;
  height: 22em;
 }
 .Checkout--summaryClose{
-  margin-left: 1em;
+  margin-left: 0.9em;
   transition: 1s ease-in;
   border-radius: 10px;
 }
@@ -1115,12 +1169,25 @@ position: relative;
     margin-top: 0.3em;
 }
 
+.cart--SizeControl{
+ position: absolute;
+        top: -2rem;
+       
+}
+
 
    
 }
 
 
 @media screen and (max-width:320px){
+
+  .cart--SizeControl {
+    left: 5.1rem;
+}
+
+
+
 
 .cart--DeleteOption, .Cart---SaveItem {
   width: 30%;

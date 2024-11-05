@@ -53,10 +53,10 @@ function ScrollingProduct() {
       <SwiperSlide key={price.id}>
       
       <div className="imageSlider--container"   onClick={() => handleProductClick(price)}>
-      <span className="imageSlider--percentage">{price.discount}</span>
        <div className="imageSlider----sales"><p>SALES</p></div> 
                 <div className="imageSlide--A">
                   <img src={price.Image} alt="" />
+                  <span className="imageSlider--percentage">{price.discount}</span>
                 </div>
                 <p className="scrollingPage---productName">{price.productName}</p>
                 <span className="scrollingPage--cartBal">{price.itemLeft} {price.itemContainer}</span> <br />

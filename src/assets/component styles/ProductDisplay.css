@@ -16,13 +16,20 @@
     content: "-25%";
     background: rgb(20, 27, 52, 0.8);
     color: white;
-    padding: 3px;
-    border-radius: 4px;
-    /* width: 50%; */
+    padding: 4px;
+    /* border-radius: 4px; */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    width: 17%;
     font-size: 0.9em;
     left: 10.5em;
     top: 1em;
   }
+
+
+  
 
 
   .ProductDisplay--container:hover{
@@ -121,6 +128,7 @@ white-space: nowrap;
 
   .ProductDisplay--percentage { 
     left: 7em;  
+    width: 23%;
 }
 
 
