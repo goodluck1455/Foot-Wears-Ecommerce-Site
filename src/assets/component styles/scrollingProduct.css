@@ -392,6 +392,7 @@
 
 
 
+
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
     .imageSlider--container {
       margin-left: 0; 
@@ -442,6 +443,13 @@
 .imageSlider--percentage{
   left: 10em;
 }
+
+@media (max-width:360px){
+  .imageSlider--percentage{
+    left: 9.5em;
+}
+}
+
 
   
 }
