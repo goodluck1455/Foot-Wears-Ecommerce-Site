@@ -352,6 +352,12 @@ width: 45%;
 
 
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
+
+  .mySwiper2 .swiper-slide img{
+    background-color: #9DAEEA;
+  }
+
+
 .Product--details {
   flex-direction: column;
 }
