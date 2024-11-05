@@ -133,13 +133,17 @@ const App: React.FC<AppProps> = () => {
 const MainContent: React.FC = () => {
   const location = useLocation();
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
-  const [isMediumScreen, setIsMediumScreen] = useState(window.innerWidth <= 320 && window.innerWidth <= 414);
+  const [isMobile_430, setIsMobile_430] = useState(window.innerWidth <= 430);
+  const [isMediumSmall, setIsMediumSmall] = useState(window.innerWidth <= 360);
+  const [isMediumScreen, setIsMediumScreen] = useState(window.innerWidth >= 320 && window.innerWidth <= 414);
 
   // Update isMobile state on window resize
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 375);
-      setIsMediumScreen(window.innerWidth > 320 && window.innerWidth <= 414)
+      setIsMediumSmall(window.innerWidth <= 360);
+      setIsMobile_430(window.innerWidth <= 430);
+      setIsMediumScreen(window.innerWidth >= 320 && window.innerWidth <= 414);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -147,6 +151,13 @@ const MainContent: React.FC = () => {
 
   // Define paths where you don't want the footer to show on mobile
   const noFooterPaths = ["/ProductDescription"];
+
+
+  const shouldRenderFooter = !(
+    (isMobile || isMediumScreen || isMediumSmall || isMobile_430 ) && 
+    noFooterPaths.includes(location.pathname)
+  );
+
 
   return (
     <>
@@ -162,11 +173,7 @@ const MainContent: React.FC = () => {
       </main>
 
       {/* Conditionally render the Footer */}
-      {(
-        (!isMobile || !noFooterPaths.includes(location.pathname)) ||
-        (!isMediumScreen || !noFooterPaths.includes(location.pathname)) 
-      )
-      && <Footer />}
+      { shouldRenderFooter && <Footer />}
     </>
   );
 };
