@@ -195,7 +195,7 @@ const priceData4ProductDisplay = [
     id: 8,
     Image: PumTrainSneakers_2,
     productName: "Puma train Sneakers 11",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$150,000",
     category: "male Shoes",
@@ -208,367 +208,430 @@ const priceData4ProductDisplay = [
     id: 9,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
     category: "female Shoes",
     Brand: "K-swiss",
     Size: "6-20",
-    discount: "-23%"
+    discount: "-23%",
+    itemLeft: 5
   },
   {
     id: 10,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
     category: "female Shoes",
-    discount: "-33%"
+    discount: "-33%",
+    itemLeft: 5
   },
   {
     id: 11,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
     category: "female Shoes",
-    discount: "-23%"
+    discount: "-23%",
+    itemLeft: 5
   },
   {
     id: 12,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$50,000",
     category: "female Shoes",
-      discount: "-13%"
+      discount: "-13%",
+      itemLeft: 9
   },
 
   {
     id: 13,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$670,000",
     category: "female Shoes",
-      discount: "-31%"
+      discount: "-31%",
+      itemLeft: 8
   },
   {
     id: 14,
     Image: Nike_Sneaker_11,
     productName: "Nike Sneakers 11",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$290,000",
     newPrice: "$230,000",
     category: "male Shoes",
-      discount: "-23%"
+      discount: "-23%",
+      itemLeft: 4
   },
   {
     id: 15,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$850,000",
     category: "male Shoes",
-      discount: "-30%"
+      discount: "-30%",
+      itemLeft: 3
   },
   {
     id: 16,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$450,000",
     category: "male Shoes",
-      discount: "-20%"
+      discount: "-20%",
+      itemLeft: 10
   },
   {
     id: 17,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$650,000",
     category: "male Shoes",
-      discount: "-21%"
+      discount: "-21%",
+      itemLeft: 7
   },
   {
     id: 18,
     Image: Nike_Sneaker_11,
     productName: "Nike Sneakers 11",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$290,000",
     newPrice: "$250,000",
     category: "male Shoes",
-      discount: "-29%"
+      discount: "-29%",
+      itemLeft: 5
   },
   {
     id: 19,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$350,000",
     category: "male Shoes",
-      discount: "-22%"
+      discount: "-22%",
+      itemLeft: 6
   },
   {
     id: 20,
     Image: PumTrainSneakers_2,
     productName: "Puma train Sneakers 11",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$750,000",
     category: "male Shoes",
-      discount: "-27%"
+      discount: "-27%",
+      itemLeft: 9
   },
   {
     id: 21,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$80,000",
     category: "female Shoes",
-      discount: "-34%"
+      discount: "-34%",
+      itemLeft: 5
   },
   {
     id: 22,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$90,000",
     category: "female Shoes",
+    discount: "-33%",
+    itemLeft: 5
   },
   {
     id: 23,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$60,000",
     category: "female Shoes",
+    discount: "-33%",
+    itemLeft: 9
   },
   {
     id: 24,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$100,000",
     category: "female Shoes",
+    discount: "-33%",
+    itemLeft: 5
   },
   {
     id: 25,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$670,000",
     category: "female Shoes",
+    discount: "-33%",
+    itemLeft: 5
   },
   {
     id: 26,
     Image: Nike_Sneaker_11,
     productName: "Nike Sneakers 11",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$290,000",
     newPrice: "$230,000",
     category: "male Shoes",
+    discount: "-33%",
+    itemLeft: 5
   },
   {
     id: 27,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$850,000",
     category: "male Shoes",
+    discount: "-33%",
+    itemLeft: 5
   },
   {
     id: 28,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$450,000",
     category: "male Shoes",
+    discount: "-33%",
+    itemLeft: 5
   },
   {
     id: 29,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$650,000",
     category: "male Shoes",
-     Brand: "Puma"
+     Brand: "Puma",
+     discount: "-33%",
+     itemLeft: 5
   },
   {
     id: 30,
     Image: Nike_Sneaker_11,
     productName: "Nike Sneakers 11",
-    itemContainer: "5 items left",
+    itemContainer: "items left",
     oldPrice: "$290,000",
     newPrice: "$250,000",
     category: "male Shoes",
-     Brand: "Nike"
+     Brand: "Nike",
+     discount: "-33%",
+     itemLeft: 5
   },
   {
     id: 31,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$350,000",
     category: "male Shoes",
-     Brand: "Puma"
+     Brand: "Puma",
+     discount: "-33%",
+     itemLeft: 12
   },
   {
     id: 32,
     Image: PumTrainSneakers_2,
     productName: "Puma train Sneakers 11",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$750,000",
     category: "male Shoes",
+    discount: "-43%",
+    itemLeft: 5
   },
   {
     id: 33,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$80,000",
     category: "male Shoes",
+    discount: "-37%",
+    itemLeft: 3
   },
   {
     id: 34,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$90,000",
     category: "male Shoes",
+    discount: "-33%",
+    itemLeft: 13
   },
   {
     id: 36,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$60,000",
     category: "female Shoes",
+    discount: "-32%",
+    itemLeft: 5
   },
   {
     id: 37,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$100,000",
     category: "female Shoes",
+    discount: "-37%",
+    itemLeft: 5
   },
   {
     id: 38,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$670,000",
     category: "male Shoes",
+    discount: "-34%",
+    itemLeft: 8
   },
   {
     id: 39,
     Image: Nike_Sneaker_11,
     productName: "Nike Sneakers 11",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$290,000",
     newPrice: "$230,000",
     category: "male Shoes",
-    Brand: "Nike"
+    Brand: "Nike",
+    discount: "-35%",
+    itemLeft: 10
   },
   {
     id: 40,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$850,000",
     category: "male Shoes",
-    Brand: "Puma"
+    Brand: "Puma",
+    discount: "-30%",
+    itemLeft: 5
   },
   {
     id: 41,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$450,000",
     category: "male Shoes",
     Brand: "Puma",
+    discount: "-24%",
+    itemLeft: 8
   },
   {
     id: 42,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$650,000",
     category: "male Shoes",
     Brand: "Puma",
+    discount: "-43%",
+    itemLeft: 7
   },
   {
     id: 43,
     Image: Nike_Sneaker_11,
     productName: "Nike Sneakers 11",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$290,000",
     newPrice: "$250,000",
     category: "male Shoes",
     Brand: "Nike",
+    discount: "-23%",
+    itemLeft: 9
   },
   {
     id: 44,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$350,000",
     category: "male Shoes",
+    discount: "-13%",
+    itemLeft: 5
   },
   {
     id: 45,
     Image: PumTrainSneakers_2,
     productName: "Puma train Sneakers 11",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$750,000",
     category: "male Shoes",
+    discount: "-50%",
+    itemLeft: 8
   },
   {
     id: 46,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$80,000",
     category: "Male Shoes",
+    discount: "-33%",
+    itemLeft: 23
   },
   {
     id: 47,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$90,000",
     category: "Male Shoes",
+    discount: "-30%",
+    itemLeft: 13
   },
   {
     id: 48,
@@ -1126,9 +1189,11 @@ const priceData4ProductDisplay = [
     id: 104,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$350,000",
+    discount: "-43%",
+    itemLeft: 5
   },
   {
     id: 105,
@@ -1137,38 +1202,48 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$200,000",
     newPrice: "$750,000",
+    discount: "-31%",
+    itemLeft: 13
   },
   {
     id: 106,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$80,000",
+    discount: "-15%",
+    itemLeft: 5
   },
   {
     id: 107,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$90,000",
+    discount: "-20%",
+    itemLeft: 9
   },
   {
     id: 108,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$60,000",
+    discount: "-43%",
+    itemLeft: 10
   },
   {
     id: 109,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "12 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
-    newPrice: "$Good,000",
+    newPrice: "$28,000",
+    discount: "-53%",
+    itemLeft: 12
   },
 ];
 
