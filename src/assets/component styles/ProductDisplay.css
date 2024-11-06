@@ -109,11 +109,16 @@ white-space: nowrap;
   left: 9rem;
 }
 
+@media (max-width:475px){
+  .ProductDisplay--percentage {
+    left: 6rem;
+    width:24%;
+  }
+  
+}
 /* .FirstCartPage---ViewPanel {
   margin-left: -1.3rem;
 } */
-
-
 
   }
 

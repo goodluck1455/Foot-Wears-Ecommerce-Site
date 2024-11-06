@@ -379,7 +379,32 @@ padding: 6px;
   }
 
 
+
+
 }
+
+
+
+
+@media (max-width:734px){
+  .imageSlider--container{
+    height: 15em;
+  }
+
+  .imageSlider--percentage {
+    left: 11rem;
+}
+}
+
+
+@media (max-width:600px){
+
+  .imageSlider--percentage {
+    left: 8rem;
+  }
+
+}
+
 
 
 @media screen and (max-width:533px){
