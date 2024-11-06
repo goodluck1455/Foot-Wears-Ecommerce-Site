@@ -1,6 +1,6 @@
 # Ecommerce Website for Foot Wears
 
-This site is build with the use of React js + Vite + Typscript.
+This site is build with the use of React js + Vite + TypeScript.
 
 
 
