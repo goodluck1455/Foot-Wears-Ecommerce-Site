@@ -379,7 +379,7 @@ width: 45%;
 
 }
 
-@media screen and (max-width:600px), (max-width:734px){
+@media screen and (max-width:600px), (max-width:734px), (max-width:740px){
   .product--details-image-and-others {
      flex-direction: column;
      height: 50rem;

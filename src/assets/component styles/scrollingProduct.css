@@ -384,7 +384,17 @@ padding: 6px;
 }
 
 
+@media (max-width:740px){
 
+  .imageSlide--A {
+
+    height: 59%}
+
+    .imageSlider--percentage {
+      left: 6rem;
+      width: 22%;
+  }
+}
 
 @media (max-width:734px){
   .imageSlider--container{
@@ -519,7 +529,7 @@ padding: 6px;
 
 @media (max-width:360px){
   .imageSlider--percentage{
-    left: 9.5em;
+    left: 8.5em;
 }
 }
 
