@@ -897,33 +897,41 @@ const priceData4ProductDisplay = [
     id: 66,
     Image: Nike_Sneaker_11,
     productName: "Nike Sneakers 11",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$290,000",
     newPrice: "$250,000",
+    discount: "-13%",
+    itemLeft: 13
   },
   {
     id: 67,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$350,000",
+    discount: "-23%",
+    itemLeft: 13
   },
   {
     id: 68,
     Image: PumTrainSneakers_2,
     productName: "Puma train Sneakers 11",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$750,000",
+    discount: "-13%",
+    itemLeft: 10
   },
   {
     id: 69,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$80,000",
+    discount: "-23%",
+    itemLeft: 9
   },
   {
     id: 70,

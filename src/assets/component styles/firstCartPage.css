@@ -148,6 +148,17 @@
 }
 
 
+@media (min-width:1440px){
+
+    .FirstCartPage---SearchPanel {
+        width: 12%;}
+
+
+   }
+
+
+
+
 @media screen and (max-width:1024px){
     .FirstCartPage---SearchPanel {
         z-index: 1;
@@ -201,13 +212,42 @@
 }
 
 
+            @media screen and (max-width:820px){
+                .FirstCartPage---ViewPanel {
+                    margin-left: 2.6rem;
+                }
+            }
+
 
 @media screen and (max-width:768px),  (max-width:600px), (max-width:820px){
     .FirstCarPge---ProductDisplay {
-        /* grid-template-columns:  1fr 1fr 1fr 1fr; */
+        grid-template-columns:  1fr 1fr 1fr;
         gap: 1em;
       
     }
+
+    
+
+
+
+        @media (max-width:820px){
+            .FirstCartPage---ViewPanel {
+                margin-left: 2.6rem;
+            }
+        }
+
+        @media (max-width:768px){
+            .FirstCartPage---ViewPanel {
+                margin-left: 1.5rem;
+       
+               }
+        }
+
+
+
+
+
+      
 
     .FirstCartPage---container, .FirstCartPageB---container{
         margin: 3em 2em 2em 2em;
@@ -220,7 +260,7 @@
     .FirstCartPage---SearchPanel {
         z-index: 1;
         position: absolute;
-        margin-left: -13em;
+        margin-left: -19em;
        height: auto;
        transition: 1s ease-in;
        border: none;
@@ -275,11 +315,19 @@
 
 @media screen and (max-width:667px),(max-width:684px){
     .firstCARTpAGE---filterTag {
-        margin-left: 30em;}
+        margin-left: 27em;}
 
 
         .FirstCarPge---ProductDisplay {
-            grid-template-columns: 1fr 1fr 1fr;}
+            grid-template-columns: 1fr 1fr;}
+
+            .FirstCartPage---ViewPanel {
+                margin-left: 3.5rem;
+               }
+
+               .FirstCart--TurnHeads{
+                display: none;
+               }
 
 }
 

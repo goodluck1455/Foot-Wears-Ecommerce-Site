@@ -63,6 +63,20 @@
    top: 7em;
   }
 
+
+  @media (min-width:1440px){
+    .ProductDisplay--percentage {
+      left: 14.5rem;  
+      font-size: 1.4em;
+      padding: 6px;
+      }
+
+
+      .ProductDisplay--container {
+        height: 19em;}
+
+  }
+
   @media screen and (max-width:1024px){
     .ProductDisplay---add-to-cart {
       left: 7.5em;}
@@ -83,6 +97,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     height: 13em;
+    width: 13rem;
 }
 
 .scrollingPage---productName {
@@ -90,6 +105,13 @@ text-overflow: ellipsis;
 overflow: hidden;
 white-space: nowrap;
 }
+.ProductDisplay--percentage {
+  left: 9rem;
+}
+
+/* .FirstCartPage---ViewPanel {
+  margin-left: -1.3rem;
+} */
 
 
 

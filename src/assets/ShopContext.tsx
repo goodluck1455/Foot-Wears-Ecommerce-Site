@@ -85,8 +85,10 @@ export const ShopContextProvider = (props:any) => {
 
         case "REMOVE":
           const filteredState = state.filter((item: any) => item.id !== action.payload.id);
+          const productToRemove = state.find((item:any) => item.id === action.payload.id);
+
           
-          toast.success(`${action.payload.productName} is successfully remove from cart`, {
+          toast.success(`${productToRemove?.productName || 'Product'} is successfully remove from cart `, {
             icon: <AddedToCartIcon style={{ color: 'green', fontSize: '1.5em' }} />,
           });
 

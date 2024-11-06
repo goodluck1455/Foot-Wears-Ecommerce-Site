@@ -66,6 +66,13 @@ padding-bottom: 15px;
 }
 
 
+@media (min-width:1440px){
+    .Footer-secondLayer---container {
+        justify-content: space-evenly;
+      }
+      
+}
+
 @media screen and (max-width:1024px){
     .Footer-secondLayer---container {
         gap: 16em;}
@@ -109,9 +116,11 @@ padding-bottom: 15px;
 
 @media screen and (max-width:667px), (max-width:684px){
     .Footer-secondLayer---container {
-        gap: 3em;}
+        gap: 2em;}
 
-       
+        .Footer---left-section {
+            gap: 2em;
+        } 
 
 }
 

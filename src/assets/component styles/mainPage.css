@@ -80,6 +80,56 @@
  } 
 
 
+ /******************************
+ MEDIA QUERY BEGINS HERE
+ ***********************************/
+
+ @media (min-width:1440px){
+  .mainPage---container {
+    justify-content: space-between;
+    padding: 6rem 11rem 6rem 11rem;
+}
+
+
+
+.mainPage--title {
+  font-size: 3.5em;
+}
+
+
+.MainPage--paragraph {
+  line-height: 39px;
+  font-size: 1.8rem;
+  color: rgb(21, 20, 20, .8);
+}
+
+
+.mainPage--button--text {
+  font-size: 1.6rem;
+  margin-top: 0.3em;
+  margin-left: -1rem;}
+
+
+  .mainPage--button {
+    padding: 8px; 
+    width: 35%;
+}
+.mainPage--arrow {
+
+  font-size: 30px;
+  padding: 2px;
+  margin-left: 4em;
+  margin-top: 0.2em;
+}
+
+
+
+ }
+
+
+
+
+
  @media screen and (max-width:1024px){
   .mainPage--title {
     font-size: 2em;}

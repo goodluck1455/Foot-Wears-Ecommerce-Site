@@ -345,10 +345,16 @@ width: 45%;
     /************************************
      MEDIA QUERY BEGINS HERE  
      ************************************/
+     @media (min-width:1440px){
+
+      .product--details-image-and-others {
+        height: 38em;}
 
 
+     }
 
-@media screen and (max-width:768px){
+
+@media screen and (max-width:768px), (max-width:820px){
   .Product--details {
    flex-direction:column;
 }
@@ -372,6 +378,30 @@ width: 45%;
 
 
 }
+
+@media screen and (max-width:600px){
+  .product--details-image-and-others {
+     flex-direction: column;
+     height: 50rem;
+  }
+
+  .productDescription--Swiper {
+    width: auto;
+    padding: 0px;
+  }
+
+  .mySwiper .swiper-slide, .productDescript----shareWithOthers{
+    display: none;
+   }
+
+   .Product-details---productName {
+    margin-top: -11px;
+    padding: 23px;
+}
+
+}
+
+
 
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 

@@ -774,7 +774,12 @@ cursor: pointer;
 display: none;
 }
 
+@media (min-width:1440px){
 
+  .cart--EmptyCart {
+    left: 26em;}
+    
+}
 
 
 @media screen and (max-width:1024px){
@@ -921,6 +926,19 @@ display: none;
 
 }
 
+@media screen and (max-width:600px){
+  .cart--EmptyCart {
+    left: 6.5em;}
+
+    .cart--DeleteOption, .Cart---SaveItem {
+      width: 27%;
+    }
+
+    .EmptyCart---startShopping {
+      width: 57%;
+  }
+
+}
 
 @media screen and (max-width:568px){
   .Cart--container {
@@ -1190,7 +1208,7 @@ position: relative;
 
 
 .cart--DeleteOption, .Cart---SaveItem {
-  width: 30%;
+  width: 32%;
 }
 
 .checkoutInfor {

@@ -305,6 +305,34 @@
   margin-top: 2em; 
 }
 
+
+@media (min-width:1440px){
+  .imageSlide--A {
+    height: 74%;}
+
+.imageSlider--container {
+  height: 17em;
+  width: 18rem;
+}
+
+.scrollingPage---productName {
+  font-size: 15.5px;
+  padding: 9px 4px 1px 0px;
+}
+
+.imageSlider--percentage {
+left: 13rem;  
+font-size: 1.4em;
+padding: 6px;
+}
+
+}
+
+
+
+
+
+
 @media screen and (max-width:1024px){
   .scrollingPage---productName {
     text-overflow: ellipsis;
@@ -337,13 +365,23 @@
 
 
   .---timeCountDownShopView{
- 
     margin-left: 2em;
     margin-top: 2.6em;
-  
-   
+
   }
+
+  .imageSlider--percentage {
+    left: 8rem;
+  }
+
+  .imageSlider--container{
+    height: 13em;
+  }
+
+
 }
+
+
 @media screen and (max-width:533px){
   .imageSlider--container {
     height: 12em;
