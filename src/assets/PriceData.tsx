@@ -877,17 +877,21 @@ const priceData4ProductDisplay = [
     id: 64,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$450,000",
+    discount: "-23%",
+    itemLeft: 16
   },
   {
     id: 65,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$650,000",
+    discount: "-43%",
+    itemLeft: 13
   },
   {
     id: 66,
@@ -1029,57 +1033,71 @@ const priceData4ProductDisplay = [
     id: 83,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$60,000",
+    discount: "-13%",
+    itemLeft: 13
   },
   {
     id: 84,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$100,000",
+    discount: "-15%",
+    itemLeft: 15
   },
   {
     id: 85,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$670,000",
+    discount: "-44%",
+    itemLeft: 33
   },
   {
     id: 86,
     Image: Nike_Sneaker_11,
     productName: "Nike Sneakers 11",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$290,000",
     newPrice: "$230,000",
+    discount: "-22%",
+    itemLeft: 6
   },
   {
     id: 87,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$850,000",
+    discount: "-32%",
+    itemLeft: 7
   },
   {
     id: 89,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$450,000",
+    discount: "-53%",
+    itemLeft: 14
   },
   {
     id: 90,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$650,000",
+    discount: "-33%",
+    itemLeft: 10
   },
   {
     id: 91,
@@ -1088,14 +1106,18 @@ const priceData4ProductDisplay = [
     itemContainer: "5 items left",
     oldPrice: "$290,000",
     newPrice: "$250,000",
+    discount: "-23%",
+    itemLeft: 12
   },
   {
     id: 92,
     Image: PumTrainSneakers,
     productName: "Puma train Sneakers",
-    itemContainer: "5 items left",
+    itemContainer: " items left",
     oldPrice: "$200,000",
     newPrice: "$350,000",
+    discount: "-13%",
+    itemLeft: 8
   },
   {
     id: 93,
@@ -1109,25 +1131,31 @@ const priceData4ProductDisplay = [
     id: 94,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$80,000",
+    discount: "-43%",
+    itemLeft: 10
   },
   {
     id: 95,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$90,000",
+    discount: "-43%",
+    itemLeft: 5
   },
   {
     id: 96,
     Image: KswissHeel,
     productName: "K-swiss Heel",
-    itemContainer: "10 items left",
+    itemContainer: " items left",
     oldPrice: "$40,000",
     newPrice: "$60,000",
+    discount: "-43%",
+    itemLeft: 5
   },
   {
     id: 97,
@@ -1136,6 +1164,8 @@ const priceData4ProductDisplay = [
     itemContainer: "10 items left",
     oldPrice: "$40,000",
     newPrice: "$100,000",
+    discount: "-43%",
+    itemLeft: 5
   },
   {
     id: 98,
@@ -1144,6 +1174,8 @@ const priceData4ProductDisplay = [
     itemContainer: "8 items left",
     oldPrice: "$40,000",
     newPrice: "$670,000",
+    discount: "-43%",
+    itemLeft: 5
   },
   {
     id: 99,
@@ -1152,6 +1184,8 @@ const priceData4ProductDisplay = [
     itemContainer: "5 items left",
     oldPrice: "$290,000",
     newPrice: "$230,000",
+    discount: "-43%",
+    itemLeft: 5
   },
   {
     id: 100,
@@ -1160,6 +1194,8 @@ const priceData4ProductDisplay = [
     itemContainer: "5 items left",
     oldPrice: "$200,000",
     newPrice: "$850,000",
+    discount: "-43%",
+    itemLeft: 5
   },
   {
     id: 101,
@@ -1168,6 +1204,8 @@ const priceData4ProductDisplay = [
     itemContainer: "5 items left",
     oldPrice: "$200,000",
     newPrice: "$450,000",
+    discount: "-43%",
+    itemLeft: 5
   },
   {
     id: 102,
@@ -1176,6 +1214,8 @@ const priceData4ProductDisplay = [
     itemContainer: "5 items left",
     oldPrice: "$200,000",
     newPrice: "$650,000",
+    discount: "-43%",
+    itemLeft: 5
   },
   {
     id: 103,
@@ -1184,6 +1224,8 @@ const priceData4ProductDisplay = [
     itemContainer: "5 items left",
     oldPrice: "$290,000",
     newPrice: "$250,000",
+    discount: "-43%",
+    itemLeft: 5
   },
   {
     id: 104,
