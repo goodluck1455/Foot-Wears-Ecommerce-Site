@@ -210,7 +210,18 @@
     }
 
 }
+@media screen and (max-width:988px){
+    .FirstCartPage---ViewPanel {
+        margin-left: 3.6rem;
+    }
 
+    .FirstCartPage---SearchPanel {
+        margin-left: -20em;}
+
+        .FirstCarPge---ProductDisplay {
+            grid-template-columns: 1fr 1fr 1fr;}
+
+}
 
             @media screen and (max-width:820px){
                 .FirstCartPage---ViewPanel {
