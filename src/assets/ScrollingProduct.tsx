@@ -113,9 +113,9 @@ function ScrollingProduct() {
                 slidesPerView: 1.5,
                 spaceBetween: -40,
               },
-              480: {
+              475: {
                 slidesPerView: 2.5,
-                spaceBetween: 40,
+                spaceBetween: 20,
               },
               568: {
                 slidesPerView: 2.5,

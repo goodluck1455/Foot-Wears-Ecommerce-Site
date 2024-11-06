@@ -426,6 +426,16 @@ padding: 6px;
 }
 
 
+@media (max-width:475px){
+
+  .imageSlider--percentage {
+    left: 6rem;
+    width: 22%;
+  }
+
+}
+
+
 @media screen and (max-width:430px){
 
 }
