@@ -87,7 +87,7 @@
  @media (min-width:1440px){
   .mainPage---container {
     justify-content: space-between;
-    padding: 6rem 11rem 6rem 11rem;
+    padding: 6rem 3rem 6rem 3rem;
 }
 
 
@@ -156,6 +156,10 @@
   .mainPage---container {
     padding: 4em 4em 4em 4em;
 }
+
+
+
+
 
  }
 
