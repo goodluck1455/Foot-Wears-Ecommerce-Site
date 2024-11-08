@@ -64,6 +64,22 @@
   }
 
 
+  .ProductDisplay--imageSlide--A {
+    background-color: #9DAEEA;
+    border-radius: 10px;
+    height: 70%;
+    overflow: hidden;
+    /* position: relative; */
+  }
+
+
+  .ProductDisplay--imageSlide--A  img{
+    width: 90%;
+    margin-top: 10px;
+    /* padding: 40px; */
+  }
+
+
   @media (min-width:1440px){
     .ProductDisplay--percentage {
       left: 14.5rem;  
@@ -77,9 +93,48 @@
 
   }
 
+  @media (min-width:1820px){
+    .ProductDisplay--cartBal {
+      margin-left: 17px;
+      font-size: 1.4rem;
+  }
+
+  .ProductDisplay--cartBal::before {
+         top: -21px;
+        left: -22px;
+        font-size: 55px;
+  }
+
+  .ProductDisplay--container {
+    height: 20.5em;
+}
+
+.ProductDisplay--imageSlide--A {
+
+  height: 13rem;}
+
+
+  }
+
   @media screen and (max-width:1024px){
     .ProductDisplay---add-to-cart {
       left: 7.5em;}
+
+
+      .ProductDisplay--container {
+        width: 11rem;
+        height: 13em}
+
+
+        .ProductDisplay--percentage {
+          width: 21%; 
+          left: 7.5rem;
+         }
+
+
+
+
+
   }
 
   @media screen and (max-width:988px){
@@ -139,7 +194,10 @@ white-space: nowrap;
 
 
   @media screen and (max-width:568px){
-    .imageSlide--A {height: 61%;}
+    .ProductDisplay--imageSlide--A {height: 61%;}
+
+
+    
 
     .ProductDisplay--container {
       height: 12em;
@@ -163,6 +221,10 @@ white-space: nowrap;
   .ProductDisplay--percentage { 
     left: 7em;  
     width: 23%;
+}
+
+.ProductDisplay--imageSlide--A {
+  height: 7rem;
 }
 
 
@@ -199,6 +261,8 @@ white-space: nowrap;
     left: 6em;  
 }
 
-  
+.ProductDisplay--imageSlide--A {
+  height: 6.5rem;
+}
   
   }

@@ -373,13 +373,13 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
                   id="maleShoes"
                   name="maleShoes"
                   checked={checkedItems.maleShoes}
-                  onChange={handleCheckboxChange}
+                  onChange={handleCheckboxChange}  
                   // disabled={checkedItems.all}
                 />
                 <label htmlFor="" className="FirstCartPgae---labelContent-B">
                   Males Shoes
                 </label>
-                <label htmlFor="">50</label>
+                <label htmlFor="">50 </label>
               </span>
               <span className="FirstCartPgae---checkBoxContainer-B">
                 <input
@@ -556,6 +556,7 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
             </div>
           </div>
         </div>
+
         <div className="Pagination--mainHolder">
           {pageCount < 12 && ( // Only show pagination if there is more than 1 page
             <ReactPaginate
@@ -568,11 +569,12 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
               nextLinkClassName={"nextBtn"}
               disabledClassName={"paginationDisabled"}
               activeClassName={"paginationActive"}
-              pageRangeDisplayed={isMobile ? 1 : 1} // Adjust the center range
+              pageRangeDisplayed={isMobile ? 1 : 1} // Adjust the center range   
               marginPagesDisplayed={isMobile ? 1 : 1}
             />
           )}
         </div>
+
       </div>
     </>
   );

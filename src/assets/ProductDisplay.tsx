@@ -89,7 +89,7 @@ item: {
          >
                    <div className="ProductDisplay--container" onClick={() => handleProductClick(item)}>
                    <span className="ProductDisplay--percentage">{discount}</span>
-                <div className="imageSlide--A" >
+                <div className="ProductDisplay--imageSlide--A">
                   <img src={images} alt="" />
                 </div>
                 <p className="scrollingPage---productName">{productName}</p>

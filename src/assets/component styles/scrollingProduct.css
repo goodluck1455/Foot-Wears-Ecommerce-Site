@@ -306,6 +306,7 @@
 }
 
 
+
 @media (min-width:1440px){
   .imageSlide--A {
     height: 74%;}
@@ -328,7 +329,52 @@ padding: 6px;
 
 }
 
+@media (min-width:1820px){
+  .imageSlider--container {
+    height: 19em;
+    width: 17rem;
+}
 
+.imageSlider--percentage {
+  width: 21%;
+  left: 11.5rem;}
+
+  .imageSlider----sales {
+    height: 5rem;
+    padding: 9px;
+    font-size: 1.4rem;}
+
+
+    .scrollingPage---productName {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 1.5rem;
+    }
+
+    .scrollingPage--cartBal {
+      margin-left: 17px;
+      font-size: 1.4rem;
+    }
+
+
+      .scrollingPage--cartBal::before {
+        top: -21px;
+        left: -22px;
+        font-size: 55px;
+    }
+
+    .Scrolling--Oldprice {
+      font-size: 1.4rem;
+  }
+  .imageSlide--A {
+    height: 68%;
+}
+.Scrolling--NewPrice {
+  font-size: 1.5rem;
+}
+
+}
 
 
 
@@ -346,15 +392,51 @@ padding: 6px;
     .custom-next.swiper-button-disabled,
     .custom-prev.swiper-button-disabled {
         background-color: white;
-        color: #151414;; 
+        color: #151414; 
        display: none;
       /* cursor: not-allowed;  */   /* Change cursor to indicate disabled state */
     }
 
+    .scrolingPage--container {
+      margin: 3em 2em 2em 2em;}
+
+      .imageSlider--container {
+        height: 12em;}
+
+        .imageSlide--A {
+          height: 66%;}
+
+          .imageSlider--percentage {
+            width: 23%;
+            left: 6rem;}
+
+        
+
 
 }
 
+/* @media screen and (max-width:988px){
+  .imageSlider--container {
+    height: 15em;
+}
 
+.imageSlide--A {
+  height: 10rem;
+}
+
+} */
+
+@media screen and (max-width:912px){
+  .imageSlider--container {
+    height: 14em;
+    width: 13rem;
+}
+
+.imageSlider--percentage {
+  left: 8.5rem;
+}
+
+}
 
 
 
@@ -376,6 +458,7 @@ padding: 6px;
 
   .imageSlider--container{
     height: 13em;
+    width: unset;
   }
 
 
@@ -413,6 +496,14 @@ padding: 6px;
     left: 8rem;
   }
 
+  .imageSlider--container {
+    height: 13em;
+}
+
+.imageSlide--A {
+  height: 8.3rem;
+}
+
 }
 
 
@@ -423,6 +514,7 @@ padding: 6px;
     width: 10em;
   }
 }
+
 
 @media screen and (max-width:480px){
   .scrolingPage--container {
@@ -441,38 +533,10 @@ padding: 6px;
   .imageSlider--percentage {
     left: 6rem;
     width: 22%;
+    
   }
 
 }
-
-
-@media screen and (max-width:430px){
-
-}
-
-@media screen and (max-width:414px){
-
-
-}
-
-
-@media screen and (max-width:390px){
-  
-}
-
-@media screen and (max-width:375px){
-  /* .---timeCountDownShopView {
-    top: 24.4em;
-  } */
- 
-}
-
-
-
-
-
-
-
 
 
 
@@ -481,8 +545,13 @@ padding: 6px;
       margin-left: 0; 
       margin-right: 0; /* Remove margin between slides */
       width: 80%;
-      height: unset;
+      height: 13rem;
     }
+
+    .imageSlide--A {
+      height: 8rem;
+  }
+
     .swiper-slide {
       margin-right: -20px; /* This should match your spaceBetween value */
     }
@@ -524,17 +593,75 @@ padding: 6px;
 
 
 .imageSlider--percentage{
-  left: 10em;
+  left: 9em;
+  
 }
+
+
+
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:430px){
+
+  .imageSlider--percentage{
+    left: 9.7rem;
+  }
+
+}
+
+
+@media screen and (max-width:414px){
+  .imageSlider--percentage{
+    left: 10em;
+  }
+
+}
+
+@media screen and (max-width:393px){
+  
+  .imageSlider--percentage{
+    left: 8.7rem;
+  }
+
+}
+
+@media screen and (max-width:390px){
+  
+  .imageSlider--percentage{
+    left: 9.5em;
+  }
+
+}
+
+
+@media screen and (max-width:375px){
+
+  .imageSlider--percentage{
+    left: 9em;
+  }
+  /* .---timeCountDownShopView {
+    top: 24.4em;
+  } */
+ 
+}
+
 
 @media (max-width:360px){
   .imageSlider--percentage{
     left: 8.5em;
 }
-}
-
-
-  
 }
 
 

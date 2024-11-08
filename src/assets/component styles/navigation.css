@@ -81,12 +81,12 @@
 
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 
-.Pagination--mainHolder{
+/* .Pagination--mainHolder{
     width:50%;
-    }
+    } */
     
     .Navigation---container {
-        margin-left: 10em;
+        /* margin-left: 10em; */
         margin-bottom: 1em;
     }
     
@@ -96,6 +96,6 @@
 @media screen and (max-width:320px){
 .Pagination--mainHolder {
     font-size: 0.8em;
-    margin-left: 1em;
+    /* margin-left: 1em; */
 }
 }

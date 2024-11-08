@@ -138,6 +138,10 @@ function ScrollingProduct() {
                 slidesPerView: 5.4,
                 spaceBetween: 15,
               },
+              1820: {
+                slidesPerView: 5.4,
+                spaceBetween: -13,
+              },
             }}
           >
             {priceDataElement}

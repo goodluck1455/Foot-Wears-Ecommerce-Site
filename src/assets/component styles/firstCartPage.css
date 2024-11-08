@@ -163,7 +163,7 @@
     .FirstCartPage---SearchPanel {
         z-index: 1;
         position: absolute;
-        margin-left: -17em;
+        margin-left: -80em;
        height: auto;
        transition: 1s ease-in;
        border: none;
@@ -209,11 +209,16 @@
          cursor: pointer;
     }
 
+
+    .FirstCartPage---ViewPanel {
+        justify-content: center;
+    }
+
 }
 @media screen and (max-width:988px){
-    .FirstCartPage---ViewPanel {
+    /* .FirstCartPage---ViewPanel {
         margin-left: 3.6rem;
-    }
+    } */
 
     .FirstCartPage---SearchPanel {
         margin-left: -20em;}
@@ -228,9 +233,9 @@
 }
 
             @media screen and (max-width:820px){
-                .FirstCartPage---ViewPanel {
+                /* .FirstCartPage---ViewPanel {
                     margin-left: 2.6rem;
-                }
+                } */
             }
 
 
@@ -247,22 +252,22 @@
 
         @media (max-width:820px){
             .FirstCartPage---ViewPanel {
-                margin-left: 2.6rem;
+                justify-content: center;
             }
         }
 
         @media (max-width:768px){
-            .FirstCartPage---ViewPanel {
+            /* .FirstCartPage---ViewPanel {
                 margin-left: 1.5rem;
        
-               }
+               } */
         }
 
         @media (max-width:734px){
-            .FirstCartPage---ViewPanel {
+            /* .FirstCartPage---ViewPanel {
                 margin-left: 0.5rem;
        
-               }
+               } */
         }
 
 
@@ -282,7 +287,7 @@
     .FirstCartPage---SearchPanel {
         z-index: 1;
         position: absolute;
-        margin-left: -19em;
+        margin-left: -58em;
        height: auto;
        transition: 1s ease-in;
        border: none;
@@ -343,13 +348,26 @@
         .FirstCarPge---ProductDisplay {
             grid-template-columns: 1fr 1fr;}
 
-            .FirstCartPage---ViewPanel {
+            /* .FirstCartPage---ViewPanel {
                 margin-left: 3.5rem;
-               }
+               } */
 
                .FirstCart--TurnHeads{
                 display: none;
                }
+
+
+               .container---no-products-message {
+                width: unset;
+            }
+
+
+            .FirstCartPage---SearchPanel {
+                margin-left: -47em;}
+
+
+               
+
 
 }
 
@@ -366,11 +384,11 @@
 
 
         @media (max-width:475px){
-            .FirstCartPage---ViewPanel {
+            /* .FirstCartPage---ViewPanel {
               
                 margin-left: 23px;
             }
-    
+     */
         }
 
 
@@ -413,9 +431,9 @@
           .FirstCartPage---SearchPanel {
             margin-left: -37em;}
 
-            .FirstCartPage---ViewPanel {
+            /* .FirstCartPage---ViewPanel {
                 margin-left: 13px;
-            }
+            } */
 }
 
 @media screen and (max-width:414px){
@@ -426,9 +444,9 @@
     .FirstCartPage---SearchPanel {
         margin-left: -35em;}
 
-        .FirstCartPage---ViewPanel {
+        /* .FirstCartPage---ViewPanel {
             margin-left: 13px;
-        }
+        } */
 
       
 
@@ -446,9 +464,9 @@
           .FirstCartPage---SearchPanel {
             margin-left: -35em;}
 
-            .FirstCartPage---ViewPanel {
+            /* .FirstCartPage---ViewPanel {
                 margin-left: -1px;
-            }
+            } */
 
 
 }
@@ -460,9 +478,9 @@
       
     }
 
-    .FirstCartPage---ViewPanel {
+    /* .FirstCartPage---ViewPanel {
         margin-left: 0px;
-    }
+    } */
 
 }
 
@@ -474,15 +492,17 @@
           .FirstCartPage---SearchPanel {
              margin-left: -35em;}
 
-             .FirstCartPage---ViewPanel {
-                margin-left: -16px;
-            }
-            @media (max-width:360px){
+             /* .FirstCartPage---ViewPanel {
+                justify-content: center;
+                
+            } */
+
+            /* @media (max-width:360px){
                 .FirstCartPage---ViewPanel {
                     margin-left: -16px;
                 }
 
-            }
+            } */
 }
 
 
@@ -500,6 +520,12 @@
    border: none;
 }
 
+.container---no-products-message {
+    width: unset;}
+
+ .FirstCartPage---ViewPanel {
+ justify-content: center;             
+            }
 
 
 .Close---SearchPanel{
@@ -589,10 +615,10 @@
 
 
 
-    .FirstCartPage---ViewPanel {
+    /* .FirstCartPage---ViewPanel {
         justify-content: center;
         margin-left: 12px;
-    }
+    } */
 
     .FirstCartPage---SearchPanel {
         margin-left: -43em;}
@@ -612,7 +638,7 @@
         }
 
         .FirstCartPage---ViewPanel {
-            margin-left: -14.5px;
+            /* margin-left: -14.5px; */
         }
        
     
