@@ -14,6 +14,8 @@ import CreditCard from "../images/credit-card.png"
 import { IoCloseSharp as FilterCloseBtn} from "react-icons/io5";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+
+
 // import image from "../images/nike-sneakers-11.png";
 import { useContext} from "react";
 // import { useState, useEffect } from "react";

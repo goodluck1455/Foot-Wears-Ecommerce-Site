@@ -18,9 +18,9 @@ function Footer() {
             <div className="footer--logoContiner">
             <h1 className='Footer--logo'>FOOTFASHION</h1> 
             <p className="Footer---paragraph">Sustainable footwear for every step. Discover 
-               <br /> stylish and comfortable shoes</p> 
+               <br className="footerBreak" /> stylish and comfortable shoes</p> 
                <span className="Footer--images">
-               <img src={instagram} alt=""  />
+               <img src={instagram} alt=""/>
                 <img src={twitter} alt=""  />
                </span>
             </div>
