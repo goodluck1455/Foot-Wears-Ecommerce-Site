@@ -213,12 +213,18 @@
     .FirstCartPage---ViewPanel {
         justify-content: center;
     }
+    .container---no-products-message{
+        width: unset;
+    }
 
 }
 @media screen and (max-width:988px){
     /* .FirstCartPage---ViewPanel {
         margin-left: 3.6rem;
     } */
+    .container---no-products-message{
+        width: unset;
+    }
 
     .FirstCartPage---SearchPanel {
         margin-left: -20em;}
@@ -236,6 +242,9 @@
                 /* .FirstCartPage---ViewPanel {
                     margin-left: 2.6rem;
                 } */
+                .container---no-products-message{
+                    width: unset;
+                }
             }
 
 
@@ -256,6 +265,9 @@
             .FirstCartPage---ViewPanel {
                 justify-content: center;
             }
+            .container---no-products-message{
+                width: unset;
+            }
         }
 
         @media (max-width:768px){
@@ -263,6 +275,10 @@
                 margin-left: 1.5rem;
        
                } */
+
+               .container---no-products-message{
+                width: unset;
+            }
         }
 
         @media (max-width:734px){

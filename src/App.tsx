@@ -178,6 +178,7 @@ const LoadingSkeleton = () => (
     <Skeleton height={50} width="80%" />
     <Skeleton height={200} width="100%" />
     <Skeleton height={50} width="50%" />
+    <Skeleton height={60} width="90%" />
   </div>
 );
 
