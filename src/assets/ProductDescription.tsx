@@ -13,12 +13,18 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { useContext } from "react";
 import { ShoppingContext } from "./ShopContext";
 import { RiPoliceBadgeLine } from "react-icons/ri";
-// import { toast, ToastContainer} from 'react-toastify';
+
+
+// import sweetalert2 modules 
+import Swal from 'sweetalert2';
+
 // import { MdOutlineDangerous as NotAddedToCart } from "react-icons/md";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { BsCart4 } from "react-icons/bs";
 import { useLocation } from "react-router-dom";
+
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { setAlert } from './assets/AlertContext.tsx'
@@ -35,7 +41,14 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper/types";
 // import { useAlert } from './AlertContext.tsx';
 
-import { useAlert } from "../assets/AlertContext.tsx";
+// import { useAlert } from "../assets/AlertContext.tsx";
+
+
+
+
+
+
+
 
 interface ProductDescriptionProps {}
 
@@ -45,7 +58,7 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
   // const [erroMessage, setErroMessage] = useState("")
   const navigate = useNavigate();
 
-  const { setAlert } = useAlert();
+  // const { setAlert } = useAlert();
 
   const [sizeSelected, setSizeselected] = useState<string | null>(null);
 
@@ -125,8 +138,19 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
 
   const handleAddToCart = () => {
     if (!sizeSelected) {
+      Swal.fire({
+        icon: "info",
+        title: "Oops...",
+        text: "Please select your shoe size",
+        confirmButtonText: "Okay",
+          customClass: {
+            confirmButton: 'swal-button-custom',
+            popup: 'swal-popup-custom', 
+            icon: 'swal-icon-custom'
+          },
+      });
       // Show popup message if size is not selected
-      setAlert("Please select your shoe size!", "error");
+      // setAlert("Please select your shoe size!", "error");
 
       return;
     } else {
@@ -135,12 +159,7 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
         payload: { ...product, quantity: addition, size: sizeSelected },
       });
 
-      // setAlert('Item added successfully!', "success")
-      // toast.success("Item added successfully!", {
-      //   position: 'top-center',
-      //   icon: <NotAddedToCart style={{ color: 'bue',  fontSize: "1.5em" }} />,
-
-      //   })
+    
       navigate("/Cart");
     }
   };
@@ -329,11 +348,11 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
 
                   <div className="productDescription---AddToCart">
                     {/* <NavLink to="/Cart"> */}
-                    <div>
+                    <div className="addToCart---Container">
                       <button type="button" onClick={handleAddToCart}>
                         <BsCart4 className="productDescript--Cart" /> ADD TO
                         CART
-                      </button>
+                      </button>   
                     </div>
                     {/* </NavLink> */}
                     <div className="productDescript----saveForLater">

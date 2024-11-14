@@ -193,11 +193,11 @@
 
 
   .ShoeImage--wahala {
-    width: 76%;
-    margin-left: 4em;
+    width: 68%;
+    margin-left: 11em;
 }
 .TagCircle {
-  margin-left: 10em;
+  margin-left: 8em;
   margin-top: 1em;
 }
 
@@ -241,8 +241,12 @@
  }
 
 
- 
-
+ @media (max-width:540px){
+ .ShoeImage--wahala {
+  width: 68%;
+  margin-left: 11em;
+}
+ }
 
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 

@@ -53,6 +53,7 @@ const MainPage: React.FC<MainPageProps> = () => {
     if (width <= 414) return "medium";
     if (width <= 430) return "large";
     if (width <= 768) return "xLarge";
+    if (width <= 820) return "xtraLarge";
     if (width <= 1024) return "Ipad";
     return "default";
   }
@@ -109,7 +110,9 @@ const MainPage: React.FC<MainPageProps> = () => {
                   : screenSize === "large"
                   ? heroImage
                   : screenSize === "xLarge"
-                  ? CanvasImage
+                  ? heroImage
+                  : screenSize === "xtraLarge"
+                  ? heroImage
                   : screenSize === "Ipad"
                   ? CanvasImage
                   : CanvasImage

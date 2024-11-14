@@ -55,7 +55,6 @@ const closeSideBar = () => {
     };
   }, []);
 
-  // window.addEventListener("scroll", stickHeader);
 
 
     return (
@@ -74,7 +73,6 @@ const closeSideBar = () => {
           <div className="Menubar--container">
             <div className={`Menuebar ${activeOpen ? "open" : "close"} `}>
               <ul>
-                {/* <li>HOME</li> */}
              <NavLink to="/"> <li onClick={() => { closeSideBar() }}>SHOP</li></NavLink>     
              <NavLink to="Shop"> <li onClick={() => { closeSideBar() }} >SALES</li></NavLink>  
               </ul>

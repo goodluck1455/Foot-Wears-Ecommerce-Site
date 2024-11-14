@@ -333,9 +333,7 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
 
   return (
     <>
-      <div
-        className={containerClassName || "FirstCartPage---container"}
-        id="mainPage">
+      <div className={containerClassName || "FirstCartPage---container"} id="mainPage">
         <div className="firstCARTpAGE---filterTag" onClick={openFilterBtn}>
           <p>Filter</p> <FilterIcon size={20} className="filterIcon" />
         </div>
@@ -344,10 +342,7 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
           
 
         <div className="FirstCartPage---ViewPanel">
-          <div
-            className={
-              openFilter ? "FirstCartPage---SearchPanel" : "Close---SearchPanel"
-            }>
+          <div className={openFilter ? "FirstCartPage---SearchPanel" : "Close---SearchPanel" }>
               <div className="searchPanel--widthIssue">  {/*// trying to correct an issue */}
             <FilterCloseBtn
               size={25}
@@ -559,7 +554,7 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
           </div>
         </div>
 
-        <div className="Pagination--mainHolder">
+        <div className="Pagination--mainHolder" >
           {pageCount < 12 && ( // Only show pagination if there is more than 1 page
             <ReactPaginate
               previousLabel={"Previous"}

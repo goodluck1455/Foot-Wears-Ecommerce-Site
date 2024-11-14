@@ -13,7 +13,7 @@
 
   .ProductDisplay--percentage{
     position: absolute;
-    content: "-25%";
+    /* content: "-25%"; */
     background: rgb(20, 27, 52, 0.8);
     color: white;
     padding: 4px;
@@ -22,9 +22,9 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     text-align: center;
-    width: 17%;
+    width: 19%;
     font-size: 0.9em;
-    left: 10.5em;
+    left: 10.7em;
     top: 1em;
   }
 
@@ -69,13 +69,14 @@
     border-radius: 10px;
     height: 70%;
     overflow: hidden;
+    align-content: center;
     /* position: relative; */
   }
 
 
   .ProductDisplay--imageSlide--A  img{
     width: 90%;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     /* padding: 40px; */
   }
 
@@ -127,7 +128,7 @@
 
 
         .ProductDisplay--percentage {
-          width: 21%; 
+          width: 23%; 
           left: 7.5rem;
          }
 
@@ -142,6 +143,20 @@
     .ProductDisplay--container {
       width: 14rem;
     }
+
+    .Product--details {
+      flex-direction: column;
+  }
+
+  }
+
+  @media screen and (max-width:960px){
+
+    .ProductDisplay--percentage{
+      width: 21%;     
+      left: 10rem;
+      font-size: 1em;
+}
   }
 
 
@@ -206,6 +221,15 @@ white-space: nowrap;
 
   }
 
+  @media  (max-width:540px){
+    .ProductDisplay--percentage {
+      width: 32%;
+      left: 5.8rem;
+      font-size: 1.13em;
+  }
+
+  }
+
 
   @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
   .ProductDisplay---add-to-cart {
@@ -219,8 +243,8 @@ white-space: nowrap;
   }
 
   .ProductDisplay--percentage { 
-    left: 7em;  
-    width: 23%;
+    left: 6em;  
+    width: 30%;
 }
 
 .ProductDisplay--imageSlide--A {
@@ -258,7 +282,8 @@ white-space: nowrap;
   left: 4em;}
 
   .ProductDisplay--percentage { 
-    left: 6em;  
+    left: 5.4em; 
+    width:30%; 
 }
 
 .ProductDisplay--imageSlide--A {

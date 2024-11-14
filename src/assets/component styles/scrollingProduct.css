@@ -125,7 +125,7 @@
 
   .imageSlider--percentage{
     position: absolute;
-    content: "-25%";
+    /* content: "-25%"; */
     background: rgb(20, 27, 52, 0.8);
     color: white;
     padding: 4px;
@@ -133,7 +133,7 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    width: 17%;
+    width: 19%;
     font-size: 0.9em;
     left: 11em;
     top: 1em;
@@ -143,18 +143,21 @@
 
 
   .imageSlider----sales{
-    padding: 0px 1px;
-    width: 19px;
+    /* padding: 0px 2px; */
+    width: 25px;
     height: 66.28px;
     left: 19px;
-    padding: 3px;
+    padding: 2px 5px;
     background: #141B34;
     position: absolute;
     color: white;
     border-radius: 0px 0px 20px 20px;
+    /* text-align: center; */
+   
   }
   .imageSlider----sales p{
-    margin-top: 4px;
+    /* text-align: center; */
+    margin-top: 2px;
     font-family: Arial, Helvetica, sans-serif;
     transform: rotate(90deg);
    
@@ -177,6 +180,7 @@
     border-radius: 10px;
     height: 70%;
     overflow: hidden;
+    align-content:center;
     /* position: relative; */
   }
 
@@ -202,7 +206,7 @@
 
   .imageSlide--A img{
     width: 90%;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     /* padding: 40px; */
   }
   .Scrolling--Oldprice {
@@ -398,7 +402,8 @@ padding: 6px;
     }
 
     .scrolingPage--container {
-      margin: 3em 2em 2em 2em;}
+      margin: 3em 0.5em 2em 0.5em;
+  }
 
       .imageSlider--container {
         height: 12em;}
@@ -407,8 +412,9 @@ padding: 6px;
           height: 66%;}
 
           .imageSlider--percentage {
-            width: 23%;
-            left: 6rem;}
+            width: 26%;
+        left: 6.5rem;
+          }
 
         
 
@@ -426,6 +432,22 @@ padding: 6px;
 
 } */
 
+@media screen and (max-width:960px){
+  .imageSlider--percentage {
+    width: 19%;     
+    left: 11rem;
+    font-size: 1em;
+}
+
+.imageSlider--container {
+    height: 14em;
+}
+.imageSlide--A {
+    height: 9.3rem;
+}
+
+}
+
 @media screen and (max-width:912px){
   .imageSlider--container {
     height: 14em;
@@ -434,15 +456,21 @@ padding: 6px;
 
 .imageSlider--percentage {
   left: 8.5rem;
+  width: 23%;
 }
 
 }
 
-
+@media  (max-width:820px){
+  .imageSlider--percentage {
+    left: 8.5rem;
+    width: 27%;
+  }
+}
 
 @media screen and (max-width:768px), (max-width:600px),(max-width:820px){
 .scrolingPage--container {
-  margin: 3em 2em 2em 2em;
+  margin: 3em 0.5em 2em 0.5em;
   }
 
 
@@ -452,12 +480,14 @@ padding: 6px;
 
   }
 
+  @media  (max-width:768px){
   .imageSlider--percentage {
     left: 7.5rem;
-  }
+    width: 27%;
+  }}
 
   .imageSlider--container{
-    height: 13em;
+    height: 14em;
     width: unset;
   }
 
@@ -529,7 +559,7 @@ padding: 6px;
 @media (max-width:600px){
 
   .imageSlider--percentage {
-    left: 8.5rem;
+    left: 9rem;
   }
 
   .imageSlider--container {
@@ -541,9 +571,26 @@ padding: 6px;
   height: 8.3rem;
 }
 
+.scrolingPage--container {
+  margin: 3em 0.5em 2em 0.5em;
 }
 
+}
 
+@media (max-width:540px){
+  .imageSlider--percentage {
+    font-size: 1.13rem;
+    width: 26%;
+    left: 8.6rem;
+  }
+
+
+  .scrollingPage---productName {
+   
+    font-size: 1.13rem;
+  }
+
+}
 
 @media screen and (max-width:533px){
   .imageSlider--container {
@@ -660,9 +707,9 @@ padding: 6px;
 
 
 @media screen and (max-width:414px){
-  .imageSlider--percentage{
+  /* .imageSlider--percentage{
     left: 10em;
-  }
+  } */
 
 }
 
@@ -677,7 +724,7 @@ padding: 6px;
 @media screen and (max-width:390px){
   
   .imageSlider--percentage{
-    left: 9.5em;
+    left: 9em;
   }
 
 }
@@ -686,7 +733,7 @@ padding: 6px;
 @media screen and (max-width:375px){
 
   .imageSlider--percentage{
-    left: 9em;
+    left: 8.7em;
   }
   /* .---timeCountDownShopView {
     top: 24.4em;
@@ -739,8 +786,8 @@ padding: 6px;
 }
 
 .imageSlider--percentage{
-  width: 22%;
-  left: 7em;
+  width: 28%;
+  left: 6em;
 }
 
 

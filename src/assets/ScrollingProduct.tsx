@@ -123,7 +123,7 @@ function ScrollingProduct() {
               },
               540: {
                 slidesPerView: 2.5,
-                spaceBetween: 10,
+                spaceBetween: 50,
               },
               734: {
                 slidesPerView: 4,
