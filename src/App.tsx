@@ -3,27 +3,27 @@ import './App.css'
 import Header from "./assets/Header";
 import Footer from './assets/Footer';
 import {HashRouter as BrowserRouter, Routes, Route, useLocation} from 'react-router-dom';
-// import HomePage from './assets/HomePage';
-// import Shop from './assets/Shop';
-// import Cart from './assets/Cart';
-// import NotFound from './assets/NotFound';
-// import CheckOutPage from './assets/CheckOutPage';
+import HomePage from './assets/HomePage';
+import Shop from './assets/Shop';
+import Cart from './assets/Cart';
+import NotFound from './assets/NotFound';
+import CheckOutPage from './assets/CheckOutPage';
 import ScrollToTop from './assets/ScrollTop';
-// import ProductDescription from './assets/ProductDescription';
+import ProductDescription from './assets/ProductDescription';
 // import { useEffect, useState } from 'react';
 
 
-import { lazy, Suspense } from 'react';
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
+// import { lazy, Suspense } from 'react';
+// import Skeleton from 'react-loading-skeleton';
+// import 'react-loading-skeleton/dist/skeleton.css';
 
 // Lazy load components
-const HomePage = lazy(() => import('./assets/HomePage'));
-const Shop = lazy(() => import('./assets/Shop'));
-const Cart = lazy(() => import('./assets/Cart'));
-const NotFound = lazy(() => import('./assets/NotFound'));
-const CheckOutPage = lazy(() => import('./assets/CheckOutPage'));
-const ProductDescription = lazy(() => import('./assets/ProductDescription'));
+// const HomePage = lazy(() => import('./assets/HomePage'));
+// const Shop = lazy(() => import('./assets/Shop'));
+// const Cart = lazy(() => import('./assets/Cart'));
+// const NotFound = lazy(() => import('./assets/NotFound'));
+// const CheckOutPage = lazy(() => import('./assets/CheckOutPage'));
+// const ProductDescription = lazy(() => import('./assets/ProductDescription'));
 
 
 
@@ -172,15 +172,15 @@ const MainContent: React.FC = () => {
   );
 
 
-// Fallback component using Skeleton while components load
-const LoadingSkeleton = () => (
-  <div>
-    <Skeleton height={50} width="80%" />
-    <Skeleton height={200} width="100%" />
-    <Skeleton height={50} width="50%" />
-    <Skeleton height={60} width="90%" />
-  </div>
-);
+// Fallback component using Skeleton while components loadadd
+// const LoadingSkeleton = () => (
+//   <div>
+//     <Skeleton height={50} width="80%" />
+//     <Skeleton height={200} width="100%" />
+//     <Skeleton height={50} width="50%" />
+//     <Skeleton height={60} width="90%" />
+//   </div>
+// );
 
 
 
@@ -189,7 +189,7 @@ const LoadingSkeleton = () => (
   return (
     <>
       <main>
-      <Suspense fallback={<LoadingSkeleton />}>
+      {/* <Suspense fallback={<LoadingSkeleton />}> */}
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="Shop" element={<Shop />} />
@@ -198,7 +198,7 @@ const LoadingSkeleton = () => (
           <Route path="/ProductDescription" element={<ProductDescription />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        </Suspense>
+        {/* </Suspense> */}
       </main>
 
       {/* Conditionally render the Footer */}
