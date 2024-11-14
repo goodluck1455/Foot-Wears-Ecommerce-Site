@@ -749,6 +749,13 @@ padding: 6px;
 }
 
 
+@media  (max-width:344px){
+  .imageSlider--percentage{
+    left: 6.8em;
+    width: 26%;
+}
+}
+
 @media screen and (max-width:320px){
 
   /* .---timeCountDownShopView {

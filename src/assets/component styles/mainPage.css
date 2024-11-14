@@ -170,6 +170,11 @@
 
  }
 
+ @media (max-width:853px){
+ .mainPage---container {
+  padding: 4em 1em 4em 1em;
+}
+}
 
  @media screen and (max-width:768px), (max-width:600px), (max-width:820px){
   .mainPage---container {

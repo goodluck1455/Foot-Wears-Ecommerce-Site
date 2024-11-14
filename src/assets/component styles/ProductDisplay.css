@@ -255,7 +255,17 @@ white-space: nowrap;
 
 }
 
+@media  (max-width:344px){
+  
+  .ProductDisplay--percentage { 
+    left: 5.2em;  
+    
+}
+.FirstCartPage---titlePage h2 {
+  font-size: 1.1em;
+}
 
+}
 
   @media screen and (max-width:320px){
     /* .ProductDisplay--container {
