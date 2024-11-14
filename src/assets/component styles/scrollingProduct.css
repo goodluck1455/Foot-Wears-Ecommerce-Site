@@ -717,6 +717,7 @@ padding: 6px;
   
   .imageSlider--percentage{
     left: 8.7rem;
+    width: 24%;
   }
 
 }
@@ -724,7 +725,8 @@ padding: 6px;
 @media screen and (max-width:390px){
   
   .imageSlider--percentage{
-    left: 9em;
+    left: 8em;
+    width: 24%;
   }
 
 }
@@ -733,7 +735,8 @@ padding: 6px;
 @media screen and (max-width:375px){
 
   .imageSlider--percentage{
-    left: 8.7em;
+    left: 7.3em;
+    width: 25%;
   }
   /* .---timeCountDownShopView {
     top: 24.4em;
@@ -744,7 +747,7 @@ padding: 6px;
 
 @media (max-width:360px){
   .imageSlider--percentage{
-    left: 8.5em;
+    left: 7em;
 }
 }
 
