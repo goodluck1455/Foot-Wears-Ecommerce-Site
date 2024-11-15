@@ -133,6 +133,10 @@ function ScrollingProduct() {
                 slidesPerView: 3.5,
                 spaceBetween: 10,
               },
+              988: {
+                slidesPerView: 5,
+                spaceBetween: 10,
+              },
 
               1024: {
                 slidesPerView: 5.4,

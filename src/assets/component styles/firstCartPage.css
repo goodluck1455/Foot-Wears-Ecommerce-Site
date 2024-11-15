@@ -241,8 +241,8 @@
         width: unset;
     }
 
-    .FirstCartPage---SearchPanel {
-        margin-left: -20em;}
+    /* .FirstCartPage---SearchPanel {
+        margin-left: -20em;} */
 
         .FirstCarPge---ProductDisplay {
             grid-template-columns: 1fr 1fr 1fr;}
@@ -568,8 +568,6 @@
 
 
 
-
-
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px), (max-width:480px){
 
 .FirstCartPage---SearchPanel {
@@ -659,6 +657,15 @@
 
 }
 
+
+
+
+@media (max-width:344px){
+    .FirstCartPage---titlePage h2 {
+        font-size: 1.1em;
+      }
+    }
+
 @media screen and (max-width:320px){
   
 
@@ -669,6 +676,13 @@
       .FirstCartPage---titlePage h2 {
         font-size: 1em;
     }
+
+
+    /* .FirstCartPage---titlePage h2 {
+        font-size: 1em;
+    } */
+
+
 
       .FirstCartPage---titlePage p {
         margin-top: 4px;

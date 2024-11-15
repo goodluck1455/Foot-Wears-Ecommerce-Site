@@ -22,9 +22,9 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     text-align: center;
-    width: 19%;
-    font-size: 0.9em;
-    left: 10.7em;
+    width: 21%;
+    font-size: 1em;
+    left: 9.2em;
     top: 1em;
   }
 
@@ -274,9 +274,7 @@ white-space: nowrap;
     left: 5.2em;  
     
 }
-.FirstCartPage---titlePage h2 {
-  font-size: 1.1em;
-}
+
 
 }
 
@@ -305,12 +303,15 @@ white-space: nowrap;
   left: 4em;}
 
   .ProductDisplay--percentage { 
-    left: 4.5em;
-    width: 33%;
+    left: 6em;
+        width: 28%;
+        font-size: 0.9rem;
 }
 
 .ProductDisplay--imageSlide--A {
   height: 6.5rem;
 }
+
+
   
   }

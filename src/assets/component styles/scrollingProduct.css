@@ -1,85 +1,5 @@
-/* 
-.scrolingPage--container{
-    background: rgba(244, 244, 244, 0.4);
-    margin: 3em 3em 2em 3em;
-    height: 20em;
-    border-radius: 20px;
-}
 
-.scrolingPage---deals{
-    color: #000000;
-    display: flex;
-    justify-content: space-between;
-    padding: 2em 2em 0.5em 2em;
-}
-
-.ScrollingPage---timeCountDown{
-    background: linear-gradient(90deg, #FB6969 0%, #B91D1D 100%);
-    border-radius: 20px;
-    color: white;
-    padding: 8px;
-}
-
-.imageSlider--container{
-    background: #F4F4F4;
-    border-radius: 10px;
-    width: 40%;
-    /* width: calc(100% / 3 - 20px); */
-    /* padding: 10px;
-    height: 12em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
-    0 6px 20px rgba(0, 0, 0, 0.1); */
-    /* box-sizing: border-box; */
-  /* margin-left: 0.5em; */
-/* } */
-
-/* .imageSlide--A{
-    background-color: #9DAEEA;
-    border-radius: 10px;
-}
-
-.Scrolling--Oldprice{
-    color: #646464;
-    text-decoration-line: line-through;
-    font-size: 14px;
-}
-
-.scrollingPage---productName{
-    color: #151414;
-    font-size: 17px;
-    font-weight: 600;
-    padding: 4px 4px 1px 0px;
-}
-.scrollingPage--cartBal{
-    position: relative;
-    color: #646464;
-    font-size: 14px;
-    margin-left: 12px;
-   
-}
-
-.scrollingPage--cartBal::before{
-    content: '•'; 
-     position: absolute;
-     top: -8px;
-     left: -13px; 
-     color: rgb(100, 100, 100, 0.2);
-     /* color: #ffb703; */
-     /* font-size: 30px;  */
- /* }
-
- .Scrolling--NewPrice{
-    font-weight: 600;
- } */
-
- /* .ScrollingPage---imagesContainer{
-    display: flex; */
-    /* width: 100%;  */
-  /* max-width: 1200px; */
-  /* margin: auto;  */
-  /* gap: 3px; */
-  /* position: relative;
- } */ 
+ 
 
 
 
@@ -133,9 +53,9 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    width: 19%;
-    font-size: 0.9em;
-    left: 11em;
+    width: 21%;
+    font-size: 1em;
+    left: 9.5em;
     top: 1em;
     text-align: center;
 
@@ -817,8 +737,9 @@ width:25%;
 }
 
 .imageSlider--percentage{
-  width: 32%;
-  left: 5em;
+  width: 27%;
+  left: 6.8em;
+  font-size: 0.9rem;
 }
 
 
