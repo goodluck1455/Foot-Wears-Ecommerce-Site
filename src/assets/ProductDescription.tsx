@@ -356,7 +356,7 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
                     </div>
                     {/* </NavLink> */}
                     <div className="productDescript----saveForLater">
-                      <FaHeart className="heart--saveLater" />{" "}
+                      <FaHeart className="heart--saveLater"  size={32}/>
                       <p>Save for Later </p>
                     </div>
                   </div>

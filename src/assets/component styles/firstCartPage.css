@@ -151,7 +151,15 @@
 @media (min-width:1440px){
 
     .FirstCartPage---SearchPanel {
-        width: 12%;}
+        width: 18%;}
+
+        .FirstCartPage---container, .FirstCartPageB---container {
+            margin: 3em 1em 2em 1em;
+        }
+
+        .FirstCartPage---ViewPanel {
+            gap: 4em;
+        }
 
 
    }

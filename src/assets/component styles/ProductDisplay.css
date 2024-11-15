@@ -83,14 +83,16 @@
 
   @media (min-width:1440px){
     .ProductDisplay--percentage {
-      left: 14.5rem;  
+      left: 11rem;  
       font-size: 1.4em;
       padding: 6px;
+      width: 24%;
       }
 
 
       .ProductDisplay--container {
-        height: 19em;}
+        height: 16em;
+      width: 16rem;}
 
   }
 

@@ -313,11 +313,11 @@
 
 @media (min-width:1440px){
   .imageSlide--A {
-    height: 74%;}
+    height: 72%;}
 
 .imageSlider--container {
-  height: 17em;
-  width: 18rem;
+  height: 16em;
+  width: 16rem;
 }
 
 .scrollingPage---productName {
@@ -326,9 +326,10 @@
 }
 
 .imageSlider--percentage {
-left: 13rem;  
+left: 11rem;  
 font-size: 1.4em;
 padding: 6px;
+width:25%;
 }
 
 }

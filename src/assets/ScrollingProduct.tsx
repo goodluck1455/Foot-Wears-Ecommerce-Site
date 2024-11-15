@@ -140,7 +140,7 @@ function ScrollingProduct() {
               },
               1440: {
                 slidesPerView: 5,
-                spaceBetween: 10,
+                spaceBetween: 50,
               },
               1820: {
                 slidesPerView: 5.4,
