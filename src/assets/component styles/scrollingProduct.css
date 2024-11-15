@@ -381,7 +381,26 @@ padding: 6px;
 }
 
 
+@media  (max-width:1280px){
+   
+  .imageSlider--container {
+   width: 12.5rem;
+}
 
+.imageSlider--percentage {
+  width: 24%;
+  font-size: 1.1em;
+  left: 7.5em;
+}
+
+.scrollingPage---productName {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.12rem;
+}
+
+}
 
 @media screen and (max-width:1024px){
   .scrollingPage---productName {

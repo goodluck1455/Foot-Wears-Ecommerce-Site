@@ -156,8 +156,15 @@
 
    }
 
+   @media (max-width:1280px){
+   .FirstCartPage---container, .FirstCartPageB---container {
+    margin: 3em 2em 2em 2em;
+}
 
-
+.FirstCartPage---ViewPanel {
+    gap: 3em;
+}
+   }
 
 @media screen and (max-width:1024px){
     .FirstCartPage---SearchPanel {
