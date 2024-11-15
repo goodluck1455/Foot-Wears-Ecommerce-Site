@@ -426,6 +426,7 @@ width:25%;
   }
 
       .imageSlider--container {
+        width: 11rem;
         height: 12em;}
 
         .imageSlide--A {
