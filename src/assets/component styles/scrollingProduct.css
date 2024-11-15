@@ -381,7 +381,8 @@ width:25%;
 }
 
 .imageSlider--container {
-    height: 14em;
+    height: 14.5em;
+    width: 15rem;
 }
 .imageSlide--A {
     height: 9.3rem;
