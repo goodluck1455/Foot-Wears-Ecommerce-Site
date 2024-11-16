@@ -14,32 +14,15 @@ import ReactPaginate from "react-paginate";
 import TurnHeadsLater from "./TurnHeadsLater";
 import { useContext } from "react";
 import { ShoppingContext } from "./ShopContext";
-// import Navigation from "./Navigation";
-// import { useCart } from "react-use-cart";
-// import ProductLayout from "./ProductLayout";
-// import ProductDisplaySec from "./ProductDisplaySec";
+import NoProductAvailiable from "./NoProductAvailiable";
 
-// const router = createBrowserRouter(
-//     createRoutesFromElements(
-//       <Route path="ProductDisplaySec" element={<ProductDisplaySec />} />
 
-//     )
 
-// interface FirstCartPageProps {
-//   pageCount:void,
-//    itemContainer:string,
-//    oldPrice:string,
-//    newPrice:string,
-//    images:string
-//   }
-
-// )
 
 interface FirstCartPageProps {
   showTurnHeadsLater?: boolean;
   containerClassName?: string;
-  // gamesRef: React.RefObject<HTMLDivElement>;
-  // handleClick: () => void;
+ 
 }
 
 const FirstCartPage: React.FC<FirstCartPageProps> = ({
@@ -52,6 +35,31 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
   const [isFiltering, setIsFiltering] = useState(false);
 
   //nbsijbjksnbkjdnfv
+  // State for price range
+  const [priceRange, setPriceRange] = useState({ min: 0, max: 10000 }); 
+
+// Reset all checkboxes function
+const resetCheckboxes = () => {
+  setCheckedItems({
+    all: false,
+    maleShoes: false,
+    femaleShoes: false,
+    childrenShoes: false,
+    Nike: false,
+    Puma: false,
+    Kswiss: false,
+    Encap: false,
+    N620: false,
+    N2030: false,
+    N3140: false,
+    N4150: false,
+  });
+
+  setPriceRange({ min: 0, max: 10000 });
+
+  setIsFiltering(false); // Optional: Reset filtering status if needed
+};
+
 
   const globalVersion = useContext(ShoppingContext);
 
@@ -100,6 +108,18 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
         if (checkedItems.N2030 && product.Size === "20-30") return true;
         if (checkedItems.N3140 && product.Size === "31-40") return true;
         if (checkedItems.N4150 && product.Size === "41-50") return true;
+
+        // **New Price Range Condition**
+        const productPrice = parseFloat(
+          product.newPrice.replace(/[^0-9.-]+/g, "")
+        );
+
+        // Check if product price falls within the selected range
+        if (productPrice >= priceRange.min && productPrice <= priceRange.max) {
+          return true;
+        }
+        
+
         return false;
       })
     : productDisplay; // Default product list if no filter is applied
@@ -122,6 +142,13 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
       );
     });
 
+
+    // Function to handle price range change
+const handlePriceRangeChange = (min: number, max: number) => {
+  setPriceRange({ min, max });
+  setIsFiltering(true); // Trigger filtering
+}
+
   //  const [checkedItems, setCheckedItems] = useState({
   //    all: false,
   //   maleShoes: false,
@@ -131,7 +158,7 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
   //  )
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = event.target;
+    const { name, checked} = event.target;
 
     // Set `isFiltering` to true when a filter is applied
     setIsFiltering(true);
@@ -150,6 +177,7 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
         N2030: checked,
         N3140: checked,
         N4150: checked,
+        
       });
     } else {
       setCheckedItems((prevState) => {
@@ -278,6 +306,8 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
           newCheckedItems.N2030 = false;
         }
 
+
+
         return newCheckedItems;
       });
     }
@@ -335,12 +365,14 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
     <>
       <div className={containerClassName || "FirstCartPage---container"} id="mainPage">
         <div className="firstCARTpAGE---filterTag" onClick={openFilterBtn}>
-          <p>Filter</p> <FilterIcon size={20} className="filterIcon" />
+          <p>Filter</p> <FilterIcon size={20} className="filterIcon" /> 
         </div>
         {showTurnHeadsLater && <TurnHeadsLater />}
           
           
-
+        <div>
+          .
+        </div>
         <div className="FirstCartPage---ViewPanel">
           <div className={openFilter ? "FirstCartPage---SearchPanel" : "Close---SearchPanel" }>
               <div className="searchPanel--widthIssue">  {/*// trying to correct an issue */}
@@ -348,8 +380,10 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
               size={25}
               className="filtercloseBTN"
               onClick={closeFilterBTN}
-            />
-            <h3>Filters</h3>
+            /> 
+            <div className="FilterSerachClear---container">   
+            <h3>Filters</h3> <button type="button" onClick={resetCheckboxes}>Clear</button>
+            </div>
             <div>
               <span className="FirstCartPgae---checkBoxContainer-A">
                 <input
@@ -412,7 +446,7 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
             <div>
               <span className="FirstCartPgae---RangeBox">
                 <h4>Price</h4>
-                <InputRange />
+                <InputRange  handlePriceRange={handlePriceRangeChange}/>
               </span>
             </div>
             <div>
@@ -540,14 +574,15 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
           </div>
 
           <div className={filteredProducts.length > 0 ? "container---no-products-message": "container---no-products-message"} >
-            <div className="FirstCarPge---ProductDisplay">
+            <div className={filteredProducts.length > 0 ? "FirstCarPge---ProductDisplay" : "FirstCarPge---NoProduct" } >
               {/* {productDisplayElement} */}
 
               {filteredProducts.length > 0 ? (
                 productDisplayElement
               ) : (
                 <div className="no-products-message">
-                  <h2 className="NO--product">Product no longer available</h2>
+                  {/* <h2 className="NO--product">Product no longer available</h2> */}
+                  <NoProductAvailiable />
                 </div>
               )}
             </div>

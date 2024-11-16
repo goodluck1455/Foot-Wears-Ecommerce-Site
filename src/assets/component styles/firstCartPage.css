@@ -83,10 +83,19 @@
 
 
 .no-products-message{
-    position: absolute;
+    /* position: absolute; */
+ 
     color: #646464;
-   margin-top: 10em;
-   margin-left: 20em;
+   /* margin-top: 10em;
+   margin-left: 20em; */
+   /* display: flex;
+   justify-content: center;
+   margin: 0 auto; */
+   /* left: 50%;
+   right: 50%; */
+   margin: 10rem auto;
+ 
+  
     
 }
 .container---no-products-message{
@@ -118,6 +127,10 @@
     /* margin-bottom: 1em; */
 
 }
+
+.FirstCarPge---NoProduct{
+    grid-template-columns: unset;
+}
 .FirstCartPgae---RangeBox h4, .FirstCartPage--size{
     margin-top: 25px;
 }
@@ -147,6 +160,19 @@
     display: none;
 }
 
+.FilterSerachClear---container{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6px;
+}
+.FilterSerachClear---container button{
+    background-color: rgb(21, 20, 20, .2);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 @media (min-width:1440px){
 

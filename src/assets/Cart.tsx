@@ -84,22 +84,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
     navigate("/ProductDescription", { state: { product } });
         
    }
-    // const handleQuantityChange = (id: number, quantity: number) => {
-    //   localStorage.setItem(id.toString(), quantity.toString());
-    //   dispatch({
-    //     type: "UPDATE_QUANTITY",
-    //     payload: { id, quantity },
-    //   });
-    // };
     
-    // const handleSize = (id: any, size: any) => {
-    //   localStorage.setItem(`size_${id}`, size.toString());
-
-    //   dispatch({
-    //     type: "UPDATE_SIZE",
-    //     payload: { id, size },
-    //   });
-    // };
       
          
           
