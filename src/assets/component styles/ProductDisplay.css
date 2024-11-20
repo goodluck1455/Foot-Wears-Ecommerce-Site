@@ -121,7 +121,7 @@
 
 
 
-  @media  (max-width:1920px){
+  @media  (min-width:1920px){
   .ProductDisplay--container {
     /* height: 16em; */
     width: 19rem;
