@@ -302,6 +302,27 @@ width:25%;
 }
 
 
+@media (min-width:1920px){
+  .imageSlider--container {
+    /* height: 19em; */
+    padding: 15px;
+    width: 19rem;
+}
+
+.imageSlider----sales {
+  height: 7.5rem;
+  padding: 1px 20px;
+  font-size: 1.7rem;
+}
+
+.imageSlider--percentage {
+  width: 25%;
+  left: 12.5rem;
+  font-size: 1.7rem;
+}
+
+}
+
 @media  (max-width:1280px){
    
   .imageSlider--container {

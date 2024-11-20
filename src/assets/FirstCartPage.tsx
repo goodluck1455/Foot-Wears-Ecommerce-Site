@@ -93,17 +93,20 @@ const resetCheckboxes = () => {
   // Filter products based on search term
   const filteredProducts = isFiltering
     ? productDisplay.filter((product) => {
-        if (checkedItems.all) return true; // Return all products if "All" is checked
+        
+      if (checkedItems.all) return true; // Return all products if "All" is checked
         if (checkedItems.maleShoes && product.category === "male Shoes")
           return true;
         if (checkedItems.femaleShoes && product.category === "female Shoes")
           return true;
         if (checkedItems.childrenShoes && product.category === "children Shoes")
           return true;
+
         if (checkedItems.Nike && product.Brand === "Nike") return true;
         if (checkedItems.Puma && product.Brand === "Puma") return true;
         if (checkedItems.Kswiss && product.Brand === "Kswiss") return true;
         if (checkedItems.Encap && product.Brand === "Encap") return true;
+        
         if (checkedItems.N620 && product.Size === "6-20") return true;
         if (checkedItems.N2030 && product.Size === "20-30") return true;
         if (checkedItems.N3140 && product.Size === "31-40") return true;
@@ -118,11 +121,15 @@ const resetCheckboxes = () => {
         if (productPrice >= priceRange.min && productPrice <= priceRange.max) {
           return true;
         }
-        
-
         return false;
       })
     : productDisplay; // Default product list if no filter is applied
+
+
+
+  
+       
+        
 
   const productDisplayElement = filteredProducts
     .slice(pageVisited, pageVisited + userPerPage)

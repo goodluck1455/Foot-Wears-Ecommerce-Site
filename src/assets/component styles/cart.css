@@ -781,6 +781,11 @@ display: none;
     
 }
 
+@media (min-width:1920px){
+.checkoutInfoContainer {
+  justify-content: center;
+}
+}
 
 @media screen and (max-width:1024px){
   .Cart--container {

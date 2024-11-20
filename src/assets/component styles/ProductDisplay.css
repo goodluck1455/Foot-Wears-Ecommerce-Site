@@ -118,6 +118,22 @@
 
 
   }
+
+
+
+  @media  (max-width:1920px){
+  .ProductDisplay--container {
+    /* height: 16em; */
+    width: 19rem;
+}
+
+.ProductDisplay--percentage {
+  left: 13rem;
+}
+
+
+  }
+
   @media  (max-width:1280px){
 
     .ProductDisplay--container {

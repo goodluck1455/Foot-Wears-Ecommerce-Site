@@ -32,6 +32,17 @@
     font-size: 13px;
     padding-top: 9px;
   }
+
+
+
+  @media  (min-width:1920px){
+    .RangeStyle {
+      font-size: unset;
+     
+  }
+
+
+  }
   
 @media screen and (max-width:375px), (max-width:414px), (max-width:430px){
 

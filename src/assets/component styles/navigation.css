@@ -59,6 +59,17 @@
    margin: 6px;
    cursor: pointer;
 } */
+
+@media  (min-width:1920px){
+    .Navigation---container {
+       font-size: 1.3rem;
+    
+    }
+
+
+
+}
+
 @media screen and (max-width:1024px){
     .Navigation---container {
         margin-left: unset;}

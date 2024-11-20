@@ -174,6 +174,8 @@
     cursor: pointer;
 }
 
+
+
 @media (min-width:1440px){
 
     .FirstCartPage---SearchPanel {
@@ -189,6 +191,29 @@
 
 
    }
+
+
+   @media (min-width:1920px){
+    .container---no-products-message {
+        width: 68%;
+    }
+    .FirstCartPage---ViewPanel {
+        justify-content: center;
+    }
+
+    .FirstCartPage---SearchPanel {
+        font-size: 1.4rem;
+        height: 40rem;
+        width: 15%;
+    }
+
+    .FilterSerachClear---container button {    
+        padding: 6px;
+        font-size: 1.4rem;
+    }
+    
+   }
+
 
    @media (max-width:1280px){
    .FirstCartPage---container, .FirstCartPageB---container {
