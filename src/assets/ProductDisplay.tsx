@@ -87,7 +87,7 @@ item: {
           whileInView={"show"}
          
          >
-                   <div className="ProductDisplay--container" onClick={() => handleProductClick(item)}>
+                   <div className="ProductDisplay--container leading-[1.2]" onClick={() => handleProductClick(item)}>
                    <span className="ProductDisplay--percentage">{discount}</span>
                 <div className="ProductDisplay--imageSlide--A">
                   <img src={images} alt="" />

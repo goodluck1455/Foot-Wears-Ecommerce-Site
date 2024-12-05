@@ -52,7 +52,7 @@ function ScrollingProduct() {
 
       <SwiperSlide key={price.id}>
       
-      <div className="imageSlider--container"   onClick={() => handleProductClick(price)}>
+      <div className="imageSlider--container leading-[1.2]"   onClick={() => handleProductClick(price)}>
        <div className="imageSlider----sales"><p>SALES</p></div> 
                 <div className="imageSlide--A">
                   <img src={price.Image} alt="" />

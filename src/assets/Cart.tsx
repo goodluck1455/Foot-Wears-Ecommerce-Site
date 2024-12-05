@@ -85,9 +85,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
         
    }
     
-      
-         
-          
+             
 
   return (
     <>
@@ -133,7 +131,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
 
                   <div className="Cart--BasketItem--Container">
                   <div className="Cart--image--container">
-                  <img src={item.Image} alt="" />
+                  <img src={item.Image} alt=""  className="  p-3 -my-9"/>
                   </div>
                     
                    <div className="Cart--Info">
@@ -201,7 +199,7 @@ const totalPrice = state.reduce((acc: number, item: any) => {
                     <div className={openModal === item.id ? "DeleteOption" : "DeleteOptionClose" }
                     onClick={() => setOpenModal(null)}>
 
-                      <div className="Overlay">
+                      <div className="Overlay backdrop-blur">
                         <div className="DeleteOption--Info">
                            <h3>Remove from Cart</h3>
                            <p>Do you really want to remove this item from cart?</p>
@@ -280,8 +278,8 @@ const totalPrice = state.reduce((acc: number, item: any) => {
 
                  </div>
 
-                 <div className="Cart---DeliveryFee">
-                  <p>   <img src={informationDiamond} alt="" /> Delivery fees is calculated at checkout</p>
+                 <div className="Cart---DeliveryFee ">
+                  <p className="flex my-auto">   <img src={informationDiamond} alt=""  className="my-auto pr-2"/> Delivery fees is calculated at checkout</p>
                   </div>
                  </div>
  )}

@@ -1,18 +1,29 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Range, getTrackBackground } from "react-range";
 import "../assets/component styles/inputRange.css";
 
-const MIN = 0;
-const MAX = 1000000;
+// const MIN = 0;
+// const MAX = 1000000;
 
 interface InputRangeProps {
-  handlePriceRange: (min: number, max: number) => void; // Prop to pass the price range to the parent
+  handlePriceRange: (min: number, max: number) => void;
+  MAX:number;
+  MIN:number;
+  values:number[];
+  setValues: any;
 }
 
 
 
-const InputRange: React.FC<InputRangeProps> = ({handlePriceRange}) => {
-  const [values, setValues] = useState([0, 1000000]);
+const InputRange: React.FC<InputRangeProps> = ({handlePriceRange, MAX, MIN, values, setValues}) => {
+  // const [values, setValues] = useState([0, 1000000]);
+
+
+
+  // const handleReset = () => {
+  //   setValues([MIN, MAX]); // Reset values to default
+  //   reset(); // Call the parent's reset function
+  // };
 
 
   const currencyCatPrice = (newPrice:number)=>{
@@ -27,6 +38,7 @@ const InputRange: React.FC<InputRangeProps> = ({handlePriceRange}) => {
   const handleChange = (newValues: number[]) => {
     setValues(newValues); // Update the slider values
     handlePriceRange(newValues[0], newValues[1]); // Pass the selected range to the parent
+   
   };
 
 

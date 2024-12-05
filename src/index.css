@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 *{
   margin: 0;
   padding: 0;
@@ -26,7 +31,6 @@ body{
 
 .Header.active{
   position: fixed;
- 
   width: 100%;
   top: 0;
   z-index: 99;
@@ -87,17 +91,18 @@ color: #F4F4F4;
 
 .Cart-countHolder{
   position: absolute;
-  left: 4.7em;
-  top: -0.3em;
+  left: 4.2em;
+  top: -0.1em;
+  width: 10px;
+  height: 10px;
   background-color: #141B34;
   border-radius: 50%;
-  padding: 5px;
-  
+  padding: 12px;
+  /* border: 1px solid white; */
+  display: flex;
   justify-content: center;
-  align-self: center;
   align-items: center;
-  text-align: center;
-   /* border: 2px solid #F4F4F4; */
+ 
 }
 
 .Cart-countHolder--empty{
@@ -223,7 +228,7 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
   .Header--logo {
    font-size: 28px;
   margin-left: 1.2em;
-   margin-top: -0.1em;
+   /* margin-top: -0.1em; */
   }
 
   .Menue--icon {
@@ -404,7 +409,7 @@ transition: 1s ease-in-out;
 .Header--logo {
   margin-left: 1.2em;
   font-size: 1.3em;
-  margin-top: 0.3em;
+  /* margin-top: 0.3em; */
 }
 
 .Menue--icon {

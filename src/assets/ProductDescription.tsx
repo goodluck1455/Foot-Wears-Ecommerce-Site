@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import "./component styles/ProductDescription.css";
 import { FaHeart } from "react-icons/fa6";
 import { GrPowerCycle } from "react-icons/gr";
@@ -39,6 +39,9 @@ import "swiper/css/thumbs";
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper/types";
+// import RootLayer from "./DataTesting/RootLayer";
+// import Descript from "./DataTesting/Descript";
+// import DataShow from "./DataTesting/dataShow";
 // import { useAlert } from './AlertContext.tsx';
 
 // import { useAlert } from "../assets/AlertContext.tsx";
@@ -51,6 +54,17 @@ import { Swiper as SwiperType } from "swiper/types";
 
 
 interface ProductDescriptionProps {}
+
+
+// const router = createBrowserRouter(
+//        createRoutesFromElements(
+//         <Route path="/" element={<RootLayer />}>
+//           <Route index  element={<Descript />}/>
+//           <Route path="DataShow"  element={<DataShow /> }/>
+//         </Route>
+//        )
+// )
+
 
 const ProductDescription: React.FC<ProductDescriptionProps> = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
@@ -175,6 +189,7 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
         </NavLink>
 
         <div className="Product--details">
+
           <div className="product--details-image-and-others">
             <div className="productDescription--Swiper">
               <Swiper
@@ -249,8 +264,9 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
                 </SwiperSlide>
               </Swiper>
 
-              <div className="productDescript----shareWithOthers">
-                <p>Share this product</p>
+              <div className="productDescript----shareWithOthers ">
+                <p>Share this product</p> 
+                  <div className="flex justify-center">
                 <MdOutlineFacebook
                   size={25}
                   className="productDescript---facebook"
@@ -263,6 +279,7 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
                   size={25}
                   className="productDescript---facebook"
                 />
+                </div>
               </div>
             </div>
             <div className="details---container">
@@ -310,9 +327,7 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
                         </div>
                       ))}
 
-                      {/* <div className={`productDescription---sizeSelection ${sizeselected ? "activeSelected": ""}`} onClick={(event)=>handleSize(product.id, event.currentTarget.textContent)}>47</div>
-                              <div className={`productDescription---sizeSelection ${sizeselected && "activeSelected"}`} onClick={activeSelected}>30</div>
-                              <div className={`productDescription---sizeSelection ${sizeselected && "activeSelected"}`} onClick={activeSelected}>20</div> */}
+                      
                     </div>
                   </div>
 
@@ -340,7 +355,7 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
 
                   <div className="productDescription--callForBulkPurchase">
                     <span>
-                      {" "}
+                   
                       Call for bulk purchase <br />
                       +2348137713110{" "}
                     </span>
@@ -349,14 +364,14 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
                   <div className="productDescription---AddToCart">
                     {/* <NavLink to="/Cart"> */}
                     <div className="addToCart---Container">
-                      <button type="button" onClick={handleAddToCart}>
-                        <BsCart4 className="productDescript--Cart" /> ADD TO
+                      <button type="button" className="flex" onClick={handleAddToCart}>
+                        <BsCart4 size={20} className="productDescript--Cart" /> ADD TO
                         CART
                       </button>   
                     </div>
                     {/* </NavLink> */}
                     <div className="productDescript----saveForLater">
-                      <FaHeart className="heart--saveLater"  size={32}/>
+                      <FaHeart className="heart--saveLater"  size={34}/>
                       <p>Save for Later </p>
                     </div>
                   </div>
@@ -371,8 +386,8 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
             </div>
             <div className="truckFlex">
               <div>
-                {" "}
-                <TbTruckDelivery size={30} className="truckColor" />{" "}
+               
+                <TbTruckDelivery size={30} className="truckColor" />
               </div>
               <div className="delivery--container">
                 <h4>Delivery</h4>
@@ -402,8 +417,8 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
 
             <div className="truckFlex">
               <div>
-                {" "}
-                <GrPowerCycle size={30} className="truckColor" />{" "}
+             
+                <GrPowerCycle size={30} className="truckColor" />
               </div>
 
               <div className="delivery--container Deiery--paragraph">
@@ -434,16 +449,13 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
         </div>
       </div>
 
-      {/* <ToastContainer 
-        
-          autoClose = {3000}
-          hideProgressBar ={false}
-          closeOnClick ={true}
-          pauseOnHover
-          draggable
+      <div className="container--productDescription">
+        <div className="Product--Overview">
+          Description</div>
+          {/* <RouterProvider router={router} /> */}
+      </div>
 
-        
-        /> */}
+   
     </>
   );
 };

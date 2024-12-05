@@ -47,6 +47,7 @@
     font-size: 2.6em;
      padding: 9px 0px 9px 3px;
      width: 100%;
+     
   }
 
   .mainPage--button{
@@ -67,15 +68,16 @@
     color: black;
     border-radius: 50%;
     font-size: 20px;
-    padding: 2px;
-    margin-left: 4em;
-    margin-top: 0.1em;
+    /* margin-top: 0.1em; */
+    /* padding: 2px; */
+    /* margin-left: 4em;
+    */
   }
 
  .mainPage--button--text{
     font-size: 15px;
-    margin-top: 0.2em;
-    position: absolute;
+    /* margin-top: 0.2em; */
+    /* position: absolute; */
    
  } 
 
@@ -288,6 +290,7 @@
 .mainPage--tile--Container {
  margin-top: 0.7em;
  width: unset;
+ text-align: -webkit-center;
 }
 
 .MainPage--paragraph {
@@ -295,7 +298,10 @@
 
   .mainPage--button {
     z-index: 999;
-    width: 40%;}
+    width: 36%;
+    /* margin-left: 7rem; */
+  }
+    
 
 }
 

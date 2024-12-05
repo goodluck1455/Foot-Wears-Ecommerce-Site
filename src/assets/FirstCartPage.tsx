@@ -19,6 +19,7 @@ import NoProductAvailiable from "./NoProductAvailiable";
 
 
 
+
 interface FirstCartPageProps {
   showTurnHeadsLater?: boolean;
   containerClassName?: string;
@@ -34,11 +35,18 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
   const [openFilter, setOpenFilter] = useState(true);
   const [isFiltering, setIsFiltering] = useState(false);
 
+
+  const [values, setValues] = useState([0, 1000000]);
   //nbsijbjksnbkjdnfv
   // State for price range
   const [priceRange, setPriceRange] = useState({ min: 0, max: 10000 }); 
 
 // Reset all checkboxes function
+
+let MIN = 0;
+let MAX = 1000000;
+
+
 const resetCheckboxes = () => {
   setCheckedItems({
     all: false,
@@ -55,10 +63,18 @@ const resetCheckboxes = () => {
     N4150: false,
   });
 
+
+  setValues([0, 1000000]);
+
   setPriceRange({ min: 0, max: 10000 });
 
   setIsFiltering(false); // Optional: Reset filtering status if needed
+
+
 };
+
+
+
 
 
   const globalVersion = useContext(ShoppingContext);
@@ -125,6 +141,20 @@ const resetCheckboxes = () => {
       })
     : productDisplay; // Default product list if no filter is applied
 
+
+    // filter testing begins here
+
+
+    
+
+
+
+
+
+    //filter testing ends here
+
+
+       
 
 
   
@@ -381,7 +411,7 @@ const handlePriceRangeChange = (min: number, max: number) => {
           .
         </div>
         <div className="FirstCartPage---ViewPanel">
-          <div className={openFilter ? "FirstCartPage---SearchPanel" : "Close---SearchPanel" }>
+          <div className={openFilter ? "FirstCartPage---SearchPanel" : "Close---SearchPanel" } >
               <div className="searchPanel--widthIssue">  {/*// trying to correct an issue */}
             <FilterCloseBtn
               size={25}
@@ -389,7 +419,7 @@ const handlePriceRangeChange = (min: number, max: number) => {
               onClick={closeFilterBTN}
             /> 
             <div className="FilterSerachClear---container">   
-            <h3>Filters</h3> <button type="button" onClick={resetCheckboxes}>Clear</button>
+            <h3>Filters</h3> <button type="button" className="px-1" onClick={resetCheckboxes}>Clear </button>
             </div>
             <div>
               <span className="FirstCartPgae---checkBoxContainer-A">
@@ -453,7 +483,10 @@ const handlePriceRangeChange = (min: number, max: number) => {
             <div>
               <span className="FirstCartPgae---RangeBox">
                 <h4>Price</h4>
-                <InputRange  handlePriceRange={handlePriceRangeChange}/>
+                <InputRange  handlePriceRange={handlePriceRangeChange} 
+                MIN={MIN} MAX={MAX}
+                values={values} setValues={setValues}
+                />
               </span>
             </div>
             <div>

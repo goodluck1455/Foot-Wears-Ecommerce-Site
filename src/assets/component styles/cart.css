@@ -59,16 +59,18 @@
 .Cart--image--container {
     background-color: #9DAEEA;
     border-radius: 10px;
-    height: 5em;
+    /* height: 5rem; */
     width: 30%;
     margin: 5px;
-    text-align: center;
-    padding: 4px;
+    align-content: center;
+    /* align-content: center; */
+    /* text-align: center; */
+    /* padding: 4px; */
   }
-  .Cart--image--container img{
-    width: 90%;
+  /* .Cart--image--container img{ */
+    /* width: 90%; */
     /* margin-top: -10px; */
-  }
+  /* } */
 
   .Cart--BasketItem--Container{
     display: flex;
@@ -262,13 +264,13 @@ padding: 5px;
   cursor: pointer;
 }
 
-.Cart---DeliveryFee p{
+/* .Cart---DeliveryFee p{
   margin-top: -0.5em;
-}
-.Cart---DeliveryFee img{
+} */
+/* .Cart---DeliveryFee img{
  margin-bottom: -0.6em;
  padding: 4px; 
-}
+} */
 
 
 
@@ -370,6 +372,9 @@ padding: 5px;
   border: 1px solid #9DAEEA;
   border-radius: 20px 0px 20px 20px;
   padding: 13px;
+  width: 28rem;
+  box-sizing: border-box;
+
 
 }
 
@@ -411,7 +416,7 @@ padding: 5px;
   border: 1px solid #646464;
   background: none;
   border-radius: 4px;
-  /* width: 93%; */
+  width: 100%;
  
   /* padding: 10px; */
 }
@@ -421,7 +426,7 @@ padding: 5px;
  /* color: #646464; */
  /* margin-left: 2em; */
  font-size: 0.9em;
-   padding: 8px 8px 8px 2.1em;
+padding: 8px 8px 8px 2.1em;
 }
 
 .checkOutExpiration--Container{
@@ -430,9 +435,9 @@ padding: 5px;
   gap: 9px;
   margin-bottom: 1em;
 }
-.checkOutExpiration--Container input, .checkOutExpiration--Container .ExpiringIput{
-  /* width: 100%; */
-  width: 13.7em;
+.checkOutExpiration--Container input, .checkOutExpiration--Container input .ExpiringIput{
+  width: 100%;
+  /* width: 13.7em; */
   height: 60%;
 }
 
@@ -472,14 +477,19 @@ padding-left: 1.5em;
    font-size: 18px;
 }
 
-.checkout--selectedOption{
-  width: 16em;
+
+.checkout--selectedOption, .checkOutInput---inputLayout input{
+  width: 12.8rem;
+  /* width: fit-content; */
+  /* width: 100%; */
+
   height: 60%;
   border: 1px solid #646464;
   background: none;
   border-radius: 4px;
   padding: 8px;
 }
+
 
 .checkout--selectedOption option{
   /* padding-left: 3em;
@@ -525,6 +535,7 @@ padding-left: 1.5em;
   background-color: #ECEFFF;
   cursor: pointer;
   margin-right: 10px;
+
 }
 
 .CheckOut---checkBoxContainer-A input[type="checkbox"]:checked {
@@ -887,7 +898,7 @@ display: none;
    .checkOut--totalDisplay {
     margin-top: 1em;}
 
-   .Checkout--summaryItems {
+   .Checkout--summaryItems{
     margin-top: 1.5em;}
    
    .checkoutInfoContainer {
@@ -1094,6 +1105,10 @@ flex-direction: column;
 position: relative;
 }
 
+.checkout--selectedOption, .checkOutInput---inputLayout input {
+  width: unset;
+}
+
 .checkOutInput--Container {
   flex-direction: column;
 }
@@ -1132,11 +1147,13 @@ position: relative;
  border-radius: 0px;
  margin-left: -28em;
  height: 22em;
+ top: 0;
 }
 .Checkout--summaryClose{
   margin-left: 0.3em;
   transition: 1s ease-in;
   border-radius: 10px;
+  top: 0;
 }
 
 .checkout--breakTag{

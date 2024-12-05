@@ -75,22 +75,19 @@ const MainPage: React.FC<MainPageProps> = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="mainPage--tile--Container">
             <p>Step Lightly</p>
-            <h2 className="mainPage--title">
+            <h2 className="mainPage--title leading-none">
               Nice Shoe that Reflect
               <br /> Your Personality
             </h2>
-            <p className="MainPage--paragraph">
+            <p className="MainPage--paragraph ">
               Step lightly:sustainble footwear for Every <br />
               step. Discover stylish and confortable shoes
             </p>
             
-             <HashLink  to="#mainPage" smooth > <button
-              className="mainPage--button"
-              // onTouchStart={handleClick}
-              // onClick={()=>handleClick(gamesRef )}
-              >
+             <HashLink  to="#mainPage" smooth > <button className="mainPage--button 
+             flex justify-evenly " >
               <span className="mainPage--button--text">Shop Now</span>
-              <MdKeyboardDoubleArrowRight className="mainPage--arrow" />
+              <MdKeyboardDoubleArrowRight className="mainPage--arrow my-auto" />
             </button> </HashLink> 
           </motion.div>
 

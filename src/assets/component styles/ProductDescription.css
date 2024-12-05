@@ -260,6 +260,7 @@ width: 45%;
       background: rgb(20, 27, 52, .9);
       color: #F4F4F4;
     }
+
     .productDescript--Cart{
       margin-right: 10px;
     }
@@ -307,9 +308,11 @@ width: 45%;
       border-radius: 50%; 
       margin-top: 0.6rem;
       color: #141B34;
+      background: rgb(157, 174, 234, .9);
     }
     .heart--saveLater:hover{
-      background: rgb(157, 174, 234, 0.3);
+     background: rgb(20, 27, 52, .8);
+      color: white
     }
 
     .productDescript----shareWithOthers{
@@ -354,6 +357,17 @@ width: 45%;
     .backToProductDescription{
       cursor: pointer;
     }
+
+      
+    /*********************************************** 
+         display of product description goes here  
+      **********************************************/
+      .Product--Overview{
+        background-color: #F4F4F4;
+      }
+      
+
+
 
     /************************************
      MEDIA QUERY BEGINS HERE  

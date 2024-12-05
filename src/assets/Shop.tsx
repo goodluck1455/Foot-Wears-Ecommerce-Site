@@ -30,7 +30,7 @@ function Shop() {
       <>
        <div className="Shop---container">
              <div className="Shop---title">
-                <h1>Get a Free Gift <br className="shop--giftBreak"/>
+                <h1 className="leading-[1.2]">Get a Free Gift <br className="shop--giftBreak"/>
                 Off Every Order
                 </h1>
              </div>

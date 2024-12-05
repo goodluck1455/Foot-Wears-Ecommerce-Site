@@ -80,10 +80,10 @@ const closeSideBar = () => {
           </div>
 
           </div>
-          <div className="Menue--icon">
+          <div className="Menue--icon flex">
             <Ci.CiSearch className="search--icon"/>
             <NavLink to="/Cart" className="cartIcon">   <img src={CartImage} alt="Cart"  />
-            <span className={state.length > 0 ? "Cart-countHolder": "Cart-countHolder--empty" }>
+            <span className={state.length > 0 ? "Cart-countHolder ": "Cart-countHolder--empty" }>
               {state.length}</span>  </NavLink> 
             </div>
         </div>
