@@ -502,25 +502,25 @@ padding-left: 1.5em;
 .CheckOutForm---firstNameIcon{
   /* width: 1%; */
   position: absolute;
-  top: 2.1em;
+  top: 2.4em;
   left: 7px;
 }
 .CheckOutForm---LastNameIcon{
   position: absolute;
-  top: 2.1em;
+  top: 2.4em;
   left: 7px;
 }
 
 .CheckOutForm---addressIcon{
   position: absolute;
-  top: 2.4em;
+  top: 2.82em;
   left: 7px;
 }
 
 
 .CheckOutForm---stateIcon{
   position: absolute;
-  top: 2.1em;
+  top: 2.52em;
   left: 7px;
 }
 

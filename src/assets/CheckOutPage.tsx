@@ -237,7 +237,7 @@ const CheckOutPage: React.FC<CheckOutPageProps> = () => {
                     <img
                       src={CreditCard}
                       alt=""
-                      className="CheckOutForm---firstNameIcon"
+                      className="CheckOutForm---firstNameIcon "
                     />
                     <input type="number" placeholder="Enter your first name" />
                   </span>
