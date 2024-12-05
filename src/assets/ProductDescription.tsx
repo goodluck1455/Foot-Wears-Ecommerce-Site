@@ -364,8 +364,8 @@ const ProductDescription: React.FC<ProductDescriptionProps> = () => {
                   <div className="productDescription---AddToCart">
                     {/* <NavLink to="/Cart"> */}
                     <div className="addToCart---Container">
-                      <button type="button" className="flex" onClick={handleAddToCart}>
-                        <BsCart4 size={20} className="productDescript--Cart" /> ADD TO
+                      <button type="button" className="flex justify-center" onClick={handleAddToCart}>
+                        <BsCart4 size={20} className="productDescript--Cart my-auto " /> ADD TO
                         CART
                       </button>   
                     </div>
