@@ -1,16 +1,32 @@
 
+
+.Emptycart---Image{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  background-color: #9DAEEA;
+  border-radius: 50%;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+}
+
 .Product--EmptyCart{
     /* position: absolute; */
     text-align: center;
-    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-content: center; */
+    align-items: center;
+    /* font-size: 1em; */
     /* font-weight: bolder; */
       /* transform: translateY(-50%, -50%); */
-        width: 100%;
-     
+        width: 100%;   
         /* align-content: center; */
        /* margin: 50% 50%; */
-     
-        
-      
-  
+
+  }
+  .emptyCart--paragrap{
+      font-size: 1.5rem;
   }
