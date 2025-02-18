@@ -109,10 +109,10 @@ const MainContent: React.FC = () => {
        
       
       </main>
-
+      </Suspense>
       {/* Conditionally render the Footer */}
       { shouldRenderFooter && <Footer />}
-      </Suspense>
+      
     </>
   );
 };
