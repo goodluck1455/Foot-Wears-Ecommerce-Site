@@ -3,20 +3,25 @@ import './App.css'
 import Header from "./assets/Header";
 import Footer from './assets/Footer';
 import {HashRouter as BrowserRouter, Routes, Route, useLocation, } from 'react-router-dom';
-import HomePage from './assets/HomePage';
-import Shop from './assets/Shop';
-import Cart from './assets/Cart';
-import NotFound from './assets/NotFound';
-import CheckOutPage from './assets/CheckOutPage';
-import ScrollToTop from './assets/ScrollTop';
-import ProductDescription from './assets/ProductDescription';
-import { useEffect, useState } from 'react';
+// import HomePage from './assets/HomePage';
+// import Shop from './assets/Shop';
+// import Cart from './assets/Cart';
+// import NotFound from './assets/NotFound';
+// import CheckOutPage from './assets/CheckOutPage';
+// import ScrollToTop from './assets/ScrollTop';
+// import ProductDescription from './assets/ProductDescription';
+import { useEffect, useState, Suspense, lazy } from 'react';
 // import RootLayer from './assets/DataTesting/RootLayer';
 // import Descript from './assets/DataTesting/Descript';
 // import DataShow from './assets/DataTesting/dataShow';
 
-
-
+const HomePage = lazy(() => import("./assets/HomePage"));
+const Shop = lazy(() => import("./assets/Shop"));
+const Cart = lazy(() => import("./assets/Cart"));
+const NotFound = lazy(() => import("./assets/NotFound"));
+const ScrollToTop = lazy(() => import("./assets/ScrollTop"));
+const ProductDescription = lazy(() => import("./assets/ProductDescription"));
+const CheckOutPage = lazy(() => import("./assets/CheckOutPage"));
 
 
 
@@ -36,6 +41,13 @@ import { useEffect, useState } from 'react';
 //    </Route>
 //   )
 // )
+
+// Skeleton Placeholder UI
+const SkeletonLoader = () => (
+  <div className="skeleton-container">
+    <div className="skeleton-box"></div>
+  </div>
+);
 
 
 
@@ -82,7 +94,9 @@ const MainContent: React.FC = () => {
 
   return (
     <>
+         <Suspense fallback={<SkeletonLoader />}>
       <main>
+ 
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="Shop" element={<Shop />} />
@@ -93,16 +107,32 @@ const MainContent: React.FC = () => {
         </Routes>
 
        
-
+      
       </main>
 
       {/* Conditionally render the Footer */}
       { shouldRenderFooter && <Footer />}
+      </Suspense>
     </>
   );
 };
 
 export default App;
+
+
+
+// import React, { Suspense, lazy } from "react";
+
+// const HeavyComponent = lazy(() => import("./HeavyComponent"));
+
+// function App() {
+//   return (
+//     <Suspense fallback={<div>Loading...</div>}>
+//       <HeavyComponent />
+//     </Suspense>
+//   );
+// }
+
 
 
 
