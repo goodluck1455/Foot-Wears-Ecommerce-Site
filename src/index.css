@@ -241,6 +241,17 @@ MEDIA QUERY FOR MOBILE DEVICE BEGINS HERE
 }
   
 }
+
+
+@media(max-width:600px){
+  .Header--logo { 
+   margin-top: -0.2em; }
+
+   .Menuebar ul {
+    margin-top: -1.9em;
+}
+
+}
 @media screen and (max-width:568px){
   .Header--logo { 
     margin-left: 1.2em;}

@@ -210,6 +210,12 @@
 
  }
   
+ @media (max-width:600px){
+.ShoeImage----container{
+  margin-left: -6em;
+}
+ }
+
  @media screen and (max-width:667px), (max-width:684px){
   .ShoeImage----container {
     margin-top: 0em;
@@ -283,7 +289,7 @@
 }
 
 .ShoeImage----container {
-  margin-left: unset;
+  margin-left: -3rem;
   margin-top: -4em;
 }
 

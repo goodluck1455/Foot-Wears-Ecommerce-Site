@@ -30,6 +30,7 @@
     display: flex;
     gap: 5em;
 }
+
 .FirstCartPage---SearchPanel{
     background: #F4F4F4;
     border: 2px solid #D7D7D7;
@@ -176,6 +177,71 @@
     cursor: pointer;
 }
 
+
+/******************************************** 
+CSS FOR FILTER SELECTION BEGINGS HERE.... 
+********************************************/
+.FirstCart--scrollingFilter{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 5px;
+}
+.Filter--Categories{
+    background: #F4F4F4;
+    border: 2px solid #D7D7D7;
+    /* width: 60%; */
+     width: 9rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* css for swiper*/
+.filterSelect-next,
+.filterSelect-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+ 
+  font-size: 1.5rem; 
+}
+
+.filterSelect-next {
+  right: 1rem; 
+  background-color: #ECEFFF;
+  color: #141B34;
+  border-radius: 50%;
+  padding: 3px; 
+ display: flex;
+ justify-content: center; 
+ align-items: center;
+}
+
+.filterSelect-prev  {
+  left: 1rem;
+  border-radius: 50%;
+  background-color: #ECEFFF;
+  color: #141B34;
+  padding: 3px;
+display: flex;
+justify-content: center; 
+align-items: center;
+}
+
+.filterSelect-next.swiper-button-disabled,
+.filterSelect-prev.swiper-button-disabled {
+display: none;
+}
+/* .FilterSelect---Container{
+    display: none;
+} */
+
+/******************************************** 
+CSS FOR FILTER SELECTION ENDS HERE.... 
+********************************************/
 
 
 @media (min-width:1440px){
@@ -546,6 +612,11 @@
           .FirstCartPage---SearchPanel {
             margin-left: -37em;}
 
+            .Shop---imageContainer {
+                display: flex;
+                justify-content: center;
+            }
+
             /* .FirstCartPage---ViewPanel {
                 margin-left: 13px;
             } */
@@ -611,6 +682,10 @@
                 justify-content: center;
                 
             } */
+            .filterSelect-next,
+            .filterSelect-prev {
+              display: none;
+            }
 
             /* @media (max-width:360px){
                 .FirstCartPage---ViewPanel {
@@ -633,6 +708,10 @@
    border: none;
 }
 
+.FirstCartPage---titlePage h1 {
+       font-size: 1.2rem;
+}
+
 .container---no-products-message {
     width: unset;}
 
@@ -648,7 +727,7 @@
     margin-top: -6.5em;
      border-radius: 20px;
     padding: 13px;
-    width: 40%;
+    width: 50%;
     height: auto;
     z-index: 1;
     border: 2px solid #141B34;
@@ -732,9 +811,9 @@
     }
 
 
-    /* .FirstCartPage---titlePage h2 {
+    .FirstCartPage---titlePage h1 {
         font-size: 1em;
-    } */
+    }
 
 
 
@@ -763,8 +842,10 @@
         } */
 
         .Close---SearchPanel{
-            width: 50%;
+            width: 55%;
         }
+
+       
 
       
        

@@ -17,6 +17,26 @@ import { ShoppingContext } from "./ShopContext";
 import NoProductAvailiable from "./NoProductAvailiable";
 
 
+// import FilterSelection from "./FilterSelection";
+
+// const FilterSelectData= [
+//       {
+//           id: 1,
+//           categories: "Female Shoes"
+//       },
+//       {
+//           id: 2,
+//           categories: "Male Shoes"
+//       },
+//       {
+//           id: 3,
+//           categories: "Children Shoes"
+//       },
+//       {
+//           id: 4,
+//           categories: "All"
+//       },
+//   ]
 
 
 
@@ -34,6 +54,7 @@ const FirstCartPage: React.FC<FirstCartPageProps> = ({
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
   const [openFilter, setOpenFilter] = useState(true);
   const [isFiltering, setIsFiltering] = useState(false);
+  // const [filterSelection, setFilterSelection] = useState(FilterSelectData);
 
 
   const [values, setValues] = useState([0, 1000000]);
@@ -117,7 +138,7 @@ const resetCheckboxes = () => {
           return true;
         if (checkedItems.childrenShoes && product.category === "children Shoes")
           return true;
-
+        // if (checkedItems.Nike && product.Brand === "Nike") return true;
         if (checkedItems.Nike && product.Brand === "Nike") return true;
         if (checkedItems.Puma && product.Brand === "Puma") return true;
         if (checkedItems.Kswiss && product.Brand === "Kswiss") return true;
@@ -127,6 +148,22 @@ const resetCheckboxes = () => {
         if (checkedItems.N2030 && product.Size === "20-30") return true;
         if (checkedItems.N3140 && product.Size === "31-40") return true;
         if (checkedItems.N4150 && product.Size === "41-50") return true;
+
+        // Filter products based on selected category
+        // Filter based on selected category
+    // if (filterSelection === "Male Shoes") {
+    //   return product.category === "Male Shoes";
+    // } else if (filterSelection === "Female Shoes") {
+    //   return product.category === "Female Shoes";
+    // } else if (filterSelection === "Children Shoes") {
+    //   return product.category === "Children Shoes";
+    // } else if (filterSelection === "All") {
+    //   // Show all products if "All" is selected
+    //   return true;
+    // } else {
+    //   // No filter applied (initial state)
+    //   return true;
+    // }
 
         // **New Price Range Condition**
         const productPrice = parseFloat(
@@ -404,11 +441,15 @@ const handlePriceRangeChange = (min: number, max: number) => {
         <div className="firstCARTpAGE---filterTag" onClick={openFilterBtn}>
           <p>Filter</p> <FilterIcon size={20} className="filterIcon" /> 
         </div>
+
         {showTurnHeadsLater && <TurnHeadsLater />}
-          
+
+        {/* <FilterSelection 
+        filterSelection={filterSelection}
+        setFilterSelection={setFilterSelection}/> */}
           
         <div>
-          .
+          
         </div>
         <div className="FirstCartPage---ViewPanel">
           <div className={openFilter ? "FirstCartPage---SearchPanel" : "Close---SearchPanel" } >

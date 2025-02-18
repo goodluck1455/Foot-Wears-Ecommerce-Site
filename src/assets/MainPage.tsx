@@ -85,9 +85,11 @@ const MainPage: React.FC<MainPageProps> = () => {
             </p>
             
              <HashLink  to="#mainPage" smooth > <button className="mainPage--button 
-             flex justify-evenly " >
+              " >
+              <span className="flex justify-evenly">
               <span className="mainPage--button--text">Shop Now</span>
               <MdKeyboardDoubleArrowRight className="mainPage--arrow my-auto" />
+              </span>
             </button> </HashLink> 
           </motion.div>
 
